@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/donut-connection-logo.png';
+import logo from '../assets/donut-logo.png';
 
 const NavBar = () => {
   return (
@@ -9,7 +9,7 @@ const NavBar = () => {
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo and home link */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Donut Connection Logo" className="h-2 sm:h-4" />
+          <img src={logo} alt="Donut Logo" className="h-2 sm:h-4" />
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Some Text Here</span>
         </Link>
         {/* Navigation Links */}
