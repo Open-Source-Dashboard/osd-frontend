@@ -1,58 +1,49 @@
-# Open Source Dashboard
+# OpenSource Dashboard Frontend
 
-Authors: Tammy Do, Andrea Riley(Thiel), Lana Zumbrunn
+Welcome to the OpenSource Dashboard, an interactive web-app for users to track and enhance their engagement with open-source projects with a fun, donut theme. 
 
-## Resources
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Authors
+Tammy Do, Andrea Riley(Thiel), Lana Zumbrunn
 
-## Change Log
 
 ## Links and Resources
 
-[back-end server url](https://osd-backend.vercel.app/)
+[backend server url](https://osd-backend.vercel.app/)
 
-front-end application
+frontend application
 
-## Setup
+## Features
 
-.env requirements
+- **User Information**: Open-source project stats including contributions represented by donuts and commit history.
+- **Project Exploration**: Browse the top active open-source projects pulled from GitHub.
+- **Community Engagement**: View the latest contributors and participate in community discussions.
+- **AI Integration**: Utilize an AI bot for getting started and project suggestions.
+- **Feedback System**: Users can submit their feedback directly through the dashboard.
 
-PORT - Port Number
+## Getting Started
+To get a local copy up and running, follow these steps:
 
-DATABASE_URL 
+1. Clone the repository
+2. Navigate to the project directory
+3. Install dependencies:
+`npm install`
+4. Build the project:
+`npm run build`
+5. Launch the development server:
+`npm start`
 
-How to initialize/run the application 
-
-### Available Scripts
-
-In the project directory, you can run:
-
-##### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-##### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-##### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application should now be running on http://localhost:3000.
 
 
-## Learn More
+## Contribute
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Change Log
+- April 10, 2024 - started project
+- April 12 - initial frontend structures
+- April 15 - dashboard layout and styling according to project requirements
+
+
+
+## Acknowledgments 
