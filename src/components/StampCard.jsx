@@ -44,7 +44,7 @@ const StampCard = () => {
         Donut images representing stamps and greyed donuts to represent future
         commits
       </p> */}
-      <div className='grid grid-cols-4 grid-rows-3 gap-2'>
+      <div className='mx-auto grid grid-cols-4 grid-rows-3 gap-2'>
         {stampedDonuts.map((iconNumber, index) => {
           return (
             <div key={index}>
