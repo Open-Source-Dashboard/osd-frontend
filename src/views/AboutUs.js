@@ -2,9 +2,10 @@ import React from 'react';
 
 
 const teamMembers = [
-  { pfp: '', name: 'Tammy', role: 'project role', linkedin: 'https://www.linkedin.com/in/tammytdo/', github: 'url', donut: 'Glazed'},
-  { pfp: '', name: 'Lana', role: 'project role', linkedin: 'https://www.linkedin.com/in/lanazumbrunn/', github: 'url', donut: 'Cream Bismarck'},
-  { pfp: '', name: 'Andrea', role: 'project role', linkedin: 'https://www.linkedin.com/in/and-riley/', github: 'url', donut: 'Jelly Filled'},
+  { pfp: '', name: 'Tammy', role: 'project role', linkedin: 'https://www.linkedin.com/in/tammytdo/', github: 'https://github.com/lana-z', donut: 'Mochi Donut with Matcha Glaze'},
+  { pfp: '', name: 'Lana', role: 'project role', linkedin: 'https://www.linkedin.com/in/lanazumbrunn/', github: 'https://github.com/tammytdo', donut: 'Cream Bismarck with Chocolate Frosting'},
+  { pfp: '', name: 'Andrea', role: 'project role', linkedin: 'https://www.linkedin.com/in/and-riley/', github: 'https://github.com/ariley215', donut: 'Vanilla Glazed with Sprinkles'},
+  { pfp: '', name: 'Caleb', role: 'project role', linkedin: 'https://www.linkedin.com/in/calebhemphill/', github: 'https://github.com/kaylubh', donut: 'Chocolate Glazed with Rainbow Sprinkles'},
 ];
 
 const AboutUs = () => {
