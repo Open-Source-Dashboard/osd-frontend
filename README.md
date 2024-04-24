@@ -44,6 +44,7 @@ The application should now be running on http://localhost:3000.
 - April 12 - initial frontend structures
 - April 15 - dashboard layout and styling according to project requirements
 - April 16 - about us page
+- April 22-24 - github authorization and vercel deployment 
 
 
 
