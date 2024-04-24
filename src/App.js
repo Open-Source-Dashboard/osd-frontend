@@ -6,6 +6,7 @@ import MapOfUsers from "./views/MapOfUsers";
 import Feedback from "./views/Feedback";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Login from "./auth/Login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/projects/:id" element={<MapOfUsers />} />
+          <Route path="/github/callback" element={<Login />} />
           <Route path="*" element={<Feedback /> } />
         </Routes>
         <Footer />
