@@ -6,7 +6,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const authAPI = process.env.AUTH_API_URL;
+  const authAPI = process.env.REACT_APP_AUTH_API_URL;
 
   const [userToken, setUserToken] = useState({});
 
