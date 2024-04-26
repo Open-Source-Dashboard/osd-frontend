@@ -3,9 +3,10 @@ import { FaGithub } from 'react-icons/fa';
 
 const AuthButtons = () => {
   const client_id=process.env.REACT_APP_GITHUB_CLIENT_ID;
-  const redirectUri=process.env.REACT_APP_GITHUB_CALLBACK_URL; 
+  // const redirectUri=process.env.REACT_APP_GITHUB_CALLBACK_URL; 
 
-  const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirectUri}`;
+  // const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirectUri}`;
+  const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${client_id}`;
 
   return (
     <div>

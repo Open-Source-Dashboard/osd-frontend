@@ -4,6 +4,7 @@ import Dashboard from "./views/Dashboard";
 import AboutUs from "./views/AboutUs";
 import MapOfUsers from "./views/MapOfUsers";
 import Feedback from "./views/Feedback";
+import Authentication from "./views/Authentication";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Login from "./auth/Login";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/projects/:id" element={<MapOfUsers />} />
           <Route path="/github/callback" element={<Login />} />
           <Route path="*" element={<Feedback /> } />
+          <Route path="/authentication" element={<Authentication />} />
         </Routes>
         <Footer />
       </div>
