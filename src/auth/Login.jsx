@@ -11,9 +11,6 @@ const Login = () => {
   const [userToken, setUserToken] = useState({});
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const code = searchParams.get('code');
-
     // if (code) {
     //   // Send the code to the backend to exchange it for an access token
     //   axios
@@ -27,19 +24,21 @@ const Login = () => {
     //       console.error('Error exchanging code for token:', error);
     //     });
     // }
+    getUserToken();  
+  }, []);
 
-    if (code) {
-      const userToken = getGithubToken(code);
-      setUserToken(userToken);
-    }
+  async function getUserToken() {
+    const searchParams = new URLSearchParams(location.search);
+    const userCode = searchParams.get('code');
 
-  }, [location]);
-
-  async function getGithubToken(userCode) {
     try {
-      const userTokenResponse = await axios.post(authAPI, { code: userCode });
-      const userToken = userTokenResponse.data.token;
-      return userToken;
+      const userTokenResponse = await axios.get(`${authAPI}?code=${userCode}`);
+      console.log('userTokenResponse:', userTokenResponse);
+      const userTokenStatus = userTokenResponse.status;
+      const userToken = userTokenResponse.data;
+      if (userTokenStatus === 200) {
+        setUserToken(userToken);
+      }
     } catch (error) {
       console.error('Error exchanging code for token:', error);
     }
@@ -47,10 +46,10 @@ const Login = () => {
 
   return (
     <>
-      {userToken.token ? (
+      {userToken.github_username ? (
         <div>
           <h1>Logged in!</h1>
-          <p>{JSON.stringify(userToken.token)}</p>
+          <p>Github Username: {JSON.stringify(userToken.github_username)}</p>
         </div>
       ) : (
         <div>
