@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from 'react';
 import axios from 'axios';
 const ghClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
+const osdAuthUrl = '';
 
 const AuthContext = createContext();
 
@@ -20,8 +21,10 @@ export function AuthProvider({ children }) {
     let userResponse;
     if (ghUserCode) {
       userResponse = await ghLogin(ghUserCode);
-      console.log({ userResponse });
+    } else if (osdUserToken) {
+      userResponse = await osdLogin(osdUserToken);
     }
+    console.log({ userResponse });
     // on successful login, create a user object
     let newUser;
     if (userResponse) {
@@ -43,6 +46,15 @@ export function AuthProvider({ children }) {
   async function ghLogin(ghUserCode) {
     try {
       const response = await axios.get(`${ghAuthUrl}?code=${ghUserCode}`);
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function osdLogin(osdUserToken) {
+    try {
+      const response = await axios.get(`${osdAuthUrl}?token=${osdUserToken}`);
       return response;
     } catch (error) {
       console.error(error);
