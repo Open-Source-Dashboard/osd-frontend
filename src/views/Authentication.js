@@ -14,6 +14,12 @@ const Authentication = () => {
     login(ghUserCode);
   }, []);
 
+  useEffect(() => {
+    if (user.github_username) {
+      navigate('/');
+    }
+  }, [user]);
+
   return (
     <div>
       <h1>Authentication</h1>

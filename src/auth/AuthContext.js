@@ -13,8 +13,20 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [state, setState] = useState({
     user: {},
+    userButtonUrl,
     login,
   });
+
+  function userButtonUrl() {
+    // TODO: add local storage check for user token, if present then use a different URL for our own auth which already has the github token
+    if (state.user.github_username) {
+      return '#';
+    } else if (localStorage.getItem('osd_user_token')) {
+      return '';
+    } else {
+      return `https://github.com/login/oauth/authorize?client_id=${ghClientId}`;
+    }
+  }
 
   async function login(ghUserCode, osdUserToken) {
     // check for osdUserToken or ghUserCode and route to appropriate login API
@@ -41,6 +53,7 @@ export function AuthProvider({ children }) {
         ...newUser,
       }));
     }
+    // TODO: save user token to local storage
   }
 
   async function ghLogin(ghUserCode) {
@@ -63,8 +76,3 @@ export function AuthProvider({ children }) {
 
   return <AuthContext.Provider value={state}>{children}</AuthContext.Provider>;
 }
-
-export const AuthButtonUrl = () => {
-  // TODO: add local storage check for user token, if present then use a different URL for our own auth which already has the github token
-  return `https://github.com/login/oauth/authorize?client_id=${ghClientId}`;
-};
