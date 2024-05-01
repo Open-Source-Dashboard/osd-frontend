@@ -24,7 +24,7 @@ const Login = () => {
     //       console.error('Error exchanging code for token:', error);
     //     });
     // }
-    getUserToken();  
+    getUserToken();
   }, []);
 
   async function getUserToken() {
@@ -36,6 +36,7 @@ const Login = () => {
       console.log('userTokenResponse:', userTokenResponse);
       const userTokenStatus = userTokenResponse.status;
       const userToken = userTokenResponse.data;
+
       if (userTokenStatus === 200) {
         setUserToken(userToken);
       }
