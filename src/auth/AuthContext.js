@@ -16,20 +16,28 @@ export function AuthProvider({ children }) {
   });
 
   async function login(ghUserCode, osdUserToken) {
+    // check for osdUserToken or ghUserCode and route to appropriate login API
     let userResponse;
-
     if (ghUserCode) {
       userResponse = await ghLogin(ghUserCode);
+      console.log({ userResponse });
     }
-
-    const newUser = {
-      user: userResponse.data,
-    };
-
-    setState((prevState) => ({
-      ...prevState,
-      ...newUser,
-    }));
+    // on successful login, create a user object
+    let newUser;
+    if (userResponse) {
+      if (userResponse.status === 200 && userResponse.data) {
+        newUser = {
+          user: userResponse.data,
+        };
+      }
+    }
+    // on success, set the user object in state
+    if (userResponse && newUser) {
+      setState((prevState) => ({
+        ...prevState,
+        ...newUser,
+      }));
+    }
   }
 
   async function ghLogin(ghUserCode) {
@@ -41,11 +49,7 @@ export function AuthProvider({ children }) {
     }
   }
 
-  return (
-    <AuthContext.Provider value={{ userToken: state }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={state}>{children}</AuthContext.Provider>;
 }
 
 export const AuthButtonUrl = () => {
