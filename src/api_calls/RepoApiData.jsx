@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const RepoApiData = () => {
   const [repoData, setRepoData] = useState({});
-  const API_SERVER_URL = process.env.API_SERVER_URL;
+  const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
   const getRepoData = async () => {
     try {
@@ -17,7 +17,7 @@ const RepoApiData = () => {
   };
 
   return (
-    <>RepoApiData</>
+    <>API Data will eventually show here</>
     // <>
     //   <div>
     //     {repoData.length > 0 ? (

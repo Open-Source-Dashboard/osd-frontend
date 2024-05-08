@@ -12,7 +12,7 @@ import RepoApiData from '../api_calls/RepoApiData';
 const Dashboard = () => {
   return (
     <div className='flex flex-col min-h-screen'>
-      {/* <RepoApiData /> */}
+      <RepoApiData />
       <main className='flex-grow'>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 bg-purple-200 md:grid-cols-3'>
