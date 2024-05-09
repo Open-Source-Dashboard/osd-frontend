@@ -1,8 +1,8 @@
-import { createContext, useContext, useState } from 'react';
-import axios from 'axios';
+import { createContext, useContext, useState } from "react";
+import axios from "axios";
 const ghClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
-const osdAuthUrl = '';
+const osdAuthUrl = "";
 
 const AuthContext = createContext();
 
@@ -11,18 +11,22 @@ export function useAuth() {
 }
 
 export function AuthProvider({ children }) {
-  const [state, setState] = useState({
+  const [userState, setUserState] = useState({
     user: {},
     userButtonUrl,
     login,
   });
 
+  const saveTokenToLocalStorage = (user_access_token) => {
+    localStorage.setItem("user_access_token", user_access_token);
+  };
+
   function userButtonUrl() {
-    // TODO: add local storage check for user token, if present then use a different URL for our own auth which already has the github token
-    if (state.user.github_username) {
-      return '#';
-    } else if (localStorage.getItem('osd_user_token')) {
-      return '';
+    // Check local storage for user token, if present then use a different URL for our own auth which already has the github token
+    if (userState.user.github_username) {
+      return "#";
+    } else if (localStorage.getItem("osd_user_token")) {
+      return "";
     } else {
       return `https://github.com/login/oauth/authorize?client_id=${ghClientId}`;
     }
@@ -31,29 +35,34 @@ export function AuthProvider({ children }) {
   async function login(ghUserCode, osdUserToken) {
     // check for osdUserToken or ghUserCode and route to appropriate login API
     let userResponse;
+    let newUser;
+
     if (ghUserCode) {
       userResponse = await ghLogin(ghUserCode);
+      console.log("received ghUserCode");
     } else if (osdUserToken) {
       userResponse = await osdLogin(osdUserToken);
+      console.log("received osdUserToken");
     }
-    console.log({ userResponse });
+
     // on successful login, create a user object
-    let newUser;
     if (userResponse) {
       if (userResponse.status === 200 && userResponse.data) {
         newUser = {
           user: userResponse.data,
         };
+        saveTokenToLocalStorage(userResponse.data.token);
       }
     }
-    // on success, set the user object in state
+
+    // on success, set the user object in userState
     if (userResponse && newUser) {
-      setState((prevState) => ({
+      console.log("newUser and access_token from the server: ", newUser);
+      setUserState((prevState) => ({
         ...prevState,
         ...newUser,
       }));
     }
-    // TODO: save user token to local storage
   }
 
   async function ghLogin(ghUserCode) {
@@ -74,5 +83,7 @@ export function AuthProvider({ children }) {
     }
   }
 
-  return <AuthContext.Provider value={state}>{children}</AuthContext.Provider>;
-}
+  return (
+    <AuthContext.Provider value={userState}>{children}</AuthContext.Provider>
+  );
+};

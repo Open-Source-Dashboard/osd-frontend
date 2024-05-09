@@ -12,17 +12,16 @@ const Authentication = () => {
 
   useEffect(() => {
     login(ghUserCode);
-  }, []);
+  }, [login, ghUserCode]); // Added missing dependencies 'login' and 'ghUserCode'
 
   useEffect(() => {
     if (user.github_username) {
       navigate('/');
     }
-  }, [user]);
+  }, [user, navigate]); // Added missing dependency 'navigate'
 
   return (
     <div>
-      <h1>Authentication</h1>
       <p>{JSON.stringify(user)}</p>
     </div>
   );

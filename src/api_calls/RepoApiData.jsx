@@ -17,7 +17,7 @@ const RepoApiData = () => {
   };
 
   return (
-    <>API Data will eventually show here</>
+    <></>
     // <>
     //   <div>
     //     {repoData.length > 0 ? (
