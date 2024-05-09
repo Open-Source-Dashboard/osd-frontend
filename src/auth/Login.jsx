@@ -11,20 +11,7 @@ const Login = () => {
   const [userToken, setUserToken] = useState({});
 
   useEffect(() => {
-    // if (code) {
-    //   // Send the code to the backend to exchange it for an access token
-    //   axios
-    //     .post('/api/auth/github/callback/', { code })
-    //     .then((response) => {
-    //       // Save the token in local storage
-    //       localStorage.setItem('github_token', response.data.token);
-    //       navigate('/'); // Redirect to a different page
-    //     })
-    //     .catch((error) => {
-    //       console.error('Error exchanging code for token:', error);
-    //     });
-    // }
-    getUserToken();  
+    getUserToken();
   }, []);
 
   async function getUserToken() {
@@ -33,9 +20,9 @@ const Login = () => {
 
     try {
       const userTokenResponse = await axios.get(`${authAPI}?code=${userCode}`);
-      console.log('userTokenResponse:', userTokenResponse);
       const userTokenStatus = userTokenResponse.status;
       const userToken = userTokenResponse.data;
+
       if (userTokenStatus === 200) {
         setUserToken(userToken);
       }
