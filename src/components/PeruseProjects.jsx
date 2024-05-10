@@ -21,11 +21,12 @@ const PeruseProjects = () => {
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md w-2/3 mx-auto">
+    <div className="w-2/3 p-6 mx-auto rounded-lg shadow-lg bg-violet-950">
       <h2 className="mb-4 text-xl font-bold">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
+
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {currentRepos.map((repo) => (
 
@@ -74,7 +75,6 @@ const PeruseProjects = () => {
     </p>
   </li>
 ))}
-
           </ul>
           <button
             onClick={handlePrevPage}
@@ -87,6 +87,7 @@ const PeruseProjects = () => {
             onClick={handleNextPage}
             className={`absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full m-2`}
             disabled={indexOfLastRepo >= popularRepos.length}
+
           >
             Next
           </button>
