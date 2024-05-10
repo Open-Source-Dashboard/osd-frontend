@@ -4,9 +4,9 @@ import sampleRepoResponse from "../sampleData/sampleRepoResponse.json"; // keep 
 export const RepoContext = createContext();
 
 export const RepoProvider = ({ children }) => {
-    const [featuredRepoResult, setFeaturedRepoResult] = useState([]);
-    const [latestContributorsResult, setLatestContributorsResult] = useState([]);
-    const [popularReposResult, setPopularReposResult] = useState([]);
+    const [featuredRepo, setFeaturedRepo] = useState([]);
+    const [latestContributors, setLatestContributors] = useState([]);
+    const [popularRepos, setPopularRepos] = useState([]);
     const [repositoryData, setRepositoryData] = useState([]);
   
   const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
@@ -22,9 +22,9 @@ export const RepoProvider = ({ children }) => {
           repositories,
         } = response.data;
 
-        setFeaturedRepoResult(featured_repo_result);
-        setLatestContributorsResult(latest_contributors_result);
-        setPopularReposResult(popular_repos_result);
+        setFeaturedRepo(featured_repo_result);
+        setLatestContributors(latest_contributors_result);
+        setPopularRepos(popular_repos_result);
         setRepositoryData(repositories);
 
         // use for testing to minimize api calls and increase rendering speed.
@@ -37,8 +37,9 @@ export const RepoProvider = ({ children }) => {
     getRepoData();
   }, [API_SERVER_URL]);
 
+
   return (
-    <RepoContext.Provider value={{ repositoryData }}>{children}</RepoContext.Provider>
+    <RepoContext.Provider value={{ popularRepos, featuredRepo }}>{children}</RepoContext.Provider>
   );
 };
 
