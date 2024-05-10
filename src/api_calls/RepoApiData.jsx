@@ -8,7 +8,7 @@ const RepoApiData = () => {
   useEffect(() => {
     const getRepoData = async () => {
       try {
-        const response = await axios.get(`${API_SERVER_URL}/osd/repos/`);
+        const response = await axios.get(`${API_SERVER_URL}/repos`);
         console.log('response:', response);
         const { popular_repos_result, featured_repo_result, latest_contributors_result, repositories } = response.data;
         setRepoData(repositories); 

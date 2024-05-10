@@ -10,7 +10,7 @@ export const RepoProvider = ({ children }) => {
   useEffect(() => {
     const getRepoData = async () => {
       try {
-        const response = await axios.get(`${API_SERVER_URL}/osd/repos/`);
+        const response = await axios.get(`${API_SERVER_URL}/repos`);
         const { repositories } = response.data;
         setRepoData(repositories); 
       } catch (error) {
