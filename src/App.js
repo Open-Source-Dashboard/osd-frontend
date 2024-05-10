@@ -8,22 +8,27 @@ import Authentication from "./views/Authentication";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Login from "./auth/Login";
+import { RepoProvider } from "./api_calls/RepoContext";  
 
 function App() {
+  const [repoData, setRepoData] = React.useState([]);
+
   return (
     <Router>
-      <div>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/projects/:id" element={<MapOfUsers />} />
-          <Route path="/github/callback" element={<Login />} />
-          <Route path="*" element={<Feedback /> } />
-          <Route path="/authentication" element={<Authentication />} />
-        </Routes>
-        <Footer />
-      </div>
+      <RepoProvider> 
+        <div>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/projects/:id" element={<MapOfUsers />} />
+            <Route path="/github/callback" element={<Login />} />
+            <Route path="*" element={<Feedback /> } />
+            <Route path="/authentication" element={<Authentication />} />
+          </Routes>
+          <Footer />
+        </div>
+      </RepoProvider>
     </Router>
   );
 }
