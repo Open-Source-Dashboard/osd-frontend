@@ -10,9 +10,9 @@ const teamMembers = [
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen p-8 bg-gray-100">
+    <div className="min-h-screen p-8 bg-gradient-to-r from-primary to-secondary">
       <div className="container mx-auto text-center">
-        <h1 className="mb-8 text-4xl font-bold text-gray-800">Our Team</h1>
+        <h1 className="mb-8 text-4xl font-bold ">Our Team</h1>
         <div className="mb-8 text-lg">
           <p>Interested in our work? Visit our GitHub repository to learn more and contribute!</p>
           <a href="//https://github.com/orgs/Open-Source-Dashboard/repositories" target="_blank" rel="noopener noreferrer" className="inline-block p-4 mt-4">
@@ -28,7 +28,7 @@ const AboutUs = () => {
                 </div>
                 <h3 className="text-xl font-semibold">{member.name}</h3>
                 <p className="text-gray-600">Project Role: {member.role}</p>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">LinkedIn</a>
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <br/>
                 <a href={member.github} target="_blank" rel="noopener noreferrer" >GitHub Profile</a>
                 <p className="text-gray-600">Favorite Donut: {member.donut}</p>
