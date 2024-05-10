@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="p-4 text-center text-white bg-purple-500">
+    <footer className="p-4 text-center bg-gradient-to-r from-primary to-secondary">
       <div className="flex flex-col items-center justify-center space-y-4">
-        <a href="https://github.com/orgs/Open-Source-Dashboard/repositories" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+        <a href="https://github.com/orgs/Open-Source-Dashboard/repositories" target="_blank" rel="noopener noreferrer">
           Link to our Repo
         </a>
-        <Link to="/about-us" className="text-white hover:text-gray-300">
+        <Link to="/about-us">
           About Us
         </Link>
-        <Link to="/feedback" className="text-white hover:text-gray-300">
+        <Link to="/feedback">
           Feedback
         </Link>
       </div>
