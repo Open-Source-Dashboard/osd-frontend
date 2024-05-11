@@ -7,12 +7,12 @@ import FeaturedProject from '../components/FeaturedProject';
 import Tbd1 from '../components/Tbd1';
 import Tbd2 from '../components/Tbd2';
 import Tbd3 from '../components/Tbd3';
-import RepoApiData from '../api_calls/RepoApiData';
+// import RepoApiData from '../api_calls/RepoApiData';
 
 const Dashboard = () => {
   return (
     <div className='flex flex-col min-h-screen bg-gradient-to-r from-primary to-secondary'> 
-      <RepoApiData />
+      {/* <RepoApiData /> */}
       <main className='flex-grow'>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
