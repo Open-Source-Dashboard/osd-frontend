@@ -1,7 +1,7 @@
 const Tbd1 = () => {
     return (
-      <div className="p-6 bg-white rounded-lg shadow-md">
-        <h2 className="mb-4 text-xl font-bold">Section TBD</h2>
+      <div className="row-3-card">
+        <h2 >Section TBD</h2>
         <p>Another section</p>
       </div>
     );

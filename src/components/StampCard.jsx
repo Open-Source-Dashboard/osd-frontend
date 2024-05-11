@@ -38,13 +38,13 @@ const StampCard = () => {
   }
 
   return (
-    <div className='flex flex-col p-6 bg-white rounded-lg shadow-md'>
+    <div className='row-2-card'>
       <h2 className='mb-4 text-xl font-bold'>Donut Card</h2>
       {/* <p>
         Donut images representing stamps and greyed donuts to represent future
         commits
       </p> */}
-      <div className='mx-auto grid grid-cols-4 grid-rows-3 gap-2'>
+      <div className='grid grid-cols-4 grid-rows-3 gap-2 mx-auto'>
         {stampedDonuts.map((iconNumber, index) => {
           return (
             <div key={index}>
