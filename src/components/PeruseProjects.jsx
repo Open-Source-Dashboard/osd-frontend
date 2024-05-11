@@ -19,6 +19,8 @@ const PeruseProjects = () => {
   const indexOfLastRepo = (currentPage + 1) * reposPerPage;
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
+  
+  console.log('popularRepos', popularRepos)
 
   return (
     <div className="w-2/3 p-6 mx-auto rounded-lg shadow-lg bg-violet-950">
@@ -41,7 +43,7 @@ const PeruseProjects = () => {
         style={{ width: "60px", height: "60px" }}
       />
     ) : 
-    // Render a donut image is avatar_url not defined
+    // Render a donut image if avatar_url not defined
     (
       <img
         src={backupDonutImage} 
@@ -52,7 +54,7 @@ const PeruseProjects = () => {
 
     <h2>
       <a
-        href={repo.url}
+        href={repo.html_url}
         target="_blank"
         rel="noreferrer"
         className="text-blue-600 font-bold"

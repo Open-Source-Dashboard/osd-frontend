@@ -7,7 +7,7 @@ export const RepoProvider = ({ children }) => {
     const [featuredRepo, setFeaturedRepo] = useState([]);
     const [latestContributors, setLatestContributors] = useState([]);
     const [popularRepos, setPopularRepos] = useState([]);
-    const [repositoryData, setRepositoryData] = useState([]);
+    // const [repositoryData, setRepositoryData] = useState([]);
   
   const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
@@ -19,13 +19,13 @@ export const RepoProvider = ({ children }) => {
           featured_repo_result,
           latest_contributors_result,
           popular_repos_result,
-          repositories,
+          // repositories,
         } = response.data;
 
         setFeaturedRepo(featured_repo_result);
         setLatestContributors(latest_contributors_result);
         setPopularRepos(popular_repos_result);
-        setRepositoryData(repositories);
+        // setRepositoryData(repositories);
 
         // use for testing to minimize api calls and increase rendering speed.
         // setRepositoryData(sampleRepoResponse)

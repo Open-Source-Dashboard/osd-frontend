@@ -26,7 +26,7 @@ const FeaturedProject = () => {
         style={{ width: "150px", height: "150px" }}
       />
     )}
-            <h1><a href={repo.owner.avatar_url}>{repo.name}</a></h1>
+            <h1><a href={repo.html_url}>{repo.name}</a></h1>
             <p>{repo.description}</p>
             <p className="text-sm text-gray-600">
                   Topics:{" "}
