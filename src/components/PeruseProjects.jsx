@@ -23,18 +23,18 @@ const PeruseProjects = () => {
   console.log('popularRepos', popularRepos)
 
   return (
-    <div className="w-2/3 p-6 mx-auto rounded-lg shadow-lg bg-violet-950">
-      <h2 className="mb-4 text-xl font-bold">Peruse Projects</h2>
+    <div className="w-2/3 row-2-card">
+      <h2>Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <ul className="card-content">
           {currentRepos.map((repo) => (
 
   <li
     key={repo.id}
-    className="border border-gray-300 bg-gray-100 p-4 rounded-lg shadow-md"
+    className="card-content-li"
   >
     {repo.owner && repo.owner.avatar_url ? ( 
       <img
@@ -57,7 +57,7 @@ const PeruseProjects = () => {
         href={repo.html_url}
         target="_blank"
         rel="noreferrer"
-        className="text-blue-600 font-bold"
+        className="font-bold text-blue-600"
       >
         {repo.name}
       </a>
@@ -65,7 +65,7 @@ const PeruseProjects = () => {
     <p className="text-sm text-gray-600">
       ⭐ {repo.stargazers_count}
     </p>
-    <p className="text-sm text-black-600 mb-2">{repo.description}</p>
+    <p className="mb-2 text-sm text-black-600">{repo.description}</p>
     <p className="text-sm text-gray-600">
       Topics:{" "}
       {repo.topics.map((topic, index) => (

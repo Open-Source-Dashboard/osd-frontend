@@ -1,6 +1,6 @@
 const Tbd3 = () => {
     return (
-      <div className="p-6 bg-white rounded-lg shadow-md">
+      <div className="row-3-card">
         <h2 className="mb-4 text-xl font-bold">Section TBD</h2>
         <p>Another section</p>
       </div>

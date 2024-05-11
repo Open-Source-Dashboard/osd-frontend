@@ -7,7 +7,7 @@ const FeaturedProject = () => {
   console.log('featuredRepo', featuredRepo)
   
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md w-1/3">
+    <div className="w-2/3 row-2-card">
       <h2 className="mb-4 text-xl font-bold">Featured Opensource Project of the Month</h2>
 
       {Object.keys(featuredRepo).length > 0? (
