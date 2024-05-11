@@ -11,22 +11,22 @@ import RepoApiData from '../api_calls/RepoApiData';
 
 const Dashboard = () => {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen bg-gradient-to-r from-primary to-secondary'> 
       <RepoApiData />
       <main className='flex-grow'>
         {/* Row 1 */}
-        <div className='grid grid-cols-1 gap-4 p-4 bg-purple-200 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
           <StampCard />
           <MyCommits />
           <LatestContributors />
         </div>
         {/* Row 2 */}
-        <div className='flex flex-col items-center justify-center gap-4 p-4 bg-cyan-200 md:flex-row'>
+        <div className='flex flex-col items-center justify-center gap-4 p-4 md:flex-row'>
           <PeruseProjects className='w-full md:w-auto md:flex-grow' />
           <FeaturedProject className='w-full md:w-auto md:flex-grow' />
         </div>
         {/* Row 3 */}
-        <div className='grid grid-cols-1 gap-4 p-4 bg-purple-200 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
           <Tbd1 />
           <Tbd2 />
           <Tbd3 />
