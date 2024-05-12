@@ -50,7 +50,7 @@ export const RepoProvider = ({ children }) => {
 
 
   return (
-    <RepoContext.Provider value={{ popularRepos, featuredRepo }}>{children}</RepoContext.Provider>
+    <RepoContext.Provider value={{ popularRepos, featuredRepo, latestContributors }}>{children}</RepoContext.Provider>
   );
 };
 
