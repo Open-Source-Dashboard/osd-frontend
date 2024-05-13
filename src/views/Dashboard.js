@@ -13,7 +13,7 @@ import GetStartedModal from "../components/GetStartedModal";
 
 const Dashboard = () => {
   const [isNewUser, setIsNewUser] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useState(() => {
     const checkUser = async () => {
@@ -28,6 +28,7 @@ const Dashboard = () => {
 
     checkUser();
   }, []);
+
   if (loading) {
     return <div>Loading...</div>;
   }
