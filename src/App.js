@@ -8,6 +8,7 @@ import Authentication from "./views/Authentication";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Login from "./auth/Login";
+import CarouselModal from "./components/GetStartedModal";
 import { RepoProvider } from "./api_calls/RepoContext";  
 
 function App() {
