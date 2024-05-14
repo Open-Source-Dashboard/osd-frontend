@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Login from "./auth/Login";
 import { RepoProvider } from "./api_calls/RepoContext";
+import { UserProvider } from "./api_calls/UserContext";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <Router>
+      <UserProvider>
       <RepoProvider>
         <div>
           <NavBar />
@@ -31,6 +33,7 @@ function App() {
           <Footer />
         </div>
       </RepoProvider>
+      </UserProvider>
     </Router>
   );
 }

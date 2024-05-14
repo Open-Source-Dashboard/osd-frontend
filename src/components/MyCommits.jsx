@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext } from "react";
+import { UserContext } from "../api_calls/UserContext"; 
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
 import donutBoxFull from "../assets/donut-box-full.png";
 
 const MyCommits = () => {
-  const totalCommits = 38; //TODO: fetch total commits from API
+  const {opensource_commit_count, commits_url } = useContext(UserContext);
+  const totalCommits = opensource_commit_count || 0; 
   const donutBoxes = Math.floor(totalCommits / 6);
   
     return (
@@ -22,9 +24,9 @@ const MyCommits = () => {
               <p className="text-2xl font-bold text-center">{donutBoxes}</p>
             </div>
           </div>
-          <button className="w-full p-2 mt-4">
+          <a href={commits_url} target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
             My Latest Commits
-          </button>
+          </a>
         </div>
       </div>
     );
