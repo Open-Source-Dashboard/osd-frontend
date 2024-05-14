@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import StampCard from '../components/StampCard';
 import MyCommits from '../components/MyCommits';
 import LatestContributors from '../components/LatestContributors';
@@ -7,13 +7,40 @@ import FeaturedProject from '../components/FeaturedProject';
 import Tbd1 from '../components/Tbd1';
 import Tbd2 from '../components/Tbd2';
 import Tbd3 from '../components/Tbd3';
+import axios from "axios";
+import GetStartedModal from "../components/GetStartedModal";
 // import RepoApiData from '../api_calls/RepoApiData';
 
 const Dashboard = () => {
+  const [isNewUser, setIsNewUser] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useState(() => {
+    const checkUser = async () => {
+      try {
+        const response = await axios.get('/accounts/users'); // Double check user API endpoint
+        setIsNewUser(response.data.isNewUser);
+      } catch (error) {
+        console.error('Error checking user status', error);
+      }
+      setLoading(false);
+    };
+
+    checkUser();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+
   return (
-    <div className='flex flex-col min-h-screen bg-gradient-to-r from-primary to-secondary'> 
+    <div className='flex flex-col min-h-screen bg-gradient-to-r from-primary to-secondary'>
       {/* <RepoApiData /> */}
       <main className='flex-grow'>
+        <div>
+          {isNewUser && <GetStartedModal/>}
+        </div>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
           <StampCard />
