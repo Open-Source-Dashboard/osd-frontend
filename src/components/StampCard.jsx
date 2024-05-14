@@ -23,7 +23,7 @@ const StampCard = () => {
   }, [userDonutBoxCount]);
 
   useEffect(() => {
-    randomizeEmptyDonutsIcons(12 - stampedDonuts.length);
+    randomizeEmptyDonutsIcons(6 - stampedDonuts.length);
   }, [stampedDonuts]);
 
   function getUserDonutsCount() {
@@ -52,12 +52,13 @@ const StampCard = () => {
 
   return (
     <div className='row-2-card'>
+      <div className=''>
       <h2 className='mb-4 text-xl font-bold'>My Donuts</h2>
       {/* <p>
         Donut images representing stamps and greyed donuts to represent future
         commits
       </p> */}
-      <div className='grid grid-cols-4 grid-rows-3 gap-2 mx-auto'>
+      <div className='grid grid-cols-3 grid-rows-2 gap-2 mx-auto'>
         {stampedDonuts.map((iconNumber, index) => {
           return (
             <div key={index}>
@@ -72,6 +73,7 @@ const StampCard = () => {
             </div>
           );
         })}
+      </div>
       </div>
     </div>
   );

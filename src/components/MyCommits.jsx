@@ -4,7 +4,7 @@ import donutBoxFull from "../assets/donut-box-full.png";
 
 const MyCommits = () => {
   const totalCommits = 38; //TODO: fetch total commits from API
-  const donutBoxes = Math.floor(totalCommits / 12);
+  const donutBoxes = Math.floor(totalCommits / 6);
   
     return (
       <div className="row-1-card">
