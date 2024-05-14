@@ -40,12 +40,12 @@ The application should now be running on http://localhost:3000.
 
 
 ## Change Log
-- April 10, 2024 - started project
+- April 10 -12, 2024 - started project
 - April 12 - initial frontend structures
 - April 15 - dashboard layout and styling according to project requirements
 - April 16 - about us page
 - April 24 - github authorization, vercel settings
-
+- 
 
 
 ## Acknowledgments 

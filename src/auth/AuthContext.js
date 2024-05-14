@@ -13,7 +13,7 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [userState, setUserState] = useState({
     user: {},
-    userButtonUrl,
+    userButtonUrl: userButtonUrl,
     login,
   });
 
