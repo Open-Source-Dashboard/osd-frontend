@@ -5,11 +5,10 @@ import LatestContributors from '../components/LatestContributors';
 import PeruseProjects from '../components/PeruseProjects';
 import FeaturedProject from '../components/FeaturedProject';
 import Tbd1 from '../components/Tbd1';
-import Tbd2 from '../components/Tbd2';
-import Tbd3 from '../components/Tbd3';
 import axios from "axios";
 import GetStartedModal from "../components/GetStartedModal";
 // import RepoApiData from '../api_calls/RepoApiData';
+import CommitGraph from '../components/CommitGraph';
 
 const Dashboard = () => {
   const [isNewUser, setIsNewUser] = useState(false);
@@ -39,7 +38,7 @@ const Dashboard = () => {
       {/* <RepoApiData /> */}
       <main className='flex-grow'>
         <div>
-          {isNewUser && <GetStartedModal/>}
+          {/* {isNewUser && <GetStartedModal/>} */}
         </div>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
@@ -53,10 +52,9 @@ const Dashboard = () => {
           <FeaturedProject className='w-full md:w-auto md:flex-grow' />
         </div>
         {/* Row 3 */}
-        <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-2'>
           <Tbd1 />
-          <Tbd2 />
-          <Tbd3 />
+          <CommitGraph />
         </div>
       </main>
     </div>
