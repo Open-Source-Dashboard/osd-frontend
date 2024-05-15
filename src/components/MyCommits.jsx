@@ -60,7 +60,7 @@ const MyCommits = () => {
         </div>
         
         {/* PASS IN USERNAME */}
-        <a href='https://github.com/tammytdo' target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
+        <a href="https://github.com/tammytdo#js-contribution-activity" target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
           My Latest Commits
         </a>
       </div>
