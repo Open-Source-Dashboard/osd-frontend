@@ -11,7 +11,7 @@ import GetStartedModal from "../components/GetStartedModal";
 import CommitGraph from '../components/CommitGraph';
 
 const Dashboard = () => {
-  const [isNewUser, setIsNewUser] = useState(false);
+  const [isNewUser, setIsNewUser] = useState(true);
   const [loading, setLoading] = useState(false);
 
   useState(() => {
@@ -38,7 +38,7 @@ const Dashboard = () => {
       {/* <RepoApiData /> */}
       <main className='flex-grow'>
         <div>
-          {/* {isNewUser && <GetStartedModal/>} */}
+          {isNewUser && <GetStartedModal/>}
         </div>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>

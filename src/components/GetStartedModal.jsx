@@ -16,9 +16,7 @@ const GetStartedModal = () => {
             <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
                 <div className="bg-white p-5 rounded-lg shadow-lg">
                     <Slider {...settings}>
-                        <div>Slide 1</div>
-                        <div>Slide 2</div>
-                        <div>Slide 3</div>
+                        <h1></h1>
                     </Slider>
 
                 </div>
