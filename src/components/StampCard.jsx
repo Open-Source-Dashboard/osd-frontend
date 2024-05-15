@@ -53,7 +53,7 @@ const StampCard = () => {
   return (
     <div className='row-2-card'>
       <div className=''>
-      <h2 className='mb-4 text-xl font-bold'>My Donuts</h2>
+      <h2 className='mb-4 text-xl font-bold'>My Donut Rewards</h2>
       {/* <p>
         Donut images representing stamps and greyed donuts to represent future
         commits

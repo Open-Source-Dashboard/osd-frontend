@@ -8,7 +8,7 @@ const FeaturedProject = () => {
   
   return (
     <div className="w-2/3 row-2-card">
-      <h2 className="mb-4 text-xl font-bold">Featured Opensource Project of the Month</h2>
+      <h2 className="mb-4 text-xl font-bold">Featured Opensource Project</h2>
 
       {Object.keys(featuredRepo).length > 0? (
         featuredRepo.map((repo) => (
