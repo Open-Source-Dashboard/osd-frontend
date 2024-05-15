@@ -14,22 +14,22 @@ const MyCommits = () => {
   const [error, setError] = useState(null);
 
   // Attribution: https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/src/fetcher.ts
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const username = "tammytdo";  // Replace with dynamic value if needed
-      const data = await FetchContributions(username);
-      if (typeof data === 'string') {
-        setError(data); 
-      } else {
-        setContributions(data.contributions);
-        console.log('contributions', data.contributions)
-      }
-      setLoading(false);
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setLoading(true);
+  //     const username = "tammytdo";  // Replace with dynamic value if needed
+  //     const data = await FetchContributions(username);
+  //     if (typeof data === 'string') {
+  //       setError(data); 
+  //     } else {
+  //       setContributions(data.contributions);
+  //       console.log('contributions', data.contributions)
+  //     }
+  //     setLoading(false);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="row-1-card">
@@ -42,7 +42,7 @@ const MyCommits = () => {
             <p className="text-2xl font-bold text-center">{totalCommits}</p>
             {loading && <p>Loading contributions...</p>}
             {error && <p>{error}</p>}
-            {!loading && !error && (
+            {/* {!loading && !error && (
               <ul>
                 {contributions.map((day, index) => (
                   <li key={index}>
@@ -50,7 +50,7 @@ const MyCommits = () => {
                   </li>
                 ))}
               </ul>
-            )}
+            )} */}
           </div>
           <div>
             <h3 className="text-lg font-bold">My Donut Boxes</h3>
@@ -58,7 +58,9 @@ const MyCommits = () => {
             <p className="text-2xl font-bold text-center">{donutBoxes}</p>
           </div>
         </div>
-        <a href={commits_url} target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
+        
+        {/* PASS IN USERNAME */}
+        <a href='https://github.com/tammytdo' target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
           My Latest Commits
         </a>
       </div>
