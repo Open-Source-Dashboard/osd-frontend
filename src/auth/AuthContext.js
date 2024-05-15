@@ -18,6 +18,7 @@ export function AuthProvider({ children }) {
   });
 
   const saveTokenToLocalStorage = (user_access_token) => {
+    console.log("user_access_token", user_access_token);
     localStorage.setItem("user_access_token", user_access_token);
   };
 

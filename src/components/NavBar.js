@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo and home link */}
         <Link to="/" className="flex items-center space-x-3">
-        <img src={logo} alt="Donut Logo" className="h-20 mr-3 sm:h-32" />
+        {/* <img src={logo} alt="Donut Logo" className="h-20 mr-3 sm:h-32" /> */}
           <h1 className="self-center xs:text-sm sm:text-sm md:text-lg lg:text-xl ">
             Opensource Project Contributions
           </h1>

@@ -1,4 +1,4 @@
-// outlined donut icons
+// greyed out donut icons
 import outline1 from '../assets/donut-icons/outline/1.png';
 import outline2 from '../assets/donut-icons/outline/2.png';
 import outline3 from '../assets/donut-icons/outline/3.png';
@@ -13,7 +13,7 @@ import color4 from '../assets/donut-icons/color/4.png';
 import color5 from '../assets/donut-icons/color/5.png';
 import color6 from '../assets/donut-icons/color/6.png';
 
-// outlined donut components
+// greyed out donut components
 export const Outline1 = () => {
   return <img src={outline1} alt='outlined donut' />;
 };
