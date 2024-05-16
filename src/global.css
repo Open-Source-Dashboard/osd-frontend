@@ -53,3 +53,22 @@
 .small-octocat {
   width: 60%;
 }
+
+/****************** Getting Started Modal ***********************/
+
+.carousel-slide {
+  padding: 20px;
+  text-align: center;
+
+}
+
+.carousel-slide h1 {
+  color: darkslategrey;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-slide h3 {
+  font-size: 1.5rem;
+  color: darkslategrey;
+}
