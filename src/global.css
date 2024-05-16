@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply text-white bg-deep-blue;
+    @apply text-white bg-custom-gradient;
   }
   h1, h2, h3 {
     @apply mb-4 text-xl font-bold text-white;
@@ -16,7 +16,7 @@
     transition: color 0.3s; /* Smooth transition for hover effects */
   }
   button {
-    @apply font-medium text-white bg-gradient-to-r from-primary to-secondary;
+    @apply px-4 py-2 text-white;
     transition: background-color 0.3s; 
     &:hover {
       @apply bg-light-blue;
@@ -46,7 +46,7 @@
     @apply p-4 text-purple-500 bg-gray-100 border rounded-lg shadow-md
   }
   .carousel-button {
-    @apply absolute p-2 m-2 transform -translate-y-1/2 rounded-full top-1/2;
+    @apply absolute p-2 m-2 transform -translate-y-1/2 rounded-full bg-violet-800 top-1/2;
   }
 }
 

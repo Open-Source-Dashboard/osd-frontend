@@ -33,8 +33,8 @@ const MyCommits = () => {
 
   return (
     <div className="row-1-card">
-      <h2 className="mb-4 text-xl font-bold">My Opensource Commits</h2>
-      <p>Since Joining Donut Dashboard</p>
+      <h2 className="mb-1 text-xl font-bold ">My Opensource Commits</h2>
+      <p className="mb-3 text-xs italic">Since Joining Donut Dashboard</p>
       <div className="flex flex-col card-content">
         <div className="flex items-center justify-between p-4">
           <div>
@@ -61,7 +61,7 @@ const MyCommits = () => {
         </div>
         
         {/* PASS IN USERNAME */}
-        <a href="https://github.com/tammytdo#js-contribution-activity" target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
+        <a href="https://github.com/tammytdo#js-contribution-activity" target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white bg-purple-600 rounded">
           My GitHub Profile
         </a>
       </div>

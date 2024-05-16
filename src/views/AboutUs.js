@@ -5,7 +5,6 @@ const teamMembers = [
   { pfp: '', name: 'Tammy', role: 'project role', linkedin: 'https://www.linkedin.com/in/tammytdo/', github: 'https://github.com/lana-z', donut: 'Mochi Donut with Matcha Glaze'},
   { pfp: '', name: 'Lana', role: 'project role', linkedin: 'https://www.linkedin.com/in/lanazumbrunn/', github: 'https://github.com/tammytdo', donut: 'Cream Bismarck with Chocolate Frosting'},
   { pfp: '', name: 'Andrea', role: 'project role', linkedin: 'https://www.linkedin.com/in/and-riley/', github: 'https://github.com/ariley215', donut: 'Vanilla Glazed with Sprinkles'},
-  { pfp: '', name: 'Caleb', role: 'project role', linkedin: 'https://www.linkedin.com/in/calebhemphill/', github: 'https://github.com/kaylubh', donut: 'Chocolate Glazed with Rainbow Sprinkles'},
 ];
 
 const AboutUs = () => {
@@ -19,9 +18,11 @@ const AboutUs = () => {
             View our GitHub Repo
           </a>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-lg">
+
+            <div key={index} className="p-6 rounded-lg shadow-lg bg-violet-950">
+              <div className="bg-grey-100">
                 <div className="mb-4">
                     {/* Display GitHub Profile Pic */}
                     <img src={member.pfp} alt={`${member.name}'s GitHub Profile Pic`} className="object-cover w-40 h-40 mx-auto bg-gray-200 rounded-full"/>
@@ -32,6 +33,7 @@ const AboutUs = () => {
                 <br/>
                 <a href={member.github} target="_blank" rel="noopener noreferrer" >GitHub Profile</a>
                 <p className="text-gray-600">Favorite Donut: {member.donut}</p>
+          </div>
           </div>
           ))}
         </div>
