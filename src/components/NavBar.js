@@ -6,7 +6,7 @@ const NavBar = () => {
   const isAuthenticated = !!localStorage.getItem('github_token');
   
   return (
-    <nav className="p-1 bg-gradient-to-r from-primary to-secondary'> ">
+    <nav className="p-1 bg-gradient-to-r from-primary to-secondary">
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo and home link */}
         <Link to="/" className="flex items-center space-x-3">
