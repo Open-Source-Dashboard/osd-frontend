@@ -33,11 +33,10 @@ const MyCommits = () => {
 
   return (
     <div className="row-1-card">
-      <h2 className="mb-1 text-xl font-bold ">My Opensource Commits</h2>
-      <p className="mb-3 text-xs italic">Since Joining Donut Dashboard</p>
+      <h2 className="mb-4 text-xl font-bold">My Opensource Project Commits</h2>
       <div className="flex flex-col card-content">
         <div className="flex items-center justify-between p-4">
-          <div>
+          <div className="border-gray-300 bg-white bg-opacity-50 rounded-lg p-2">
             <h3 className="text-lg font-bold">Total Commits</h3>
             <img src={octocatHoldingDonut} alt="Octocat holding donut" />
             <p className="text-2xl font-bold text-center">{totalCommits}</p>
@@ -53,16 +52,16 @@ const MyCommits = () => {
               </ul>
             )} */}
           </div>
-          <div>
-            <h3 className="text-lg font-bold">Donut Boxes</h3>
+          <div className="order-gray-300 bg-white bg-opacity-50 rounded-lg p-2">
+            <h3 className="text-lg font-bold">My Donut Boxes</h3>
             <img src={donutBoxFull} alt="Donut box full" />
             <p className="text-2xl font-bold text-center">{donutBoxes}</p>
           </div>
         </div>
         
         {/* PASS IN USERNAME */}
-        <a href="https://github.com/tammytdo#js-contribution-activity" target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white bg-purple-600 rounded">
-          My GitHub Profile
+        <a href="https://github.com/tammytdo#js-contribution-activity" target="_blank" rel="noopener noreferrer" className="w-full p-2 mt-4 text-center text-white rounded bg-gradient-to-r from-primary to-secondary">
+          My Latest Commits
         </a>
       </div>
     </div>
