@@ -46,15 +46,15 @@ const Dashboard = () => {
           <MyCommits />
           <LatestContributors />
         </div>
-        {/* Row 2 */}
-        <div className='flex flex-col items-center justify-center gap-4 p-4 md:flex-row'>
-          <PeruseProjects className='w-full md:w-auto md:flex-grow' />
-          <FeaturedProject className='w-full md:w-auto md:flex-grow' />
-        </div>
         {/* Row 3 */}
         <div className='flex flex-col items-center justify-center grid-cols-1 gap-4 m-4 row-3-card md:flex-rowgrid md:grid-cols-2'>
         {/* <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-2'> */}
           <CommitGraph />
+        </div>
+        {/* Row 2 */}
+        <div className='flex flex-col items-center justify-center gap-4 p-4 md:flex-row'>
+          <PeruseProjects className='w-full md:w-auto md:flex-grow' />
+          <FeaturedProject className='w-full md:w-auto md:flex-grow' />
         </div>
       </main>
     </div>

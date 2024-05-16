@@ -70,9 +70,9 @@ const MyCommits = () => {
           href="https://github.com/tammytdo#js-contribution-activity"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full p-2 mt-4 text-center text-white rounded bg-teal-500 border-2 border-grey-500"
+          className="w-full p-2 mt-4 text-center text-white rounded bg-teal-500 shadow-md"
         >
-          My Latest Commits
+          My Github Profile
         </a>
       </div>
     </div>

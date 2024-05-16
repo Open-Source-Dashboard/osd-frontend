@@ -7,7 +7,7 @@ const NavBar = () => {
   
   return (
     <nav className="p-1 bg-gradient-to-r from-primary to-secondary">
-      <div className="container flex items-center justify-between mx-auto">
+      <div className="flex items-center justify-between w-full mx-auto border-gray-300 bg-white bg-opacity-50 rounded-lg p-1">
         {/* Logo and home link */}
         <Link to="/" className="flex items-center space-x-3">
         {/* <img src={logo} alt="Donut Logo" className="h-20 mr-3 sm:h-32" /> */}
