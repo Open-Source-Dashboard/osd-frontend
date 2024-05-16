@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React from "react";
+import logo from '../assets/donut-logo-dark-purple.png';
 
 const GetStartedModal = () => {
     const settings = {
@@ -17,11 +18,16 @@ const GetStartedModal = () => {
             <div className="bg-white w-3/4 m-auto rounded-lg shadow-lg">
                 <div className='mt-5'>
                     <Slider {...settings}>
-                        <div className='carousel-slide'>
-                                <h1>Carousel Example</h1>
+                        <div className='carousel-slide flex items-center'>
+                            <h1>Welcome!</h1>
+                            {/* <img src={logo} alt="Donut Logo" className=" w-48 h-48 object-cover align-middle"></img> */}
+                            <p className='text-gray-700'>Welcome to Donut Dashboard—a place built for developers like you who are eager to contribute to Open Source projects.</p>
+                            <h3>How it Works</h3>
+                            <p className='text-gray-700'>Earn Donuts for Contributions: Each commit you make earns you a donut on your virtual donut reward card. For every six donuts you collect, you get a box of donuts. It's our way of adding a bit of fun to the serious business of coding!</p>
                             </div>
                             <div className='carousel-slide'>
-                                <h3>hello world</h3>
+                                <h3>Where to Start</h3>
+                            <p className='text-gray-700'>Select a Project: If a project catches your eye, click its title to navigate to its GitHub repository.</p>
                             </div>
                             <div className='carousel-slide'>
                                 <h3>3</h3>
@@ -40,4 +46,3 @@ export default GetStartedModal;
 
 
 
-const text = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
