@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import CommitGraph from '../components/CommitGraph';
 
 const Dashboard = () => {
-  const [isNewUser, setIsNewUser] = useState(true);
+  const [isNewUser, setIsNewUser] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useState(() => {

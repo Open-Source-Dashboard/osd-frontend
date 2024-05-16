@@ -8,7 +8,7 @@
     @apply text-white bg-deep-blue;
   }
   h1, h2, h3 {
-    @apply mb-4 text-xl font-bold text-white;
+    @apply mb-4 mt-4 text-xl font-bold text-white;
     font-family: 'Baloo 2', cursive;
   }
   a {
@@ -57,18 +57,18 @@
 /****************** Getting Started Modal ***********************/
 
 .carousel-slide {
-  padding: 20px;
-  text-align: center;
-
+  @apply p-5 text-center;
 }
 
 .carousel-slide h1 {
-  color: darkslategrey;
-  font-size: 2rem;
-  font-weight: bold;
+  @apply text-2xl font-bold text-purple-900;
 }
 
 .carousel-slide h3 {
-  font-size: 1.5rem;
-  color: darkslategrey;
+  @apply text-xl text-purple-900;
+}
+
+.carousel-slide p {
+  @apply mt-4;
+  @apply mb-4;
 }
