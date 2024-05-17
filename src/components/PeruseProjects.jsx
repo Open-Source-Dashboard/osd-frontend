@@ -23,7 +23,7 @@ const PeruseProjects = () => {
   console.log('popularRepos', popularRepos)
 
   return (
-    <div className="w-2/3 p-6 mx-auto rounded-lg shadow-lg bg-violet-950">
+    <div className="row-2-card bg-violet-950">
       <h2 className="mb-4 text-xl font-bold">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
@@ -34,13 +34,13 @@ const PeruseProjects = () => {
 
   <li
     key={repo.id}
-    className="p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-md"
+    className='card-content-li'
   >
     {repo.owner && repo.owner.avatar_url ? ( 
       <img
         src={repo.owner.avatar_url}
         alt={repo.name}
-        style={{ width: "60px", height: "60px" }}
+        className="rounded-lg h-25 w-25"
       />
     ) : 
     // Render a donut image if avatar_url not defined
@@ -48,7 +48,7 @@ const PeruseProjects = () => {
       <img
         src={backupDonutImage} 
         alt={repo.name}
-        style={{ width: "60px", height: "60px" }}
+        className="rounded-lg w-25 h-25"
       />
     )}
 
@@ -80,14 +80,14 @@ const PeruseProjects = () => {
           </ul>
           <button
             onClick={handlePrevPage}
-            className={`absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full m-2`}
+            className={`carousel-button absolute left-0 top-1/2 transform -translate-y-1/2`}
             disabled={currentPage === 0}
           >
             Prev
           </button>
           <button
             onClick={handleNextPage}
-            className={`absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full m-2`}
+            className={`carousel-button absolute right-0 top-1/2 transform -translate-y-1/2`}
             disabled={indexOfLastRepo >= popularRepos.length}
 
           >

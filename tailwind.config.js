@@ -16,11 +16,14 @@ module.exports = {
         'vibrant-orange': '#ff9f00',
         'light-blue': '#08d9ff',
       },
-      gradientColorStops: theme => ({
-        ...theme('colors'),
-        'primary': '#4F2F8E',
-        'secondary': '#252d47',
+      backgroundImage: theme => ({
+        // 'custom-gradient': 'linear-gradient(to right, #4F2F8E, #02c1cb, #4F2F8E)',
+        'custom-gradient': 'linear-gradient(to right, #4F2F8E, #614499, #4F2F8E)',
       }),
+      boxShadow: {
+        'custom-light': '0 2px 5px rgba(255, 255, 255, 0.15)',
+        'custom-dark': '5px 5px 15px rgba(0, 0, 0, 0.3)',
+      },
     },
   },
   variants: {
