@@ -29,36 +29,40 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen p-8 bg-gradient-to-r from-primary to-secondary">
       <div className="container mx-auto text-center">
-        <h1 className="mb-8 text-4xl font-bold ">Our Team</h1>
+        <h1 className="mb-8 text-4xl font-bold">The Team</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
             <div key={index} className="p-6 rounded-lg shadow-lg bg-violet-950">
               <div className="bg-grey-100">
                 <div className="mb-4">
-                  {/* Display GitHub Profile Pic */}
                   <img
                     src={member.pfp}
                     alt={`${member.name}'s GitHub Profile Pic`}
                     className="object-cover w-40 h-40 mx-auto bg-gray-200 rounded-full"
                   />
                 </div>
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-                <br />
-                <a
-                  href={member.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub Profile
-                </a>
-                <p className="text-gray-600">Favorite Donut: {member.donut}</p>
+                <h3 className="text-orange-500 text-2xl font-semibold">{member.name}</h3>
+                <p className="text-white-600 text-xl mb-4">Favorite Donut: {member.donut}</p>
+                
+                <div className="flex justify-center space-x-2 mt-2">
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal-500 text-xl"
+                  >
+                    LinkedIn
+                  </a>
+                  <span className="text-gray-500">|</span>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal-500 text-xl"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -72,7 +76,7 @@ const AboutUs = () => {
             href="//https://github.com/orgs/Open-Source-Dashboard/repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block p-4"
+            className="inline-block p-4 text-yellow-500 "
           >
             <FaGithub className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
           </a>

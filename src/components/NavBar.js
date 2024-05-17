@@ -11,7 +11,7 @@ const NavBar = () => {
         <Link to="/" className="flex items-center space-x-3">
           <h1 className="self-center p-5 mt-4 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Donut Dashboard
-            <h2 className="self-center py-0 text-lg font-normal sm:text-lg md:text-lg lg:text-xl">
+            <h2 className="self-center py-0 text-lg font-normal sm:text-lg md:text-lg lg:text-xl ">
              For Opensource Project Contributions
             </h2>
           </h1>
