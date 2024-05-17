@@ -6,14 +6,14 @@ const teamMembers = [
     pfp: process.env.PUBLIC_URL + "/tammy_do.png",
     name: "Tammy",
     linkedin: "https://www.linkedin.com/in/tammytdo/",
-    github: "https://github.com/lana-z",
+    github: "https://github.com/tammytdo",
     donut: "Matcha Mochi Donut with Oreo",
   },
   {
     pfp: process.env.PUBLIC_URL + "/lana_zumbrunn.png",
     name: "Lana",
     linkedin: "https://www.linkedin.com/in/lanazumbrunn/",
-    github: "https://github.com/tammytdo",
+    github: "https://github.com/lana-z",
     donut: "Cream Bismarck with Chocolate Frosting",
   },
   {
