@@ -4,12 +4,10 @@ import MyCommits from '../components/MyCommits';
 import LatestContributors from '../components/LatestContributors';
 import PeruseProjects from '../components/PeruseProjects';
 import FeaturedProject from '../components/FeaturedProject';
-import Tbd1 from '../components/Tbd1';
 import axios from "axios";
 import GetStartedModal from "../components/GetStartedModal";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import RepoApiData from '../api_calls/RepoApiData';
 import CommitGraph from '../components/CommitGraph';
 
 const Dashboard = () => {
@@ -37,7 +35,6 @@ const Dashboard = () => {
 
   return (
 <div className='flex flex-col min-h-screen bg-gradient-to-r from-primary to-secondary '>
-      {/* <RepoApiData /> */}
       <div className='slider-container'>
         {isNewUser && <GetStartedModal  />
         }
