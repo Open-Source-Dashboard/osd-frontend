@@ -38,7 +38,7 @@ const MyCommits = () => {
           </div>
         </div>
 
-        <div className="text-l flex items-center justify-between p-4 mb-4 ml-20 mr-20">
+        <div className="text-l flex items-center justify-between p-4 ml-20 mr-20">
           <a
             href="https://github.com/tammytdo#js-contribution-activity"
             target="_blank"
