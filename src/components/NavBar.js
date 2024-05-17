@@ -6,13 +6,11 @@ const NavBar = () => {
   const isAuthenticated = !!localStorage.getItem('github_token');
   
   return (
-    <nav className="p-1 bg-gradient-to-r from-primary to-secondary">
+    <nav className="p-0.5 bg-gradient-to-r from-primary to-secondary">
       <div className="flex items-center justify-between w-full mx-auto border-gray-300 bg-white bg-opacity-50 rounded-lg p-1">
         <Link to="/" className="flex items-center space-x-3">
-          <h1 className="self-center p-5 mt-4 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Donut Dashboard
-            <h2 className="self-center py-0 text-lg font-normal sm:text-lg md:text-lg lg:text-xl ">
-             For Opensource Project Contributions
+        <h1 className="self-center p-3 pb-2 mt-2 xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl">            Donut Dashboard
+        <h2 className="self-center py-0 text-lg font-normal sm:text-lg md:text-lg lg:text-xl">              For Opensource Project Contributions
             </h2>
           </h1>
           

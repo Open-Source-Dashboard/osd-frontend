@@ -8,7 +8,7 @@ const AuthButtons = () => {
     <>
       <a
         href={userButtonUrl()}
-        className='flex items-center px-3 py-2 font-medium rounded-md textbase text-2xl'
+        className='flex items-center px-3 py-2 font-medium rounded-md textbase text-xl'
       >
         <span>{user.github_username ? user.github_username : 'Login'}</span>
         <FaGithub className='ml-2' />
