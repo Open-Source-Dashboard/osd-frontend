@@ -53,7 +53,7 @@ const AboutUs = () => {
                   >
                     LinkedIn
                   </a>
-                  <span className="text-gray-500">|</span>
+                  <span className="text-2xl text-gray-500">|</span>
                   <a
                     href={member.github}
                     target="_blank"
