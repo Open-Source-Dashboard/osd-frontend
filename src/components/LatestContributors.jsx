@@ -8,7 +8,7 @@ const LatestContributors = () => {
 
   return (
     <div className="p-6 row-1-card">
-      <h2 className="mb-4 text-xl font-bold">Latest Opensource Project Contributors</h2>
+      <h2 className="mb-4 text-xl font-bold mt-0">Latest Opensource Project Contributors</h2>
       {Object.keys(latestContributors).length > 0 && (
         latestContributors.map((contributor, idx) => (
           <div key={`contributor-${idx}`} style={{ border: "1px solid #ccc", borderRadius: "8px", padding: "8px", marginBottom: "8px" }}>

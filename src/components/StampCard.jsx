@@ -51,7 +51,7 @@ const StampCard = () => {
   }
 
   return (
-    <div className='flex-grow h-auto row-2-card'>
+    <div className='flex-grow h-auto row-1-card '>
       <div className='w-full p-4 bg-gray-100 rounded-sm shadow-inner'>
         <h2 className='mb-2 text-xl font-bold text-center text-gray-800'>
           My Donut Rewards</h2>

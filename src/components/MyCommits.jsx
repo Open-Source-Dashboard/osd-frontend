@@ -15,24 +15,22 @@ const MyCommits = () => {
 
   return (
     <div className="row-1-card">
-      <h2 className="mb-4 text-xl font-bold">My Opensource Commits</h2>
+      <h2 className="mb-2 text-xl font-bold mt-0">My Opensource Commits</h2>
       <div className="flex flex-col card-content">
         <div className="flex items-center justify-between p-2">
-          <div className="border-gray-300 bg-white bg-opacity-50 rounded-lg p-2 mr-2">
-            <h3 className="text-lg font-bold pl-2 text-center">
-              Total Commits
-            </h3>
-            <img src={octocatHoldingDonut} alt="Octocat holding donut" />
-            <p className="text-3xl font-bold text-center m-4">{totalCommits}</p>
+          <div className="border-gray-300 bg-white bg-opacity-50 rounded-lg p-2 mr-1">
+            <h3 className="text-lg font-bold pl-2 text-center">Total Commits</h3>
+            <img src={octocatHoldingDonut} alt="Octocat holding donut" className="w-28 h-28 mx-auto" />
+            <p className="text-3xl font-bold text-center m-3">{totalCommits}</p>
             {loading && <p>Loading contributions...</p>}
             {error && <p>{error}</p>}
-            <p className="mt-3 text-xs italic text-center text-gray-800 mb-4">
+            <p className="mt-3 text-xs italic text-center text-gray-800 mb-3 ml-6 mr-6">
               Since joining on _____{" "}
             </p>
           </div>
           <div className="border-gray-300 bg-white bg-opacity-50 rounded-lg p-2">
             <h3 className="text-lg font-bold text-center">My Donut Boxes</h3>
-            <img src={donutBoxFull} alt="Donut box full" />
+            <img src={donutBoxFull} alt="Donut box full" className="w-28 h-28 mx-auto" />
             <p className="text-3xl font-bold text-center p-3">{donutBoxes}</p>
             <p className="mt-3 text-xs italic text-center text-gray-800 ">
               Earn 6 donuts to add a donut box!{" "}
@@ -40,7 +38,7 @@ const MyCommits = () => {
           </div>
         </div>
 
-        <div className="text-l flex items-center justify-between p-4 mb-4 ml-20 mr-20">
+        <div className="text-l flex items-center justify-between p-4 ml-20 mr-20">
           <a
             href="https://github.com/tammytdo#js-contribution-activity"
             target="_blank"
