@@ -46,7 +46,7 @@
     @apply p-4 text-purple-500 bg-gray-100 border rounded-lg shadow-md
   }
   .carousel-button {
-    @apply absolute p-2 m-2 transform -translate-y-1/2 rounded-full bg-violet-800 top-1/2;
+    @apply absolute p-1 m-2 transform -translate-y-1/2 rounded-full bg-violet-800 top-1/2;
   }
 }
 

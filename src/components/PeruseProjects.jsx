@@ -24,7 +24,7 @@ const PeruseProjects = () => {
 
   return (
     <div className="row-2-card bg-violet-950">
-      <h2 className="mb-4 text-xl font-bold">Peruse Projects</h2>
+      <h2 className="mb-4 text-xl font-bold mt-0">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
