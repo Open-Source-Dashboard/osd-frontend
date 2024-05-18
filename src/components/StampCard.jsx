@@ -51,7 +51,7 @@ const StampCard = () => {
   }
 
   return (
-    <div className="flex-grow h-auto w-3/4 row-1-card">
+  <div className="flex-grow h-auto w-3/4 row-1-card shadow-lg shadow-gray-500/60">
       <h2 className="mb-2 text-xl font-bold mt-0">My Donuts</h2>
 
       <div className="flex items-center justify-center w-full">
@@ -68,7 +68,7 @@ const StampCard = () => {
               return (
                 <div
                   key={index}
-                  className="flex items-center justify-center w-16 h-16 m-1 bg-orange-100 rounded-lg shadow-md"
+                  className="flex items-center justify-center w-16 h-16 m-1 bg-orange-200 rounded-lg shadow-md shadow-lg shadow-gray-500/50"
                 >
                   <div className="flex items-center justify-center w-16 h-16 p-1">
                     <ColorDonutIcon number={iconNumber} />
