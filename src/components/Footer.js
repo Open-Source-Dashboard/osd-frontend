@@ -5,13 +5,13 @@ import { FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="p-4 text-center bg-gradient-to-r from-primary to-secondary border-gray-300 bg-white bg-opacity-50 rounded-lg p-2 sm:text-lg md:text-lg lg:text-xl">
-      <div className="flex flex-col items-center justify-center space-y-4">
+    <footer className="p-4 text-center bg-gradient-to-r from-primary to-secondary bg-gray-900 border-gray-300 rounded-lg sm:text-m md:text-lg lg:text-l">
+      <div className="flex flex-col items-center justify-center space-y-1">
       <a
           href="https://github.com/orgs/Open-Source-Dashboard/repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-2 border-gray-300 rounded-md"
         >
           <span>Visit the Repository</span>
           <FaGithub />

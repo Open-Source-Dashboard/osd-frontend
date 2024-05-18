@@ -7,7 +7,7 @@ const LatestContributors = () => {
   console.log('latestContributors', latestContributors)
 
   return (
-    <div className="p-6 row-1-card">
+    <div className="shadow-gray-500/50 p-6 row-1-card">
       <h2 className="mb-4 text-xl font-bold mt-0">Latest Opensource Project Contributors</h2>
       {Object.keys(latestContributors).length > 0 && (
         latestContributors.map((contributor, idx) => (
