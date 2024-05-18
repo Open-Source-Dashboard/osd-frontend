@@ -52,7 +52,7 @@ const StampCard = () => {
 
   return (
     <div className="flex-grow h-auto w-3/4 row-1-card">
-      <h2 className="mb-2 text-xl font-bold mt-0">My Contributions</h2>
+      <h2 className="mb-2 text-xl font-bold mt-0">My Donuts</h2>
 
       <div className="flex items-center justify-center w-full">
         <div
