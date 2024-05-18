@@ -22,8 +22,8 @@ const Authentication = () => {
 
   return (
     <div>
-      <p>{JSON.stringify(user)}</p>
-    </div>
+    {Object.keys(user).length === 0 ? <p className="text-2xl">Loading...</p> : <p>{JSON.stringify(user)}</p>}
+  </div>
   );
 };
 

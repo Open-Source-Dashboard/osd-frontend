@@ -13,8 +13,9 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [userState, setUserState] = useState({
     user: {},
-    userButtonUrl: userButtonUrl,
-    login,
+      login,
+      userButtonUrl: userButtonUrl,
+      isLoading: false,
   });
 
   const saveTokenToLocalStorage = (user_access_token) => {
@@ -34,7 +35,7 @@ export function AuthProvider({ children }) {
   }
 
   async function login(ghUserCode, osdUserToken) {
-    // check for osdUserToken or ghUserCode and route to appropriate login API
+    // check for osdUserToken or ghUserCode and route to login API
     let userResponse;
     let newUser;
 
@@ -46,7 +47,6 @@ export function AuthProvider({ children }) {
       console.log("received osdUserToken");
     }
 
-    // on successful login, create a user object
     if (userResponse) {
       if (userResponse.status === 200 && userResponse.data) {
         newUser = {
@@ -56,7 +56,6 @@ export function AuthProvider({ children }) {
       }
     }
 
-    // on success, set the user object in userState
     if (userResponse && newUser) {
       console.log("newUser and access_token from the server: ", newUser);
       setUserState((prevState) => ({
@@ -84,7 +83,14 @@ export function AuthProvider({ children }) {
     }
   }
 
+  const logout = () => {
+    localStorage.removeItem("user_access_token");
+    setUserState({ user: {}, isLoading: false });
+  };
+
+
   return (
     <AuthContext.Provider value={userState}>{children}</AuthContext.Provider>
   );
 };
+
