@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
+import LoadingDonut from '../assets/loading-donut.gif';
 
 const Authentication = () => {
   const { login, user } = useAuth();
@@ -21,8 +22,11 @@ const Authentication = () => {
   }, [user, navigate]); // Added missing dependency 'navigate'
 
   return (
-    <div>
-    {Object.keys(user).length === 0 ? <p className="text-2xl">Loading...</p> : <p>{JSON.stringify(user)}</p>}
+    <div className="flex items-center justify-center min-h-screen">
+    {Object.keys(user).length === 0 ? <p className="text-2xl">
+      Loading...
+      <img src={LoadingDonut} alt="Loading..." className='h-200 w-200'/>
+      </p> : <p>{JSON.stringify(user)}</p>}
   </div>
   );
 };
