@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="p-4 text-center bg-gradient-to-r from-primary to-secondary bg-gray-900 border-gray-300 rounded-lg sm:text-m md:text-lg lg:text-l">
+    <footer className="p-4 text-center bg-gradient-to-r from-primary to-secondary border-gray-300 rounded-lg sm:text-m md:text-lg lg:text-l">
       <div className="flex flex-col items-center justify-center space-y-1">
       <a
           href="https://github.com/orgs/Open-Source-Dashboard/repositories"

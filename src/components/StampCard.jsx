@@ -91,7 +91,7 @@ const StampCard = () => {
             backgroundImage: `url(${process.env.PUBLIC_URL}/sprinkles-colorful-background_405506-117.jpeg)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            boxShadow: "0px 0px 1px 2pt #4536CE",
+            boxShadow: "0px 0px 1px 1pt #4536CE",
           }}
         >
           <div className="relative bg-white rounded-md p-2 border-none">

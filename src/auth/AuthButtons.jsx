@@ -1,5 +1,5 @@
-import { useAuth } from './AuthContext';
-import { FaGithub } from 'react-icons/fa';
+import { useAuth } from "./AuthContext";
+import { FaGithub } from "react-icons/fa";
 
 const AuthButtons = () => {
   const { user, userButtonUrl } = useAuth();
@@ -8,10 +8,15 @@ const AuthButtons = () => {
     <>
       <a
         href={userButtonUrl()}
-        className='flex items-center px-3 py-2 font-medium rounded-md textbase text-xl'
+        className="flex items-center px-3 py-2 font-medium rounded-md textbase text-xl"
       >
-        <span>{user.github_username ? user.github_username : 'Login'}</span>
-        <FaGithub className='ml-2' />
+        <span>
+          {user.github_username ? user.github_username : "Login"}
+        </span>
+        <FaGithub
+          className="ml-2 text-teal-300 
+"
+        />
       </a>
     </>
   );
