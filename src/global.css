@@ -26,6 +26,10 @@
       @apply ring-2 ring-purple-500;
     }
   }
+ 
+  .no-shadow.flex-grow {
+    box-shadow: none !important;
+  }
   
   .row-1-card {
     @apply p-6 rounded-lg shadow-md bg-violet-950;
