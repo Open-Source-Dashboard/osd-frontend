@@ -12,7 +12,6 @@ import Login from "./auth/Login";
 import { RepoProvider } from "./api_calls/RepoContext";
 import { UserProvider } from "./api_calls/UserContext";
 import { useAuth } from "./auth/AuthContext";
-import { AuthProvider } from "./auth/AuthContext";
 
 
 function App() {

@@ -4,7 +4,7 @@ const ghClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
 const osdAuthUrl = "";
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 export function useAuth() {
   return useContext(AuthContext);
@@ -85,12 +85,12 @@ export function AuthProvider({ children }) {
 
   const logout = () => {
     localStorage.removeItem("user_access_token");
-    setUserState({ user: {}, isLoading: false });
+    setUserState({ user: {}, isLoading: true });
   };
 
 
   return (
-    <AuthContext.Provider value={userState}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ ...userState, logout }}>{children}</AuthContext.Provider>
   );
 };
 
