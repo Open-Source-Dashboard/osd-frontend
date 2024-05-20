@@ -5,7 +5,7 @@ const LogoutButton = () => {
     const { user, logout } = useAuth();
   
     return user.github_username ? (
-      <button onClick={logout} className="flex items-center px-3 py-2 text-xl font-medium rounded-md logout-button hover:text-light-blue" >
+      <button onClick={logout} className="flex items-center ml-6 px-3 py-2 text-xl font-medium rounded-md logout-button hover:text-light-blue" >
         Logout
       </button>
     ) : null;
