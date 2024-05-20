@@ -1,47 +1,26 @@
-# Opensource Dashboard Frontend
+# OpenSource Dashboard Frontend
 
-Welcome to OpenSource Dashboard, where devs receive virtually sweet rewards <img src="src/assets/donut-icons/color/5.png" width="20" height="20" style="vertical-align: middle;" /> for contributions to opensource projects. 
-
-Built with React App & Python Django styled with Tailwind CSS, and utilizing PostgreSQL.
+Welcome to the OpenSource Dashboard, an interactive web-app for users to track and enhance their engagement with open-source projects with a fun, donut theme. 
 
 ### Authors
-- [Tammy Do](https://github.com/tammytdo)
-- [Andrea Riley(Thiel)](https://github.com/ariley215)
-- [Lana Zumbrunn](https://github.com/lana-z) 
-
-## Features
-- **GitHub App**: Opensource Dashboard is a GitHub App using GitHub Authorization and GitHub API repo data.        
-- **User Information**: Opensource project stats including contributions represented by donuts and commit history.
-- **Project Exploration**: Browse the top active opensource projects pulled from GitHub. Repos with the Topic tag 'Opensource' are considered.
-- **Feedback**: Users can submit their feedback directly at the web app.
+Tammy Do, Andrea Riley(Thiel), Lana Zumbrunn
 
 
 ## Links and Resources
 
-- frontend application link, project TBD - to be deployed!
-- [backend server url](https://osd-backend.vercel.app/)
+[backend server url](https://osd-backend.vercel.app/)
 
+frontend application
 
-## Change Log
-- April 12 - May 18, 2024 - started project planning, initial build
-- May 20 - 24 - styling, logic finishing touches, features glow up, deployment
+## Features
 
+- **User Information**: Open-source project stats including contributions represented by donuts and commit history.
+- **Project Exploration**: Browse the top active open-source projects pulled from GitHub.
+- **Community Engagement**: View the latest contributors and participate in community discussions.
+- **AI Integration**: Utilize an AI bot for getting started and project suggestions.
+- **Feedback System**: Users can submit their feedback directly through the dashboard.
 
-## Acknowledgments 
-- GitHub <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" height="20" style="vertical-align: middle;" />
-- Opensource project maintainers for sharing their projects, expertise and opportunities for contribution
-- OpenAI for ChatGPT code assistance and DALLE donut box art
-- [Github Readme Activity Graph](https://github.com/Ashutosh00710/github-readme-activity-graph/tree/main) by Ashutosh Dwivedi
-- Figma for whiteboarding, domain modeling, UI, software requirements, 
-- Canva for creation of donut assets <img src="src/assets/donut-box-full.png" width="60" height="60" style="vertical-align: bottom;" /> 
-- [EmailJS](https://www.emailjs.com/) for feedback emails
-- Allison Do, Nicole Do for UI ideation and feedback
-- [Code Fellows](https://www.codefellows.org/), where the stars aligned for Tammy, Andrea and Lana to meet long ago
-- All of the amazing devs contributing to Opensource projects!
-
-
-
-## Want to contribute to our project? 
+## Getting Started
 To get a local copy up and running, follow these steps:
 
 1. Clone the repository
@@ -55,9 +34,18 @@ To get a local copy up and running, follow these steps:
 
 The application should now be running on http://localhost:3000.
 
-### Project Contributors 
 
-See your name here when we merge your PR!
+## Contribute
 
-Thank you!  <img src="src/assets/donut-icons/color/4.png" width="20" height="20" style="vertical-align: bottom;">
-- Caleb Hemphill
+
+
+## Change Log
+- April 10 -12, 2024 - started project
+- April 12 - initial frontend structures
+- April 15 - dashboard layout and styling according to project requirements
+- April 16 - about us page
+- April 24 - github authorization, vercel settings
+- 
+
+
+## Acknowledgments 
