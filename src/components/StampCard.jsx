@@ -95,7 +95,7 @@ const StampCard = () => {
           }}
         >
           <div className="relative bg-white rounded-md p-2 border-none">
-            <h2 className="mb-1 text-2xl font-bold mt-0 text-gray-800 text-center">
+            <h2 className="mb-0 text-2xl font-bold mt-0 text-gray-800 text-center">
               My Donuts
             </h2>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 rounded-b-md"></div>
