@@ -86,7 +86,7 @@ const StampCard = () => {
     <div className="flex-grow h-auto w-3/4 row-1-card border-none bg-transparent no-shadow p-0">
       <div className="flex items-center justify-center w-full ">
         <div
-          className="w-5/6 p-2 rounded-md shadow-inner relative"
+          className="w-5/6 p-3 rounded-md shadow-inner relative"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/sprinkles-colorful-background_405506-117.jpeg)`,
             backgroundSize: "cover",
