@@ -32,13 +32,13 @@
   }
   
   .row-1-card {
-    @apply p-6 rounded-lg shadow-md bg-violet-950;
+    @apply p-6 rounded-lg shadow-md bg-violet-950 shadow-gray-500/50;
   }
   .row-2-card {
-    @apply w-2/3 p-6 mx-auto rounded-lg shadow-md bg-violet-950;
+    @apply w-2/3 p-6 mx-auto rounded-lg shadow-md bg-violet-950 shadow-gray-500/50;
   }
   .row-3-card {
-    @apply p-6 rounded-lg shadow-md bg-violet-950;
+    @apply p-6 rounded-lg shadow-md bg-violet-950 shadow-gray-500/50;
   }
   .card-content {
     @apply rounded-lg;
