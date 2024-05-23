@@ -25,6 +25,7 @@ Built with React App & Python Django styled with Tailwind CSS, and utilizing Pos
 ## Change Log
 - April 12 - May 18, 2024 - started project planning, initial build
 - May 20 - 24 - styling, logic finishing touches, features glow up, deployment
+- May 27 - June 7 - A/B testing on UI/UX
 
 
 ## Acknowledgments 
@@ -32,11 +33,10 @@ Built with React App & Python Django styled with Tailwind CSS, and utilizing Pos
 - Opensource project maintainers for sharing their projects, expertise and opportunities for contribution
 - OpenAI for ChatGPT code assistance and DALLE donut box art
 - [Github Readme Activity Graph](https://github.com/Ashutosh00710/github-readme-activity-graph/tree/main) by Ashutosh Dwivedi
-- Figma for whiteboarding, domain modeling, UI, software requirements, 
+- Figma for whiteboarding, domain modeling, UI, software requirements
 - Canva for creation of donut assets <img src="src/assets/donut-box-full.png" width="60" height="60" style="vertical-align: bottom;" /> 
 - [EmailJS](https://www.emailjs.com/) for feedback emails
 - Allison Do, Nicole Do for UI ideation and feedback
-- [Code Fellows](https://www.codefellows.org/), where the stars aligned for Tammy, Andrea and Lana to meet long ago
 - All of the amazing devs contributing to Opensource projects!
 
 

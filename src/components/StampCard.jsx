@@ -83,25 +83,20 @@ const StampCard = () => {
   };
   
   return (
-    <div className="flex-grow h-auto w-3/4 row-1-card border-none bg-transparent no-shadow p-0">
-      <div className="flex items-center justify-center w-full ">
-        <div
-          className="w-5/6 p-3 rounded-md shadow-inner relative"
-          style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/sprinkles-colorful-background_405506-117.jpeg)`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            boxShadow: "0px 0px 1px 1pt #4536CE",
-          }}
-        >
-          <div className="relative bg-white rounded-md p-2 border-none">
-            <h2 className="mb-0 text-2xl font-bold mt-0 text-gray-800 text-center">
+    <div className="flex-grow w-3/4 h-auto p-0 bg-transparent border-none row-1-card no-shadow">
+    <div className="flex items-center justify-center w-full ">
+      <div
+        className="relative w-5/6 p-3 bg-center bg-cover rounded-md shadow-inner"
+        style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}
+      >
+          <div className="relative p-2 bg-white border-none rounded-md">
+            <h2 className="mt-0 mb-0 text-2xl font-bold text-center text-gray-800">
               My Donuts
             </h2>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 rounded-b-md"></div>
           </div>
 
-          <div className="grid grid-cols-3 grid-rows-4 gap-1 mx-auto mb-2 place-items-center">
+          <div className="grid grid-cols-4 grid-rows-3 gap-1 mx-auto mb-2 place-items-center">
             {stampedDonuts.map((iconNumber, index) => (
               <div
                 key={index}
@@ -122,13 +117,13 @@ const StampCard = () => {
             ))}
           </div>
           
-          <div className="relative bg-white rounded-md border-none mt-2">
+          <div className="relative mt-2 bg-white border-none rounded-md">
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300 rounded-b-md"></div>
           </div>
-            <p className="text-s text-center italic text-gray-700 pt-2">
+            <p className="pt-2 italic text-center text-gray-700 text-s">
               Earn a donut for every opensource commit.
             </p>
-            <p className="text-xs italic text-center text-orange-600 p-1">
+            <p className="p-1 text-xs italic text-center text-orange-600">
               12 donuts equals a donut box!
             </p>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
-import donutBoxFull from "../assets/donut-box-full.png";
+import donutBoxFull from "../assets/dozen-donuts.png";
 
 const MyCommitsStatic = () => {
   const totalCommits = 20;

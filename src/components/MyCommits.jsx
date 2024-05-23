@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../api_calls/UserContext";
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
-import donutBoxFull from "../assets/donut-box-full.png";
+import donutBoxFull from "../assets/dozen-donuts.png";
 import FetchContributions from "./FetchContributions";
 
 const MyCommits = () => {
