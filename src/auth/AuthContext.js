@@ -41,10 +41,8 @@ export function AuthProvider({ children }) {
 
     if (ghUserCode) {
       userResponse = await ghLogin(ghUserCode);
-      console.log("received ghUserCode");
     } else if (osdUserToken) {
       userResponse = await osdLogin(osdUserToken);
-      console.log("received osdUserToken");
     }
 
     if (userResponse) {

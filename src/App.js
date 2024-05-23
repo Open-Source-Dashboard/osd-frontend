@@ -16,6 +16,9 @@ import { UserProvider } from "./api_calls/UserContext";
 
 function App() {
   const { user } = useAuth();
+  console.log('user', user);
+  let github_username = user['github_username']
+  console.log('github_username', github_username);
 
   return (
     <Router>

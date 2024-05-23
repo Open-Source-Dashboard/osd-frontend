@@ -4,7 +4,6 @@ import backupDonutImage from '../assets/donut-icons/color/1.png';
 
 const LatestContributors = () => {
   const { latestContributors } = useContext(RepoContext);
-  console.log('latestContributors', latestContributors)
 
   return (
     <div className="shadow-gray-500/50 p-6 row-1-card">
