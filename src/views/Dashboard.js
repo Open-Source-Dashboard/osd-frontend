@@ -34,7 +34,7 @@ const Dashboard = () => {
 
 
   return (
-<div className='flex flex-col min-h-screen bg-gradient-to-r from-primary to-secondary '>
+<div className='flex flex-col min-h-screen '>
       <div className='slider-container'>
         {isNewUser && <GetStartedModal  />
         }
