@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./views/Dashboard";
-import StaticDashboard from "./views/StaticDashboard";
-import AboutUs from "./views/AboutUs";
-// import MapOfUsers from "./views/MapOfUsers";
-import Feedback from "./views/Feedback";
-import Authentication from "./views/Authentication";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import AboutUs from "./views/AboutUs";
+import Authentication from "./views/Authentication";
+import Dashboard from "./views/Dashboard";
+import Feedback from "./views/Feedback";
+import StaticDashboard from "./views/StaticDashboard";
 import Login from "./auth/Login";
+import { useAuth } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
 import { UserProvider } from "./api_calls/UserContext";
-import { useAuth } from "./auth/AuthContext";
+// import MapOfUsers from "./views/MapOfUsers";
 
 
 function App() {
