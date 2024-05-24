@@ -10,15 +10,20 @@ import FeaturedProject from "../components/FeaturedProject";
 import GetStartedModal from "../components/GetStartedModal";
 import CommitGraph from "../components/CommitGraph";
 
+const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
+
+
 const Dashboard = () => {
   const [isNewUser, setIsNewUser] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useState(() => {
+    // TODO: Check whether user is new, already exists in database, or had a fetch error
     const checkUser = async () => {
       try {
-        const response = await axios.get("/accounts/users"); // Double check user API endpoint
+        const response = await axios.get(`${API_SERVER_URL}/accounts/users`); // Double check user API endpoint
         setIsNewUser(response.data.isNewUser);
+        console.log('response.data.isNewUser', response.data.isNewUser)
       } catch (error) {
         console.error("Error checking user status", error);
       }

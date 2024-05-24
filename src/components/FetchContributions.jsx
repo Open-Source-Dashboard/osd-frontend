@@ -1,4 +1,3 @@
-// Attribution: https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/src/fetcher.ts
 import axios from 'axios';
 import moment from 'moment';
 const TOKEN = process.env.REACT_APP_GITHUB_ORG_ACCESS_TOKEN;

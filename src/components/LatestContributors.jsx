@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { RepoContext } from "../api_calls/RepoContext";
-import backupDonutImage from '../assets/donut-icons/color/1.png';
 
 const LatestContributors = () => {
   const { latestContributors } = useContext(RepoContext);

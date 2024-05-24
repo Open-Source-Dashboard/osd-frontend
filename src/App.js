@@ -10,7 +10,7 @@ import StaticDashboard from "./views/StaticDashboard";
 import Login from "./auth/Login";
 import { useAuth } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
-import { UserProvider } from "./api_calls/UserContext";
+// import { UserProvider } from "./api_calls/UserContext";
 // import MapOfUsers from "./views/MapOfUsers";
 
 
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <Router>
-      <UserProvider>
+      {/* <UserProvider> */}
       <RepoProvider>
         <div>
           <NavBar />
@@ -37,7 +37,7 @@ function App() {
           <Footer />
         </div>
       </RepoProvider>
-      </UserProvider>
+      {/* </UserProvider> */}
     </Router>
   );
 }
