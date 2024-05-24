@@ -23,7 +23,6 @@ export function AuthProvider({ children }) {
   };
 
   function userButtonUrl() {
-    // Check local storage for user token, if present then use a different URL for our own auth which already has the github token
     if (userState.user.github_username) {
       return "#";
     } else if (localStorage.getItem("osd_user_token")) {
@@ -34,29 +33,25 @@ export function AuthProvider({ children }) {
   }
 
   async function login(ghUserCode, osdUserToken) {
-    // check for osdUserToken or ghUserCode and route to login API
     let userResponse;
     let newUser;
 
     if (ghUserCode) {
       userResponse = await ghLogin(ghUserCode);
-      console.log("received ghUserCode");
     } else if (osdUserToken) {
       userResponse = await osdLogin(osdUserToken);
-      console.log("received osdUserToken");
     }
 
-    if (userResponse) {
-      if (userResponse.status === 200 && userResponse.data) {
-        newUser = {
-          user: userResponse.data,
-        };
-        saveTokenToLocalStorage(userResponse.data.token);
-      }
+
+    if (userResponse && userResponse.status === 200 && userResponse.data) {
+      newUser = {
+        user: userResponse.data,
+      };
+      const user_access_token = userResponse.data.access_token;
+      saveTokenToLocalStorage(user_access_token);
     }
 
     if (userResponse && newUser) {
-      console.log("newUser and access_token from the server: ", newUser);
       setUserState((prevState) => ({
         ...prevState,
         ...newUser,

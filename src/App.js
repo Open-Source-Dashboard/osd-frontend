@@ -7,7 +7,6 @@ import Authentication from "./views/Authentication";
 import Dashboard from "./views/Dashboard";
 import Feedback from "./views/Feedback";
 import StaticDashboard from "./views/StaticDashboard";
-import Login from "./auth/Login";
 import { useAuth } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
 // import { UserProvider } from "./api_calls/UserContext";
@@ -17,6 +16,8 @@ import { RepoProvider } from "./api_calls/RepoContext";
 function App() {
   const { user } = useAuth();
   console.log('user from App.jsx', user);
+  console.log('user access_token from App.jsx', user.access_token);
+
   let github_username = user['github_username']
   console.log('github_username', github_username);
 
@@ -29,10 +30,8 @@ function App() {
           <Routes>
           <Route path="/" element={user && user.github_username ? <Dashboard /> : <StaticDashboard />} />
             <Route path="/about-us" element={<AboutUs />} />
-            {/* <Route path="/github/callback" element={<Login />} /> */}
-            <Route path="*" element={<Feedback />} />
             <Route path="/authentication" element={<Authentication />} />
-            {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
+            <Route path="*" element={<Feedback />} />
           </Routes>
           <Footer />
         </div>
