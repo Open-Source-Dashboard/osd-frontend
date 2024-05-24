@@ -28,9 +28,9 @@ function App() {
           <Routes>
           <Route path="/" element={user && user.github_username ? <Dashboard /> : <StaticDashboard />} />
             <Route path="/about-us" element={<AboutUs />} />
-            {/* <Route path="/github/callback" element={<Login />} /> */}
             <Route path="*" element={<Feedback />} />
             <Route path="/authentication" element={<Authentication />} />
+            {/* <Route path="/github/callback" element={<Login />} /> */}
             {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
           </Routes>
           <Footer />

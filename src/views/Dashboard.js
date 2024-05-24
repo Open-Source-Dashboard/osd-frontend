@@ -18,16 +18,16 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(false);
 
   useState(() => {
-    // TODO: Check whether user is new, already exists in database, or had a fetch error
     const checkUser = async () => {
-      try {
-        const response = await axios.get(`${API_SERVER_URL}/accounts/users`); // Double check user API endpoint
-        setIsNewUser(response.data.isNewUser);
-        console.log('response.data.isNewUser', response.data.isNewUser)
-      } catch (error) {
-        console.error("Error checking user status", error);
-      }
-      setLoading(false);
+      console.log('TODO: Add logic to check whether authenticated user is not in database, already exists in database, or had a fetch error')
+      // try {
+      //   const response = await axios.get(`${API_SERVER_URL}/accounts/users`); // Double check user API endpoint
+      //   setIsNewUser(response.data.isNewUser);
+      //   console.log('response.data.isNewUser', response.data.isNewUser)
+      // } catch (error) {
+      //   console.error("Error checking user status", error);
+      // }
+      // setLoading(false);
     };
 
     checkUser();
