@@ -17,8 +17,7 @@ import { RepoProvider } from "./api_calls/RepoContext";
 function App() {
   const { user } = useAuth();
   console.log('user from App.jsx', user);
-  let github_username = user['github_username']
-  console.log('github_username', github_username);
+
 
   return (
     <Router>
