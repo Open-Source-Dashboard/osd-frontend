@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/donut-logo-dark-purple.png';
 import AuthButtons from '../auth/AuthButtons';
 
 const NavBar = () => {

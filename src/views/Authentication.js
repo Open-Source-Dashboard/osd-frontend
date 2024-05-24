@@ -13,13 +13,13 @@ const Authentication = () => {
 
   useEffect(() => {
     login(ghUserCode);
-  }, [login, ghUserCode]); // Added missing dependencies 'login' and 'ghUserCode'
+  }, [login, ghUserCode]); 
 
   useEffect(() => {
     if (user.github_username) {
       navigate('/');
     }
-  }, [user, navigate]); // Added missing dependency 'navigate'
+  }, [user, navigate]);
 
   return (
     <div className="flex items-center justify-center min-h-screen">
