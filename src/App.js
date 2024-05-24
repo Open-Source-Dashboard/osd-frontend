@@ -16,7 +16,7 @@ import { RepoProvider } from "./api_calls/RepoContext";
 
 function App() {
   const { user } = useAuth();
-  console.log('user', user);
+  console.log('user from App.jsx', user);
   let github_username = user['github_username']
   console.log('github_username', github_username);
 
@@ -29,10 +29,10 @@ function App() {
           <Routes>
           <Route path="/" element={user && user.github_username ? <Dashboard /> : <StaticDashboard />} />
             <Route path="/about-us" element={<AboutUs />} />
-            {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
-            <Route path="/github/callback" element={<Login />} />
+            {/* <Route path="/github/callback" element={<Login />} /> */}
             <Route path="*" element={<Feedback />} />
             <Route path="/authentication" element={<Authentication />} />
+            {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
           </Routes>
           <Footer />
         </div>
