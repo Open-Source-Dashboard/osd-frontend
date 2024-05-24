@@ -20,8 +20,6 @@ const PeruseProjects = () => {
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
   
-  console.log('popularRepos', popularRepos)
-
   return (
     <div className="shadow-gray-500/50 row-2-card bg-violet-950">
       <h2 className="mb-4 text-xl font-bold mt-0">Peruse Projects</h2>

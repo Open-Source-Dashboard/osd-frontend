@@ -13,13 +13,12 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [userState, setUserState] = useState({
     user: {},
-      login,
-      userButtonUrl: userButtonUrl,
-      isLoading: false,
+    login,
+    userButtonUrl: userButtonUrl,
+    isLoading: false,
   });
 
   const saveTokenToLocalStorage = (user_access_token) => {
-    console.log("user_access_token", user_access_token);
     localStorage.setItem("user_access_token", user_access_token);
   };
 
@@ -88,9 +87,9 @@ export function AuthProvider({ children }) {
     setUserState({ user: {}, isLoading: true });
   };
 
-
   return (
-    <AuthContext.Provider value={{ ...userState, logout }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ ...userState, logout }}>
+      {children}
+    </AuthContext.Provider>
   );
-};
-
+}

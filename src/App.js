@@ -1,40 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./views/Dashboard";
-import StaticDashboard from "./views/StaticDashboard";
-import AboutUs from "./views/AboutUs";
-// import MapOfUsers from "./views/MapOfUsers";
-import Feedback from "./views/Feedback";
-import Authentication from "./views/Authentication";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import AboutUs from "./views/AboutUs";
+import Authentication from "./views/Authentication";
+import Dashboard from "./views/Dashboard";
+import Feedback from "./views/Feedback";
+import StaticDashboard from "./views/StaticDashboard";
 import Login from "./auth/Login";
-import { RepoProvider } from "./api_calls/RepoContext";
-import { UserProvider } from "./api_calls/UserContext";
 import { useAuth } from "./auth/AuthContext";
+import { RepoProvider } from "./api_calls/RepoContext";
+// import { UserProvider } from "./api_calls/UserContext";
+// import MapOfUsers from "./views/MapOfUsers";
 
 
 function App() {
   const { user } = useAuth();
+  console.log('user from App.jsx', user);
+  let github_username = user['github_username']
+  console.log('github_username', github_username);
 
   return (
     <Router>
-      <UserProvider>
+      {/* <UserProvider> */}
       <RepoProvider>
         <div>
           <NavBar />
           <Routes>
           <Route path="/" element={user && user.github_username ? <Dashboard /> : <StaticDashboard />} />
             <Route path="/about-us" element={<AboutUs />} />
-            {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
-            <Route path="/github/callback" element={<Login />} />
+            {/* <Route path="/github/callback" element={<Login />} /> */}
             <Route path="*" element={<Feedback />} />
             <Route path="/authentication" element={<Authentication />} />
+            {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
           </Routes>
           <Footer />
         </div>
       </RepoProvider>
-      </UserProvider>
+      {/* </UserProvider> */}
     </Router>
   );
 }

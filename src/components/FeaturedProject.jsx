@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { RepoContext } from "../api_calls/RepoContext";
-import backupDonutImage from '../assets/donut-icons/color/1.png';
+import backupDonutImage from '../assets/donut-icons/color/4.png';
 
 const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
-  console.log('featuredRepo', featuredRepo)
   
   return (
     <div className="shadow-gray-500/50 w-2/3 row-2-card">
