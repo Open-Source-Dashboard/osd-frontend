@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
+import NavLeft from "../components/NavLeft";
+import StampCard from "../components/StampCardStatic";
 
 const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
@@ -38,7 +40,9 @@ const Dashboard = () => {
       <div className="col-span-2 row-span-3 p-2 mt-6 rounded-lg h-60">
         <FeaturedProject />
         </div>
-      <div className="col-span-1 row-span-4 p-2 mb-5 border-4 border-white rounded-lg">NavLeft</div>
+      <div className="col-span-1 row-span-4 p-2 mb-5 ">
+        <NavLeft />
+      </div>
       <div className="col-span-3 row-span-5 p-3 bg-gray-400 rounded-lg">
         <div className="grid h-full grid-cols-2 grid-rows-2 gap-2 ">
           <div className="col-span-1 row-span-1 p-2 mb-2 bg-purple-300 rounded-lg">StampCard</div>

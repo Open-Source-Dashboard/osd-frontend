@@ -7,11 +7,11 @@ const NavLeft = () => {
   
   return (
     <div>
-      <div className="flex flex-col items-center justify-between p-4 border-4 border-white rounded-lg">
+      <div className="flex flex-col p-3 text-sm border-4 border-white rounded-lg justify-left">
           {/* Conditionally render auth buttons */}
           {isAuthenticated ? (
             <button
-              className="px-3 py-2 text-base rounded-md"
+              className="text-base rounded-md "
               onClick={() => {
                 localStorage.removeItem('github_token'); // Clear the token
                 window.location.reload(); // Reload to update UI
@@ -22,7 +22,7 @@ const NavLeft = () => {
           ) : (
             <AuthButtons /> 
           )}
-            <div className="flex flex-col items-center justify-center space-y-1">
+            <div className="flex flex-col space-y-3 text-sm justify-left">
             <a
                 href="https://github.com/orgs/Open-Source-Dashboard/repositories"
                 target="_blank"
