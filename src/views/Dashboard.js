@@ -3,7 +3,14 @@ import axios from "axios";
 import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
 import NavLeft from "../components/NavLeft";
-import StampCard from "../components/StampCardStatic";
+import StampCard from "../components/StampCard";
+import CommitGraph from "../components/CommitGraph";
+import PeruseProjects from "../components/PeruseProjects";
+import MyCommits from "../components/MyCommits";
+import LatestContributors from "../components/LatestContributors";
+import MapOfUsers from "./MapOfUsers";  
+import 'leaflet/dist/leaflet.css';
+
 
 const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
@@ -33,27 +40,39 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="grid h-screen grid-cols-6 gap-4 p-4 m-4 mt-0">
-      <div className="h-24 col-span-4 row-span-1 p-2 rounded-lg">
+    <div className="grid h-screen gap-4 m-3 mt-0" style={{ gridTemplateRows: 'repeat(6, minmax(100px, 1fr))', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+      <div className="col-span-4 row-span-1 p-2 rounded-lg">
         <Title />
         </div>
-      <div className="col-span-2 row-span-3 p-2 mt-6 rounded-lg h-60">
+      <div className="col-span-2 row-span-3 p-2 mt-6 border-4 border-white rounded-lg bg-violet-950 ">
         <FeaturedProject />
         </div>
       <div className="col-span-1 row-span-4 p-2 mb-5 ">
         <NavLeft />
       </div>
-      <div className="col-span-3 row-span-5 p-3 bg-gray-400 rounded-lg">
+      <div className="col-span-3 row-span-5 p-3 bg-gray-400 rounded-lg p-">
         <div className="grid h-full grid-cols-2 grid-rows-2 gap-2 ">
-          <div className="col-span-1 row-span-1 p-2 mb-2 bg-purple-300 rounded-lg">StampCard</div>
-          <div className="col-span-1 row-span-1 p-2 mb-2 ml-2 bg-purple-300 rounded-lg ">MyCommits</div>
-          <div className="col-span-2 row-span-1 p-2 bg-purple-300 rounded-lg">CommitGraph</div>
+          <div className="col-span-1 row-span-1">
+            <StampCard />
+            </div>
+          <div className="col-span-1 row-span-1 ml-2 rounded-lg ">
+            <MyCommits />
+          </div>
+          <div className="col-span-2 row-span-1 p-2">
+            <CommitGraph/>
+          </div>
         </div>
       </div>
 
-      <div className="col-span-2 row-span-3 p-2 bg-purple-300 rounded-lg">PeruseProjects</div>
-      <div className="col-span-4 row-span-2 p-2 bg-purple-300 rounded-lg">MapOfUsers</div>
-      <div className="col-span-2 row-span-2 p-2 bg-purple-300 rounded-lg">LatestContributors</div>
+      <div className="col-span-2 row-span-3 p-2 border-4 border-white rounded-lg bg-violet-950">
+        <PeruseProjects />
+      </div>
+      <div className="col-span-4 row-span-2 p-2 overflow-hidden rounded-lg bg-violet-950">
+        <MapOfUsers />
+      </div>
+      <div className="col-span-2 row-span-2 p-2 rounded-lg bg-violet-950">
+        <LatestContributors />
+      </div>
     </div>
   );
 };

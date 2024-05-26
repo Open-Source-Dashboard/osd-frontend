@@ -14,26 +14,27 @@ const MyCommits = () => {
   const [error, setError] = useState(null);
 
   return (
-    <div className="row-1-card">
-      <h2 className="mt-0 mb-2 text-xl font-bold">My Opensource Commits</h2>
-      <div className="flex flex-col card-content">
+    <div className="h-full p-2 overflow-scroll rounded-lg shadow-md bg-violet-950 shadow-gray-500/50">
+      <h2 className="mt-0 mb-2 text-md bold text-">My Opensource Commits</h2>
+      <div className="card-content">
         <div className="flex items-center justify-between p-2">
-        <div className="p-2 mr-1 bg-white bg-opacity-100 border-gray-300 rounded-lg">
-            <h3 className="pl-2 text-lg font-bold text-center text-orange-600">Total Commits</h3>
-            <img src={octocatHoldingDonut} alt="Octocat holding donut" className="mx-auto w-28 h-28" />
-            <p className="m-3 text-3xl font-bold text-center text-gray-800">{totalCommits}</p>
+          
+        <div className="w-48 h-48 mr-1 bg-white bg-opacity-100 rounded-lg">
+            <h3 className="mb-1 text-sm font-bold text-center text-orange-600 ">Total Commits</h3>
+            <img src={octocatHoldingDonut} alt="Octocat holding donut" className="w-20 h-20 mx-auto" />
+            <p className="text-2xl font-bold text-center text-gray-800 ">{totalCommits}</p>
             {loading && <p>Loading contributions...</p>}
             {error && <p>{error}</p>}
-            <p className="mt-3 mb-3 ml-6 mr-6 text-xs italic text-center text-gray-800">
+            <p className="mx-6 text-xs italic text-center text-gray-800 m">
               Since joining on _____{" "}
             </p>
           </div>
 
-          <div className="p-2 mr-1 bg-white border-gray-300 rounded-lg">
-            <h3 className="text-lg font-bold text-center text-orange-600">My Donut Boxes</h3>
-            <img src={donutBoxFull} alt="Donut box full" className="mx-auto w-28 h-28" />
-            <p className="p-3 text-3xl font-bold text-center text-gray-800">{donutBoxes}</p>
-            <p className="mt-1 mb-3 text-xs italic text-center text-gray-800">
+          <div className="w-48 h-48 bg-white rounded-lg">
+            <h3 className="mb-1 text-sm font-bold text-center text-orange-600">My Donut Boxes</h3>
+            <img src={donutBoxFull} alt="Donut box full" className="w-20 h-20 mx-auto" />
+            <p className="text-2xl font-bold text-center text-gray-800">{donutBoxes}</p>
+            <p className="mt-1 mb-2 text-xs italic text-center text-gray-800">
               Earn 12 donuts to add a donut box!{" "}
             </p>
           </div>
@@ -44,7 +45,7 @@ const MyCommits = () => {
             href="https://github.com/tammytdo#js-contribution-activity"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full p-2 mt-4 text-center text-white bg-teal-500 rounded shadow-md text-l"
+            className="w-48 p-2 text-xs text-center text-white bg-teal-500 rounded shadow-md"
           >
             My Github Profile
           </a>

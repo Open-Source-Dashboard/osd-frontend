@@ -6,7 +6,7 @@ const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
   
   return (
-    <div className="p-2 border-4 border-white rounded-lg bg-violet-900 ">
+    <div className="h-full overflow-scroll">
       <h2 className="mt-0 mb-4 text-xl font-bold text-left">Featured Opensource Project</h2>
         <div className="card-content bg-organge-300">
           {Object.keys(featuredRepo).length > 0? (
@@ -16,7 +16,7 @@ const FeaturedProject = () => {
           <img
             src={repo.owner.avatar_url}
             alt={repo.name}
-            className="w-40 h-40 rounded-lg"
+            className="w-20 h-20 rounded-lg"
           />
         ) : (
           <img

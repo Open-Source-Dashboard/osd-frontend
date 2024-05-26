@@ -21,18 +21,18 @@ const PeruseProjects = () => {
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
   
   return (
-    <div className="shadow-gray-500/50 row-2-card bg-violet-950">
-      <h2 className="mb-4 text-xl font-bold mt-0">Peruse Projects</h2>
+    <div className="h-full overflow-scroll shadow-gray-500/50 bg-violet-950">
+      <h2 className="mt-0 mb-4 text-xl font-bold">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
 
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
           {currentRepos.map((repo) => (
 
   <li
     key={repo.id}
-    className='card-content-li'
+    className=' card-content-li'
   >
     {repo.owner && repo.owner.avatar_url ? ( 
       <img
@@ -55,7 +55,7 @@ const PeruseProjects = () => {
         href={repo.html_url}
         target="_blank"
         rel="noreferrer"
-        className="font-bold text-blue-600"
+        className="text-sm font-bold text-orange-600"
       >
         {repo.name}
       </a>
@@ -63,8 +63,8 @@ const PeruseProjects = () => {
     <p className="text-sm text-gray-600">
       ⭐ {repo.stargazers_count}
     </p>
-    <p className="p-1 text-sm text-purple-600 mb3-2">{repo.description}</p>
-    <p className="text-sm text-gray-600">
+    <p className="p-1 text-xs text-purple-600 mb3-2">{repo.description}</p>
+    <p className="text-xs text-gray-600">
       Topics:{" "}
       {repo.topics.map((topic, index) => (
         <span key={topic}>
@@ -78,14 +78,14 @@ const PeruseProjects = () => {
           </ul>
           <button
             onClick={handlePrevPage}
-            className={`carousel-button absolute left-0 top-1/2 transform -translate-y-1/2`}
+            className={`carousel-button absolute left-0 top-1/4`}
             disabled={currentPage === 0}
           >
             Prev
           </button>
           <button
             onClick={handleNextPage}
-            className={`carousel-button absolute right-0 top-1/2 transform -translate-y-1/2`}
+            className={`carousel-button absolute right-0 top-1/4`}
             disabled={indexOfLastRepo >= popularRepos.length}
 
           >

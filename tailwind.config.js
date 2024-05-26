@@ -24,6 +24,12 @@ module.exports = {
         'custom-light': '0 2px 5px rgba(255, 255, 255, 0.15)',
         'custom-dark': '5px 5px 15px rgba(0, 0, 0, 0.3)',
       },
+      gridTemplateRows: {
+        'layout': 'repeat(6, minmax(100px, 1fr))',
+      },
+      gridTemplateColumns: {
+        'layout': 'repeat(6, 1fr)',
+      },
     },
   },
   variants: {

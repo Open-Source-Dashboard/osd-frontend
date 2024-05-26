@@ -11,7 +11,7 @@ const CommitGraph = () => {
       <img 
         src={imageUrl} 
         alt="GitHub Commit Graph" 
-        className="h-auto max-w-full rounded-sm" 
+        className="h-auto max-w-full rounded-lg" 
       />
     </div>
   );
