@@ -7,7 +7,7 @@ const FeaturedProject = () => {
   
   return (
     <div className="h-full overflow-scroll">
-      <h2 className="mt-0 mb-4 text-xl font-bold text-left">Featured Opensource Project</h2>
+      <h2 className="mt-0 mb-2 text-xl font-bold text-left">Featured Opensource Project</h2>
         <div className="card-content bg-organge-300">
           {Object.keys(featuredRepo).length > 0? (
             featuredRepo.map((repo) => (

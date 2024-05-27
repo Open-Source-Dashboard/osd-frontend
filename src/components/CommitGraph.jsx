@@ -7,7 +7,9 @@ const CommitGraph = () => {
   const imageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=ariley215&theme=dracula&line=FFD700&point=00FFFF`;
 
   return (
-    <div className="text-center">
+<div className="relative text-center" 
+      // style={{ clipPath: 'inset(30px 0 0 0)' }}
+      >
       <img 
         src={imageUrl} 
         alt="GitHub Commit Graph" 

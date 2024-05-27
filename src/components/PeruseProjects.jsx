@@ -22,7 +22,7 @@ const PeruseProjects = () => {
   
   return (
     <div className="h-full overflow-scroll shadow-gray-500/50 bg-violet-950">
-      <h2 className="mt-0 mb-4 text-xl font-bold">Peruse Projects</h2>
+      <h2 className="mt-0 mb-2 text-xl font-bold">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
@@ -32,13 +32,14 @@ const PeruseProjects = () => {
 
   <li
     key={repo.id}
-    className=' card-content-li'
+    className='card-content-li'
   >
+    <div className="flex justify-center">
     {repo.owner && repo.owner.avatar_url ? ( 
       <img
         src={repo.owner.avatar_url}
         alt={repo.name}
-        className="rounded-lg h-25 w-25"
+        className="w-20 h-20 rounded-lg "
       />
     ) : 
     // Render a donut image if avatar_url not defined
@@ -46,16 +47,17 @@ const PeruseProjects = () => {
       <img
         src={backupDonutImage} 
         alt={repo.name}
-        className="rounded-lg w-25 h-25"
+        className="w-20 h-20 rounded-lg"
       />
     )}
+    </div>
 
     <h2>
       <a
         href={repo.html_url}
         target="_blank"
         rel="noreferrer"
-        className="text-sm font-bold text-orange-600"
+        className="text-sm font-bold text-blue-600"
       >
         {repo.name}
       </a>

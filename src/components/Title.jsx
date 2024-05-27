@@ -7,7 +7,7 @@ const Title = () => {
         <h1 className="text-3xl font-bold text-teal-300">
           Donut Dashboard
         </h1>
-        <div className="subtitle">
+        <div className="mb-0 subtitle">
           Virtually Sweet Rewards for Opensource Project Contributions
         </div>
       </Link>
