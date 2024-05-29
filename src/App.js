@@ -10,15 +10,17 @@ import StaticDashboard from "./views/StaticDashboard";
 // import Login from "./auth/Login";
 import { useAuth } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
-import { UserProvider, useUser } from "./api_calls/UserContext";
+import { UserProvider } from "./api_calls/UserContext";
+// import { useUser } from "./api_calls/UserContext";
+
 // import MapOfUsers from "./views/MapOfUsers";
 
 function App() {
   const { user } = useAuth();
-  const userData = useUser();
+  // const userData = useUser();
 
   console.log('user from App.jsx', user);
-  console.log('userData from UserContext', userData);
+  // console.log('userData from UserContext', userData);
 
   return (
     <Router>
@@ -27,7 +29,7 @@ function App() {
           <div>
             <NavBar />
             <Routes>
-              <Route path="/" element={userData.github_username ? <Dashboard /> : <StaticDashboard />} />
+              <Route path="/" element={user.github_username ? <Dashboard /> : <StaticDashboard />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="*" element={<Feedback />} />
               <Route path="/authentication" element={<Authentication />} />
