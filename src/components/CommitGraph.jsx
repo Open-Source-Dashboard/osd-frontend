@@ -4,7 +4,7 @@ const CommitGraph = () => {
   // TODO Remove hard coded name
   // Remove title from inside graph
   // Add title outside of graph to match the other section titles
-  const imageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=ariley215&theme=dracula&line=FFD700&point=00FFFF`;
+  const imageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=ariley215&theme=dracula&line=FFD700&point=00FFFF&height=280`;
 
   return (
 <div className="relative text-center" 

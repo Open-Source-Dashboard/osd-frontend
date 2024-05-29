@@ -7,7 +7,7 @@ const NavLeft = () => {
   
   return (
     <div>
-      <div className="flex flex-col p-3 text-sm border-4 border-white rounded-lg justify-left">
+      <div className="flex flex-col p-3 text-sm rounded-lg justify-left">
           {/* Conditionally render auth buttons */}
           {isAuthenticated ? (
             <button
@@ -22,23 +22,30 @@ const NavLeft = () => {
           ) : (
             <AuthButtons /> 
           )}
-            <div className="flex flex-col space-y-3 text-sm justify-left">
-            <a
-                href="https://github.com/orgs/Open-Source-Dashboard/repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 border-gray-300 rounded-md"
-                >
-                <span>Visit the Repository</span>
-                <FaGithub />
-                </a>
-                <Link to="/about-us">
-                The Team
-                </Link>
-                <Link to="/feedback">
-                Give Feedback
-                </Link>
-            </div>
+        <div className="flex flex-col space-y-10 text-sm justify-left">
+        <a
+            href="https://github.com/tammytdo#js-contribution-activity"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Github Profile
+          </a>
+          <a
+            href="https://github.com/orgs/Open-Source-Dashboard/repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center border-gray-300 rounded-md"
+          >
+            <span>Donut Dashboard Repo</span>
+          </a>
+          <Link to="/about-us">
+            The Team
+          </Link>
+          <Link to="/feedback" >
+            Give Feedback
+          </Link>
+        </div>
+
         </div>
     </div>
   );
