@@ -6,6 +6,7 @@ import AboutUs from "./views/AboutUs";
 import Authentication from "./views/Authentication";
 import Dashboard from "./views/Dashboard";
 import Feedback from "./views/Feedback";
+import GetStartedModal from "./components/GetStartedModal"
 import StaticDashboard from "./views/StaticDashboard";
 // import Login from "./auth/Login";
 import { useAuth } from "./auth/AuthContext";
@@ -31,7 +32,8 @@ function App() {
             <Routes>
               <Route path="/" element={user.github_username ? <Dashboard /> : <StaticDashboard />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="*" element={<Feedback />} />
+              <Route path="/feedback" element={<Feedback />} />
+              <Route path="/getting-started" element={<GetStartedModal />} />
               <Route path="/authentication" element={<Authentication />} />
               {/* <Route path="/github/callback" element={<Login />} /> */}
               {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
