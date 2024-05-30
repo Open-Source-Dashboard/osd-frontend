@@ -15,10 +15,19 @@ export const UserProvider = ({ children }) => {
                         Authorization: `Bearer ${localStorage.getItem("user_access_token")}`
                     }
                 });
-                setUser(response.data);
-                console.log('Fetched user data:', response.data); 
+                const user = response.data;
+                setUser(user);
+                console.log('Fetched user data:', user);
+
+                // Send username to backend. Can I link this to the existing /check-user path?
+                await axios.post(`${API_SERVER_URL}/accounts/users/check-user`, { username: user.username }, {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("user_access_token")}`
+                    }
+                });
+                console.log('Username sent to backend');
             } catch (error) {
-                console.error("Error fetching user data:", error);
+                console.error("Error fetching or sending user data:", error);
             }
         };
 
