@@ -34,9 +34,10 @@ const MyCommits = () => {
             <p className="m-3 text-3xl font-bold text-center text-gray-800">
               {totalCommits}
             </p>
+
             {loading && <p>Loading contributions...</p>}
             {error && <p>{error}</p>}
-            <p className="mt-3 mb-3 ml-6 mr-6 text-xs italic text-center text-gray-800">
+            <p className="px-1 text-xs text-center text-gray-800">
               Since joining on _____{" "}
             </p>
           </div>
@@ -70,7 +71,7 @@ const MyCommits = () => {
           </a>
         </div>
       </div>
-    </div>
+
   );
 };
 

@@ -83,26 +83,26 @@ const StampCard = () => {
   };
   
   return (
-    <div className="flex-grow w-3/4 h-auto p-0 bg-transparent border-none row-1-card no-shadow">
+    <div className="h-auto p-0 bg-transparent border-none row-1-card no-shadow">
     <div className="flex items-center justify-center w-full ">
       <div
-        className="relative w-5/6 p-3 bg-center bg-cover rounded-md shadow-inner"
+        className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner"
         style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}
       >
-          <div className="relative p-2 bg-white border-none rounded-md">
-            <h2 className="mt-0 mb-0 text-2xl font-bold text-center text-gray-800">
+          <div className="relative bg-white border-none rounded-md">
+            <h2 className="mt-0 mb-0 text-xl font-bold text-center text-gray-800">
               My Donuts
             </h2>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 rounded-b-md"></div>
           </div>
 
-          <div className="grid grid-cols-4 grid-rows-3 gap-1 mx-auto mb-2 place-items-center">
+          <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 place-items-center">
             {stampedDonuts.map((iconNumber, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center w-16 h-16 m-1 bg-teal-200 rounded-lg shadow-md shadow-lg shadow-gray-500/50"
+                className="flex items-center justify-center m-1 bg-teal-200 rounded-lg shadow-md shadow-lg h-11 w-11 shadow-gray-500/50"
               >
-                <div className="flex items-center justify-center w-16 h-16 p-1">
+                <div className="flex items-center justify-center h-11 w-11">
                   <ColorDonutIcon number={iconNumber} />
                 </div>
               </div>
@@ -110,7 +110,7 @@ const StampCard = () => {
             {emptyDonuts.map((iconNumber, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center w-16 h-16 p-1 bg-teal-100 rounded-lg shadow-md"
+                className="flex items-center justify-center bg-teal-100 rounded-lg shadow-md h-11 w-11"
               >
                 <OutlineDonutIcon number={iconNumber} />
               </div>
@@ -120,7 +120,7 @@ const StampCard = () => {
           <div className="relative mt-2 bg-white border-none rounded-md">
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300 rounded-b-md"></div>
           </div>
-            <p className="pt-2 italic text-center text-gray-700 text-s">
+            <p className="pt-2 text-sm italic text-center text-gray-700">
               Earn a donut for every opensource commit.
             </p>
             <p className="p-1 text-xs italic text-center text-orange-600">
