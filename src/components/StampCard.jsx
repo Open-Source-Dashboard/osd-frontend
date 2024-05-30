@@ -89,7 +89,7 @@ const StampCard = () => {
         className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner"
         style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}
       >
-          <div className="relative p-2 bg-white border-none rounded-md">
+          <div className="relative bg-white border-none rounded-md">
             <h2 className="mt-0 mb-0 text-xl font-bold text-center text-gray-800">
               My Donuts
             </h2>
@@ -100,9 +100,9 @@ const StampCard = () => {
             {stampedDonuts.map((iconNumber, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center m-1 bg-teal-200 rounded-lg shadow-md shadow-lg h-9 w-9 shadow-gray-500/50"
+                className="flex items-center justify-center m-1 bg-teal-200 rounded-lg shadow-md shadow-lg h-11 w-11 shadow-gray-500/50"
               >
-                <div className="flex items-center justify-center w-8 h-8 p-1">
+                <div className="flex items-center justify-center h-11 w-11">
                   <ColorDonutIcon number={iconNumber} />
                 </div>
               </div>
@@ -110,7 +110,7 @@ const StampCard = () => {
             {emptyDonuts.map((iconNumber, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-1 bg-teal-100 rounded-lg shadow-md h-9 w-9"
+                className="flex items-center justify-center bg-teal-100 rounded-lg shadow-md h-11 w-11"
               >
                 <OutlineDonutIcon number={iconNumber} />
               </div>
