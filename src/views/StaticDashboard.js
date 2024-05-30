@@ -5,6 +5,7 @@ import LatestContributors from '../components/LatestContributors';
 import PeruseProjects from '../components/PeruseProjects';
 import FeaturedProject from '../components/FeaturedProject';
 import CommitGraphStatic from '../components/CommitGraphStatic';
+import NavLeft from '../components/NavLeft';
 
 const StaticDashboard = () => {
   return (
@@ -14,9 +15,9 @@ const StaticDashboard = () => {
       <main className='flex-grow'>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
+          <NavLeft />
           <StampCardStatic />
           <MyCommitsStatic />
-          <LatestContributors/>
         </div>
         {/* Row 2 */}
         <div className='flex flex-col items-center justify-center grid-cols-1 gap-4 m-4 row-3-card md:flex-rowgrid md:grid-cols-2'>
@@ -26,6 +27,7 @@ const StaticDashboard = () => {
         <div className='flex flex-col items-center justify-center gap-4 p-4 md:flex-row'>
           <PeruseProjects className='w-full md:w-auto md:flex-grow' />
           <FeaturedProject className='w-full md:w-auto md:flex-grow' />
+          <LatestContributors/>
         </div>
 
       </main>

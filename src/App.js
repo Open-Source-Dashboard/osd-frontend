@@ -24,7 +24,7 @@ function App() {
       {/* <UserProvider> */}
       <RepoProvider>
         <div>
-          <NavBar />
+          {/* <NavBar /> */}
           <Routes>
           <Route path="/" element={user && user.github_username ? <Dashboard /> : <StaticDashboard />} />
             <Route path="/about-us" element={<AboutUs />} />
@@ -33,7 +33,7 @@ function App() {
             {/* <Route path="/github/callback" element={<Login />} /> */}
             {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </RepoProvider>
       {/* </UserProvider> */}
