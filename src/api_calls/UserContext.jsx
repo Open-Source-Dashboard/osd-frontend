@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
 
     useEffect(() => {
         const getUserData = async () => {
+            // TODO: This try returns an error every time. Cannot find /accounts/users/me/.
             try {
                 const response = await axios.get(`${API_SERVER_URL}/accounts/users/me/`, {
                     headers: {

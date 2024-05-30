@@ -11,8 +11,8 @@ const NavBar = () => {
           <h1 className="self-center p-3 pb-2 mt-2 xs:text-m sm:text-l md:text-xl lg:text-3xl
           text-teal-300 
           ">Donut Dashboard
-          <h2 className="self-center py-0 text-lg font-normal sm:text-m md:text-l lg:text-l mt-0 mb-0">Virtually Sweet Rewards for Opensource Project Contributions</h2>
           </h1>
+          <h2 className="self-center py-0 text-lg font-normal sm:text-m md:text-l lg:text-l mt-0 mb-0">Virtually Sweet Rewards for Opensource Project Contributions</h2>
         </Link>
         <div className="flex items-center space-x-4">
           {/* <Link to="/getting-started" className="px-3 py-2 text-base font-medium rounded-md">

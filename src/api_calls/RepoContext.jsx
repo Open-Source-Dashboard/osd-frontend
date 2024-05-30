@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
-import sampleRepoResponse from "../sampleData/sampleRepoResponse.json"; // keep for testing
+// import sampleRepoResponse from "../sampleData/sampleRepoResponse.json"; // keep for testing
 export const RepoContext = createContext();
 
 export const RepoProvider = ({ children }) => {
@@ -17,21 +17,21 @@ export const RepoProvider = ({ children }) => {
 
         // Comment out while testing to minimize API calls
 
-        // const response = await axios.get(`${API_SERVER_URL}/repos`);
-        // const {
-        //   featured_repo_result,
-        //   latest_contributors_result,
-        //   popular_repos_result,
-        //   // repositories,
-        // } = response.data;
-
-        // Use while testing to minimize API calls
+        const response = await axios.get(`${API_SERVER_URL}/repos`);
         const {
           featured_repo_result,
           latest_contributors_result,
           popular_repos_result,
           // repositories,
-        } = sampleRepoResponse;
+        } = response.data;
+
+        // Use while testing to minimize API calls
+        // const {
+        //   featured_repo_result,
+        //   latest_contributors_result,
+        //   popular_repos_result,
+        //   // repositories,
+        // } = sampleRepoResponse;
 
         setFeaturedRepo(featured_repo_result);
         setLatestContributors(latest_contributors_result);

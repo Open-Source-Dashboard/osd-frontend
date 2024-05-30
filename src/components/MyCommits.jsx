@@ -71,7 +71,7 @@ const MyCommits = () => {
           </a>
         </div>
       </div>
-
+    </div>
   );
 };
 
