@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 const NavLeft = () => {
   const isAuthenticated = !!localStorage.getItem('github_token');
   const { user } = useAuth();
-  let username = user.github_username || 'null'
+  let username = user.github_username? || 'null'
 
   return (
     <div>
