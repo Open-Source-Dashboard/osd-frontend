@@ -6,7 +6,6 @@ import { FaGithub } from 'react-icons/fa';
 const NavLeft = () => {
   const isAuthenticated = !!localStorage.getItem('github_token');
   const { user } = useAuth();
-  let username = user.github_username? || 'null'
 
   return (
     <div>
@@ -27,7 +26,7 @@ const NavLeft = () => {
           )}
         <div className="flex flex-col space-y-10 text-sm justify-left">
         <a
-            href={`https://github.com/${username}#js-contribution-activity`}
+            href={`https://github.com/${user.github_username}#js-contribution-activity`}
             target="_blank"
             rel="noopener noreferrer"
           >
