@@ -14,7 +14,6 @@ import 'leaflet/dist/leaflet.css';
 
 const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
-
 const Dashboard = () => {
   const [isNewUser, setIsNewUser] = useState(false);
   const [loading, setLoading] = useState(false);
