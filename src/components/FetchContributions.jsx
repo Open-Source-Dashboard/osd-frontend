@@ -47,8 +47,6 @@ const fetchContributions = async (username) => {
   
   try {
     const graphQLQuery = getGraphQLQuery(username, from, to);
-
-    // RESUME HERE 
     const apiResponse = await fetchGraphQLData(graphQLQuery);
 
     if (apiResponse.data.data.user === null) {

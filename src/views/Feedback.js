@@ -4,32 +4,6 @@ import { useAuth } from '../auth/AuthContext';
 // import axios from 'axios';
 import emailjs from 'emailjs-com';
 
-
-
-// const Feedback = () => {
-//     const { user } = useAuth();
-//     const [email, setEmail] = useState(''); 
-//     const [message, setMessage] = useState('');
-//     const [feedbackSent, setFeedbackSent] = useState(false);
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         const feedbackData = {
-//             name: user.github_username, 
-//             email: email, 
-//             message: message
-//         };
-//         try {
-//             await axios.post(process.env.REACT_APP_BACKEND_URL + '/feedback', feedbackData);
-//             setFeedbackSent(true);
-//             setMessage('');
-//             setEmail('');  
-//         } catch (error) {
-//             console.error("Error sending feedback:", error);
-//         }
-//     };
-
-
 // use of EmailJS to send feedback until backend is implemented for axios call and feedback data storage and/or initiating email
 const Feedback = () => {
     const { user } = useAuth();
