@@ -13,23 +13,11 @@ const StaticDashboard = () => {
       <div className='slider-container'>
       </div>
       <main className='flex-grow'>
+          <h1 style={{fontSize:'2em', color:'yellow', marginLeft:'2%'}}>** Login to see the live dashboard **</h1>
         {/* Row 1 */}
         <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-3'>
           <NavLeft />
-          <StampCardStatic />
-          <MyCommitsStatic />
         </div>
-        {/* Row 2 */}
-        <div className='flex flex-col items-center justify-center grid-cols-1 gap-4 m-4 row-3-card md:flex-rowgrid md:grid-cols-2'>
-          <CommitGraphStatic />
-          </div>
-        {/* Row 3 */}
-        <div className='flex flex-col items-center justify-center gap-4 p-4 md:flex-row'>
-          <PeruseProjects className='w-full md:w-auto md:flex-grow' />
-          <FeaturedProject className='w-full md:w-auto md:flex-grow' />
-          <LatestContributors/>
-        </div>
-
       </main>
     </div>
   );
