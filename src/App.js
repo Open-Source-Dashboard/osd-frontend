@@ -15,7 +15,6 @@ import { UserProvider } from "./api_calls/UserContext";
 function App() {
   const { user } = useAuth();
   console.log('user object from App.jsx', user);
-
   // const userData = useUser();
   // console.log('userData from UserContext', userData);
 
