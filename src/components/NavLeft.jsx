@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import AuthButtons from '../auth/AuthButtons';
+import { useAuth } from "../auth/AuthContext";
 import { FaGithub } from 'react-icons/fa';
 
 const NavLeft = () => {
   const isAuthenticated = !!localStorage.getItem('github_token');
-  
+  const { user } = useAuth();
+
   return (
     <div>
       <div className="flex flex-col p-3 text-sm rounded-lg justify-left">
@@ -24,7 +26,7 @@ const NavLeft = () => {
           )}
         <div className="flex flex-col space-y-10 text-sm justify-left">
         <a
-            href="https://github.com/tammytdo#js-contribution-activity"
+            href={`https://github.com/${user.github_username}#js-contribution-activity`}
             target="_blank"
             rel="noopener noreferrer"
           >

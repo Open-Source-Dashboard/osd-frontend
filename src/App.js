@@ -1,25 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import AboutUs from "./views/AboutUs";
 import Authentication from "./views/Authentication";
 import Dashboard from "./views/Dashboard";
 import Feedback from "./views/Feedback";
+import PageNotFound from "./views/PageNotFound";
 import StaticDashboard from "./views/StaticDashboard";
-// import Login from "./auth/Login";
 import { useAuth } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
 import { UserProvider } from "./api_calls/UserContext";
 // import { useUser } from "./api_calls/UserContext";
 
-// import MapOfUsers from "./views/MapOfUsers";
 
 function App() {
   const { user } = useAuth();
+  console.log('user object from App.jsx', user);
   // const userData = useUser();
-
-  console.log('user from App.jsx', user);
   // console.log('userData from UserContext', userData);
 
   return (
@@ -27,16 +23,13 @@ function App() {
       <UserProvider>
         <RepoProvider>
           <div>
-            {/* <NavBar /> */}
             <Routes>
               <Route path="/" element={user.github_username ? <Dashboard /> : <StaticDashboard />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="*" element={<Feedback />} />
               <Route path="/authentication" element={<Authentication />} />
-              {/* <Route path="/github/callback" element={<Login />} /> */}
-              {/* <Route path="/projects/:id" element={<MapOfUsers />} /> */}
+              <Route path="/feedback" element={<Feedback />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
-            {/* <Footer /> */}
           </div>
         </RepoProvider>
       </UserProvider>

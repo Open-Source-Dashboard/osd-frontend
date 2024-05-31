@@ -7,7 +7,7 @@ const teamMembers = [
     name: "Tammy",
     linkedin: "https://www.linkedin.com/in/tammytdo/",
     github: "https://github.com/tammytdo",
-    donut: "Matcha Mochi Donut with Oreo",
+    donut: "Matcha Mochi with Oreo",
   },
   {
     pfp: process.env.PUBLIC_URL + "/lana_zumbrunn.png",

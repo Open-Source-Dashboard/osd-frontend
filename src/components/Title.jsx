@@ -8,7 +8,7 @@ const Title = () => {
           Donut Dashboard
         </h1>
         <div className="ml-6 subtitle">
-          Virtually Sweet Rewards for Opensource Project Contributions
+          <h2>Virtually Sweet Rewards for Opensource Project Contributions</h2>
         </div>
       </Link>
     </div>
