@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
 
-const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL; // change the callback path in the future
+const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
 // const ghClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 // const osdAuthUrl = "";
 
@@ -20,6 +20,9 @@ export function AuthProvider({ children }) {
   });
 
   const saveTokenToLocalStorage = (userAccessToken) => {
+    console.log('saveTokenToLocalStorage function called')
+    console.log('userAccessToken function called')
+
     localStorage.setItem("user_access_token", userAccessToken);
   };
 
@@ -52,8 +55,8 @@ export function AuthProvider({ children }) {
         const newUser = {
           user: userResponse.data,
         };
-        saveTokenToLocalStorage(userResponse.data.token);
-        console.log("New user and access token from the server: ", newUser);
+        const access_token = userResponse.data.access_token;
+        saveTokenToLocalStorage(access_token);
 
         setUserState((prevState) => ({
           ...prevState,
