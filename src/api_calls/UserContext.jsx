@@ -4,42 +4,55 @@ import axios from "axios";
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-    const [userData, setUser] = useState({});
-    const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
+  const [userData, setUser] = useState({});
+  const [tokenChecked, setTokenChecked] = useState(false);
+  const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
-    useEffect(() => {
-        const getUserData = async () => {
-            try {
-                // TODO: create this path on server
-                const response = await axios.get(`${API_SERVER_URL}/accounts/users/me/`, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem("user_access_token")}`
-                    }
-                });
-                const user = response.data;
-                setUser(user);
-                console.log('Fetched user data:', user);
+  useEffect(() => {
+    const checkForTokenAndFetchUserData = async () => {
+      const token = localStorage.getItem("user_access_token");
+      if (!token) {
+        console.log("No access token found in localStorage");
+        setTokenChecked(false);
+        return;
+      }
+      setTokenChecked(true);
 
-                // Send username to backend. Can I link this to the existing /check-user path?
-                await axios.post(`${API_SERVER_URL}/accounts/users/check-user`, { username: user.username }, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem("user_access_token")}`
-                    }
-                });
-                console.log('Username sent to backend');
-            } catch (error) {
-                console.error("Error fetching or sending user data:", error);
-            }
-        };
+      try {
+        const response = await axios.get(
+          `${API_SERVER_URL}/repos/api/github/commit-history/`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
-        getUserData();
-    }, [API_SERVER_URL]);
+        const user = response.data;
+        setUser(user);
+        console.log("Response from commit-history path:", user);
+      } catch (error) {
+        console.error("Error fetching or sending user data:", error);
+      }
+    };
 
-    return (
-        <UserContext.Provider value={userData}>
-            {children}
-        </UserContext.Provider>
-    );
+    if (!tokenChecked) {
+      const intervalId = setInterval(() => {
+        const token = localStorage.getItem("user_access_token");
+        if (token) {
+          clearInterval(intervalId);
+          checkForTokenAndFetchUserData();
+        }
+      }, 1000);
+      return () => clearInterval(intervalId);
+    } else {
+      checkForTokenAndFetchUserData();
+    }
+  }, [API_SERVER_URL, tokenChecked]);
+
+  return (
+    <UserContext.Provider value={userData}>{children}</UserContext.Provider>
+  );
 };
 
 export const useUser = () => useContext(UserContext);
