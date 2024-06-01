@@ -15,30 +15,28 @@ export function AuthProvider({ children }) {
   const [userState, setUserState] = useState({
     user: {},
     login,
-    getUserButtonUrl,
     isLoading: false,
   });
+
+  // TODO: Find a better place to invoke this
+  determineAuthUrl()
 
   const saveTokenToLocalStorage = (userAccessToken) => {
     localStorage.setItem("user_access_token", userAccessToken);
   };
 
   // // Determine the URL for the user button based on authentication status
-  function getUserButtonUrl() {
+  function determineAuthUrl() {
     if (userState.user.github_username) {
-      // User is already authenticated with GitHub
       console.log('User is already authenticated with GitHub');
       return "#";
 
     } else if (localStorage.getItem("user_access_token")) {
-      // User has a valid access token in local storage
       console.log('User has a valid access token in local storage');
       return "";
 
     } else {
-      // User is not authenticated, provide GitHub OAuth URL for login
       console.log('User is not authenticated, provide GitHub OAuth URL for login');
-
       return `https://github.com/login/oauth/authorize?client_id=${ghClientId}`;
     }
   }

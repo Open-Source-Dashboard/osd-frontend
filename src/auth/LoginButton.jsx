@@ -3,9 +3,6 @@ import { useAuth } from './AuthContext';
 import { FaGithub } from 'react-icons/fa';
 
 const LoginButton = () => {
-  const { getUserButtonUrl } = useAuth();
-
-  getUserButtonUrl()
 
   return (
     <a

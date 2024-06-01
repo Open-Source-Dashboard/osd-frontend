@@ -10,6 +10,7 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         const getUserData = async () => {
             try {
+                // TODO: create this path on server
                 const response = await axios.get(`${API_SERVER_URL}/accounts/users/me/`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("user_access_token")}`
