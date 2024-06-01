@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
 import NavLeft from "../components/NavLeft";
@@ -12,26 +11,10 @@ import MapOfUsers from "./MapOfUsers";
 import 'leaflet/dist/leaflet.css';
 
 
-const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
-
 const Dashboard = () => {
-  const [isNewUser, setIsNewUser] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useState(() => {
-    const checkUser = async () => {
-      console.log('TODO: Add logic to check whether authenticated user is not in database, already exists in database, or had a fetch error')
-      // try {
-      //   const response = await axios.get(`${API_SERVER_URL}/accounts/users`); // Double check user API endpoint
-      //   setIsNewUser(response.data.isNewUser);
-      //   console.log('response.data.isNewUser', response.data.isNewUser)
-      // } catch (error) {
-      //   console.error("Error checking user status", error);
-      // }
-      // setLoading(false);
-    };
-
-    checkUser();
   }, []);
 
   if (loading) {
