@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAuth } from './AuthContext';
 import { FaGithub } from 'react-icons/fa';
-import Login from './Login';
-import LogoutButton from './Logout';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 
 const AuthButtons = () => {
   const { user } = useAuth();
@@ -14,11 +14,13 @@ const AuthButtons = () => {
           <div className='flex items-center'>
             <span>{user.github_username}</span>
             <FaGithub className='ml-2' />
-          </div >
+          </div>
           <LogoutButton />
         </div>
       ) : (
-        <Login />
+        <>
+          <LoginButton />
+        </>
       )}
     </>
   );

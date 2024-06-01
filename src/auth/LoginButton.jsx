@@ -1,7 +1,12 @@
 import React from 'react';
+import { useAuth } from './AuthContext';
 import { FaGithub } from 'react-icons/fa';
 
-const Login = () => {
+const LoginButton = () => {
+  const { getUserButtonUrl } = useAuth();
+
+  getUserButtonUrl()
+
   return (
     <a
       href={'https://github.com/login/oauth/authorize?client_id=' + process.env.REACT_APP_GITHUB_CLIENT_ID}
@@ -12,4 +17,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginButton;
