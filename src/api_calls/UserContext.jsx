@@ -30,7 +30,7 @@ export const UserProvider = ({ children }) => {
 
         const user = response.data;
         setUser(user);
-        console.log("Response from commit-history path:", user);
+        console.log("User's recent commit-history:", user);
       } catch (error) {
         console.error("Error fetching or sending user data:", error);
       }

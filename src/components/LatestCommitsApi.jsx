@@ -1,41 +1,43 @@
-const axios = require('axios');
+// File not in use
 
-async function getCommitsSortedByDate(username, token) {
-    try {
-        // Set up the headers with your personal access token
-        const headers = {
-            'Authorization': `token ${token}`,
-            'Accept': 'application/vnd.github.cloak-preview'
-        };
+// const axios = require('axios');
 
-        // Define the parameters for sorting by author date in descending order
-        const params = {
-            q: `author:${username} sort:author-date-desc`
-        };
+// async function getCommitsSortedByDate(username, token) {
+//     try {
+//         // Set up the headers with your personal access token
+//         const headers = {
+//             'Authorization': `token ${token}`,
+//             'Accept': 'application/vnd.github.cloak-preview'
+//         };
 
-        // Make the GET request to the GitHub search commits API endpoint
-        const response = await axios.get('https://api.github.com/search/commits', { headers, params });
+//         // Define the parameters for sorting by author date in descending order
+//         const params = {
+//             q: `author:${username} sort:author-date-desc`
+//         };
 
-        if (response.status === 200) {
-            return response.data.items;
-        } else {
-            throw new Error(`Query failed with status code: ${response.status}`);
-        }
-    } catch (error) {
-        throw new Error(`An error occurred: ${error.message}`);
-    }
-}
+//         // Make the GET request to the GitHub search commits API endpoint
+//         const response = await axios.get('https://api.github.com/search/commits', { headers, params });
 
-// Usage
-const username = 'GITHUB_USERNAME';  // Replace with the GitHub username
-const token = 'YOUR_ACCESS_TOKEN';   // Replace with your GitHub personal access token
+//         if (response.status === 200) {
+//             return response.data.items;
+//         } else {
+//             throw new Error(`Query failed with status code: ${response.status}`);
+//         }
+//     } catch (error) {
+//         throw new Error(`An error occurred: ${error.message}`);
+//     }
+// }
 
-getCommitsSortedByDate(username, token)
-    .then(commits => {
-        commits.forEach(commit => {
-            console.log(commit.commit.author.date, commit.commit.message);
-        });
-    })
-    .catch(error => {
-        console.error(error.message);
-    });
+// // Usage
+// const username = 'GITHUB_USERNAME';  // Replace with the GitHub username
+// const token = 'YOUR_ACCESS_TOKEN';   // Replace with your GitHub personal access token
+
+// getCommitsSortedByDate(username, token)
+//     .then(commits => {
+//         commits.forEach(commit => {
+//             console.log(commit.commit.author.date, commit.commit.message);
+//         });
+//     })
+//     .catch(error => {
+//         console.error(error.message);
+//     });
