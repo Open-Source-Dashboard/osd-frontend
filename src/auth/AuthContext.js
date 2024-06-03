@@ -72,9 +72,9 @@ export function AuthProvider({ children }) {
 
   // Perform GitHub login by sending a GET request to the GitHub authentication URL with the provided user code
   async function ghLogin(ghUserCode) {
-    // console.log('ghLogin', ghUserCode)
     try {
       const response = await axios.get(`${ghAuthUrl}?code=${ghUserCode}`);
+      console.log("User data with updated opensource_commits_count", response);
       return response;
     } catch (error) {
       console.error("GitHub login error: ", error);

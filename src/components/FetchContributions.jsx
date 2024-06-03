@@ -58,7 +58,6 @@ const fetchContributions = async (username) => {
       };
 
       const weeks = apiResponse.data.data.user.contributionsCollection.contributionCalendar.weeks;
-      console.log('apiResponse.data', apiResponse)
 
       weeks.forEach((week) =>
         week.contributionDays.forEach((contributionDay) => {

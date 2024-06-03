@@ -14,7 +14,6 @@ import { UserProvider } from "./api_calls/UserContext";
 
 function App() {
   const { user } = useAuth();
-  console.log('user object from App.jsx', user);
   
   return (
     <Router>
