@@ -34,6 +34,7 @@ export const UserProvider = ({ children }) => {
 
         // small comment to test backend 1
         // small comment to test backend 2
+        // small comment to test backend 3
 
       } catch (error) {
         console.error("Error fetching or sending user data:", error);
