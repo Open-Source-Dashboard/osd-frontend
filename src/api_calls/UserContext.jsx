@@ -38,7 +38,6 @@ export const UserProvider = ({ children }) => {
         // small comment to test backend 4
         // small comment to test backend 5
         // small comment to test backend 6
-        // small comment to test backend 7
      
 
       } catch (error) {
