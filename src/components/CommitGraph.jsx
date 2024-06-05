@@ -1,7 +1,11 @@
 import React from "react";
+import { useAuth } from '../auth/AuthContext';
+
 
 const CommitGraph = () => {
-  const imageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=ariley215&theme=dracula&line=FFD700&point=00FFFF&height=280`;
+  const { user } = useAuth();
+
+  const imageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${user.github_username}&theme=dracula&line=FFD700&point=00FFFF&height=280`;
 
   return (
     <div className="relative text-center">
