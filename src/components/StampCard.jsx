@@ -1,6 +1,11 @@
 import { lazy, Suspense, useState, useEffect } from "react";
+import { useAuth } from "../auth/AuthContext";
+
+
 
 const StampCard = () => {
+  const { user } = useAuth();
+  // console.log('user call in StampCard.jsx', user)
   const [userDonutsCount, setUserDonutsCount] = useState(1); // We give everyone a donut to start!
   const [userDonutBoxCount, setUserDonutBoxCount] = useState(0);
   const [stampedDonuts, setStampedDonuts] = useState([]);
@@ -19,6 +24,7 @@ const StampCard = () => {
   }, [userDonutsCount]);
 
   useEffect(() => {
+    // TODO: Move logic from MyCommits to here.
     getUserDonutBoxCount(); // TODO: Calculate the number of donut boxes to show
   }, [userDonutBoxCount]);
 
@@ -26,8 +32,13 @@ const StampCard = () => {
     randomizeEmptyDonutsIcons(12 - stampedDonuts.length);
   }, [stampedDonuts]);
 
+  // TODO: fetch user donuts count from API
   function getUserDonutsCount() {
-    return 4; // TODO: fetch user donuts count from API
+    const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
+    console.log('total commits', totalCommits);
+    const currentDonutStamps = totalCommits % 12
+    console.log('currentDonutStamps', currentDonutStamps);
+    return currentDonutStamps; 
   }
 
   function getUserDonutBoxCount() {
