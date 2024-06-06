@@ -29,6 +29,10 @@ export function AuthProvider({ children }) {
   function determineAuthUrl() {
     if (userState.user.github_username) {
       console.log('User is already authenticated with GitHub');
+
+      // TODO: Add a loading spinner
+      console.log('Loading commit history... Wait 30 seconds...')
+
       return "#";
 
     } else if (localStorage.getItem("user_access_token")) {
@@ -75,6 +79,7 @@ export function AuthProvider({ children }) {
     try {
       const response = await axios.get(`${ghAuthUrl}?code=${ghUserCode}`);
       console.log("User data with updated opensource_commits_count", response);
+
       return response;
     } catch (error) {
       console.error("GitHub login error: ", error);
