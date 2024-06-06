@@ -1,13 +1,16 @@
 import React, { useContext, useState } from "react";
-import { UserContext } from "../api_calls/UserContext";
+// import { UserContext } from "../api_calls/UserContext";
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
 import donutBoxFull from "../assets/dozen-donuts.png";
-import FetchContributions from "./FetchContributions";
+// import FetchContributions from "./FetchContributions";
+import { useAuth } from "../auth/AuthContext";
 
 const MyCommits = () => {
-  const { opensource_commit_count } = useContext(UserContext);
-  const totalCommits = opensource_commit_count || 0;
-  const donutBoxes = Math.floor(totalCommits / 6);
+  const { user } = useAuth();
+  const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
+  // const totalCommits = 0
+  // console.log('totalCommits', totalCommits)
+  const donutBoxes = Math.floor(totalCommits / 12);
 
   const [contributions, setContributions] = useState([]);
   const [loading, setLoading] = useState(false);
