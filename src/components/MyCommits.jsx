@@ -5,8 +5,10 @@ import donutBoxFull from "../assets/dozen-donuts.png";
 import FetchContributions from "./FetchContributions";
 
 const MyCommits = () => {
-  const { opensource_commit_count } = useContext(UserContext);
-  const totalCommits = opensource_commit_count || 0;
+  // Store the opensource_commit_count var on the original axios call so that the call is made only once
+  // const { opensource_commit_count } = useContext(UserContext);
+  // const totalCommits = opensource_commit_count || 0; // Comment in for live variable
+  const totalCommits = 0; // Use for testing
   const donutBoxes = Math.floor(totalCommits / 6);
 
   const [contributions, setContributions] = useState([]);

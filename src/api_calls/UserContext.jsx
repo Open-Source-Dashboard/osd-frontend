@@ -29,12 +29,11 @@ export const UserProvider = ({ children }) => {
         );
 
         // small change to test backend
-        // small change to test backend
 
 
         const user = response.data;
         setUser(user);
-        console.log("User's recent commit-history:", user);
+        console.log("User commit-history from backend:", user);
 
       } catch (error) {
         console.error("Error fetching or sending user data:", error);
