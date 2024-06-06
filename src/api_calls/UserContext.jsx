@@ -29,7 +29,9 @@ export const UserProvider = ({ children }) => {
         );
 
         // small change to test backend
-        
+        // small change to test backend
+
+
         const user = response.data;
         setUser(user);
         console.log("User's recent commit-history:", user);
