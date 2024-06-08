@@ -5,7 +5,7 @@ Welcome to OpenSource Dashboard, where devs receive virtually sweet rewards <img
 Built with React App & Python Django styled with Tailwind CSS, and utilizing PostgreSQL.
 
 ### Authors
-- [Tammy Do](https://github.com/tammytdo)
+- [Tammy T. Do](https://github.com/tammytdo)
 - [Andrea Riley(Thiel)](https://github.com/ariley215)
 - [Lana Zumbrunn](https://github.com/lana-z)
 

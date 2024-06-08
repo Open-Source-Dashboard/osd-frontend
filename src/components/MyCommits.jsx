@@ -28,7 +28,7 @@ const MyCommits = () => {
           </div>
 
           <div className="w-48 bg-white rounded-lg h-54">
-          <h3 className="mt-2 mb-0 text-lg font-bold text-center text-gray-800">My Donut Boxes</h3>
+          <h3 className="mt-2 mb-0 text-lg font-bold text-center text-gray-800">Donut Boxes</h3>
             <img src={donutBoxFull} alt="Donut box full" className="w-20 h-20 mx-auto mt-2" />
             <p className="px-1 m-1 text-2xl font-bold text-center text-gray-800">{donutBoxes}</p>
             <p className="px-2 mt-1 mb-2 text-xs text-center text-gray-800">
