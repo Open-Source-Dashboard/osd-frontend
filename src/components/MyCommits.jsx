@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
-import donutBoxFull from "../assets/dozen-donuts.png";
+import donutBoxFull from "../assets/dozen-donuts-box.png";
 import { useAuth } from "../auth/AuthContext";
 
 const MyCommits = () => {
