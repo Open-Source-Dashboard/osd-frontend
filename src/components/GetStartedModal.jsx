@@ -1,8 +1,8 @@
 import React from "react";
+import { useAuth } from "./auth/AuthContext";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useAuth } from "./auth/AuthContext";
 // TODO: Create a logo for Donut Dashboard
 import logo from '../assets/donut-icons/color/donut-dashboard-logo.png';
 
