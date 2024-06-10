@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { RepoContext } from "../api_calls/RepoContext";
-import backupDonutImage from '../assets/donut-icons/color/1.png';
+import backupDonutImage from '../assets/donut-icons/color/donut-purple.png';
 
 const PeruseProjects = () => {
   const { popularRepos } = useContext(RepoContext);

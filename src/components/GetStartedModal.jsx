@@ -2,7 +2,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React from "react";
-import logo from '../assets/donut-logo-dark-purple.png';
+// TODO: Create a logo for Donut Dashboard
+import logo from '../assets/donut-icons/color/donut-dashboard-logo.png';
 
 const GetStartedModal = () => {
     const settings = {
@@ -20,7 +21,7 @@ const GetStartedModal = () => {
                     <Slider {...settings}>
                         <div className='carousel-slide flex items-center'>
                             <h1>Welcome!</h1>
-                            {/* <img src={logo} alt="Donut Logo" className=" w-48 h-48 object-cover align-middle"></img> */}
+                            {/* <img src={logo} alt="Donut Dashboard Logo" className=" w-48 h-48 object-cover align-middle"></img> */}
                             <p className='text-gray-700 font-semibold '>Welcome to Donut Dashboard—a place built for developers like you who are eager to contribute to Open Source projects.</p>
                             <h3>How it Works</h3>
                             <p className='text-gray-700 font-semibold '>Earn Donuts for Contributions: Each commit you make earns you a donut on your virtual donut reward card. For every six donuts you collect, you get a box of donuts. It's our way of adding a bit of fun to the serious business of coding!</p>
