@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Title from "../components/Title";
+import SubHeader from "../components/SubHeader";
 import FeaturedProject from "../components/FeaturedProject";
 import NavLeft from "../components/NavLeft";
 import StampCard from "../components/StampCard";
@@ -24,7 +24,7 @@ const Dashboard = () => {
   return (
     <div className="grid h-screen gap-4 m-3 mt-0" style={{ gridTemplateRows: 'repeat(12, 1fr)', gridTemplateColumns: 'repeat(18, 1fr)' }}>
       <div className="col-span-12 row-span-1 px-2 rounded-lg">
-        <Title />
+        <SubHeader />
       </div>
       <div className="col-span-6 row-span-4 px-2 pt-0 mt-4 overflow-scroll rounded-lg bg-violet-950">
         <LatestContributors />

@@ -27,6 +27,7 @@ const StampCard = () => {
   }, [stampedDonuts]);
 
   function getUserDonutsCount() {
+    // TODO: Implement logic so the total commits count in StampcardStatic always matches the count in MyCommitsStatic.
     return 20; 
   }
 
@@ -85,10 +86,10 @@ const StampCard = () => {
   return (
     <div className="flex-grow w-3/4 h-auto p-0 bg-transparent border-none row-1-card no-shadow">
       <div className="flex items-center justify-center w-full ">
-      <div
-        className="relative w-5/6 p-3 bg-center bg-cover rounded-md shadow-inner"
-        style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}
-      >
+        <div
+          className="relative w-5/6 p-3 bg-center bg-cover rounded-md shadow-inner"
+          style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}
+        >
           <div className="relative p-2 bg-white border-none rounded-md">
             <h2 className="mt-0 mb-0 text-2xl font-bold text-center text-gray-800">
               My Donuts
@@ -120,12 +121,12 @@ const StampCard = () => {
           <div className="relative mt-2 bg-white border-none rounded-md">
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300 rounded-b-md"></div>
           </div>
-            <p className="pt-2 italic text-center text-gray-700 text-s">
-              Earn a donut for every opensource commit.
-            </p>
-            <p className="p-1 text-xs italic text-center text-orange-600">
-              12 donuts equals a donut box!
-            </p>
+          <p className="pt-2 italic text-center text-gray-700 text-s">
+            Earn a donut for every opensource commit.
+          </p>
+          <p className="p-1 text-xs italic text-center text-orange-600">
+            12 donuts equals a donut box!
+          </p>
         </div>
       </div>
     </div>
