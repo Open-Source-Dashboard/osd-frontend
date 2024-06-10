@@ -29,8 +29,7 @@ export const UserProvider = ({ children }) => {
         );
         const user = response.data;
         setUser(user);
-        console.log("User's recent commit-history:", user);
-
+        console.log("User's recent commit history:", user);
       } catch (error) {
         console.error("Error fetching or sending user data:", error);
       }
@@ -51,7 +50,9 @@ export const UserProvider = ({ children }) => {
   }, [API_SERVER_URL, tokenChecked]);
 
   return (
-    <UserContext.Provider value={userData}>{children}</UserContext.Provider>
+    <UserContext.Provider value={userData}>
+      {children}
+    </UserContext.Provider>
   );
 };
 

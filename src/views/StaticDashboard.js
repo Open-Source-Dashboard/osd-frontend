@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLeftStatic from '../components/NavLeftStatic';
 
-// Reduced the static dashboard for testing purposes
+// TODO: Implement the static dashboard once testing is complete
 const StaticDashboard = () => {
   return (
     <div className='flex flex-col min-h-screen'>

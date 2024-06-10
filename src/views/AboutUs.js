@@ -41,9 +41,13 @@ const AboutUs = () => {
                     className="object-cover w-40 h-40 mx-auto bg-gray-200 rounded-full"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold text-orange-500">{member.name}</h3>
-                <p className="mb-4 text-xl text-white-600">Favorite Donut: {member.donut}</p>
-                
+                <h3 className="text-2xl font-semibold text-orange-500">
+                  {member.name}
+                </h3>
+                <p className="mb-4 text-xl text-white-600">
+                  Favorite Donut: {member.donut}
+                </p>
+
                 <div className="flex justify-center mt-2 space-x-2">
                   <a
                     href={member.linkedin}
@@ -68,11 +72,10 @@ const AboutUs = () => {
           ))}
         </div>
         <div className="mb-8 text-lg mt-14">
+          <p className="mb-2">Interested in our work?</p>
           <p className="mb-2">
-            Interested in our work? 
+            Visit our GitHub repository to learn more and contribute!
           </p>
-          <p className="mb-2">Visit our GitHub repository to learn more
-            and contribute!</p>
           <a
             href="https://github.com/Open-Source-Dashboard/osd-frontend"
             target="_blank"

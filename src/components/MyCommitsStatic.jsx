@@ -1,42 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
-import donutBoxFull from "../assets/dozen-donuts.png";
+import donutBoxFull from "../assets/dozen-donuts-box.png";
 
 const MyCommitsStatic = () => {
-  const totalCommits = 20;
-  const donutBoxes = 3;
+  const totalCommits = 20 || 1;
+  const donutBoxes = Math.floor(totalCommits / 12);
+
+  const currentDate = new Date();
+  const currentMonth = currentDate.toLocaleString("default", { month: "short" });
+  const currentYear = currentDate.getFullYear();
 
   return (
-    <div className="row-1-card">
-      <h2 className="mt-0 mb-2 text-xl font-bold">My Opensource Commits</h2>
-      <div className="flex flex-col card-content">
-        <div className="flex items-center justify-between p-2">
-          <div className="p-2 mr-1 bg-white border-gray-300 rounded-lg">
-            <h3 className="pl-2 text-lg font-bold text-center text-orange-600">Total Commits</h3>
-            <img src={octocatHoldingDonut} alt="Octocat holding donut" className="mx-auto w-28 h-28" />
-            <p className="m-3 text-3xl font-bold text-center text-gray-800">{totalCommits}</p>
-            <p className="mt-3 mb-3 ml-6 mr-6 text-xs italic text-center text-gray-800">
-              Since joining on _____{" "}
-            </p>
-          </div>
-          <div className="p-2 bg-white border-gray-300 rounded-lg">
-          <h3 className="text-lg font-bold text-center text-orange-600">My Donut Boxes</h3>
-            <img src={donutBoxFull} alt="Donut box full" className="mx-auto w-28 h-28" />
-            <p className="p-3 text-3xl font-bold text-center text-gray-800">{donutBoxes}</p>
-            <p className="mt-1 mb-3 text-xs italic text-center text-gray-800 ">
-              Earn 12 donuts to add a donut box!
-            </p>
-          </div>
+    <div className="mt-0 card-content">
+      <div className="flex items-center justify-between p-2 mt-0">
+        <div className="w-48 pb-2 mt-0 mr-2 bg-white rounded-lg h-54">
+          <h3 className="mb-0 text-lg font-bold text-center text-gray-800">Opensource Commits</h3>
+          <img src={octocatHoldingDonut} alt="Octocat holding donut" className="w-20 h-20 mx-auto mt-1" />
+          <p className="m-1 text-2xl font-bold text-center text-gray-800">{totalCommits}</p>
+          <p className="px-1 text-xs text-center text-gray-800">
+            Since joining on {currentMonth} {currentYear}
+          </p>
         </div>
-        <div className="flex items-center justify-between p-4 ml-20 mr-20 text-l">
-          <a
-            href="https://github.com"  
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full p-2 mt-4 text-center text-white bg-teal-500 rounded shadow-md text-l"
-          >
-            My Github Profile
-          </a>
+
+        <div className="w-48 bg-white rounded-lg h-54">
+          <h3 className="mt-2 mb-0 text-lg font-bold text-center text-gray-800">Donut Boxes</h3>
+          <img src={donutBoxFull} alt="Donut box full" className="w-20 h-20 mx-auto mt-2" />
+          <p className="px-1 m-1 text-2xl font-bold text-center text-gray-800">{donutBoxes}</p>
+          <p className="px-2 mt-1 mb-2 text-xs text-center text-gray-800">
+            Earn 12 donuts to add a donut box.
+          </p>
         </div>
       </div>
     </div>

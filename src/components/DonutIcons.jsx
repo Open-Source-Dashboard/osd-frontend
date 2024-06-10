@@ -1,50 +1,23 @@
-// greyed out donut icons
-import outline1 from '../assets/donut-icons/outline/1.png';
-
-// color donut icons
-import color1 from '../assets/donut-icons/color/1.png';
-import color2 from '../assets/donut-icons/color/2.png';
-import color3 from '../assets/donut-icons/color/3.png';
-import color4 from '../assets/donut-icons/color/4.png';
-import color5 from '../assets/donut-icons/color/5.png';
-import color6 from '../assets/donut-icons/color/6.png';
+import unstampedDonut from '../assets/donut-icons/outline/donut-unstamped.png';
+import creamDonut from '../assets/donut-icons/color/donut-cream.png';
+import peachDonut from '../assets/donut-icons/color/donut-peach.png';
+import pinkDonut from '../assets/donut-icons/color/donut-pink.png';
+import purpleDonut from '../assets/donut-icons/color/donut-purple.png';
+import lightbrownDonut from '../assets/donut-icons/color/donut-lightbrown.png';
+import darkbrownDonut from '../assets/donut-icons/color/donut-darkbrown.png';
 
 // greyed out donut components
-export const Outline1 = () => {
-  return <img src={outline1} alt='outlined donut' />;
-};
-export const Outline2 = () => {
-  return <img src={outline1} alt='outlined donut' />;
-};
-export const Outline3 = () => {
-  return <img src={outline1} alt='outlined donut' />;
-};
-export const Outline4 = () => {
-  return <img src={outline1} alt='outlined donut' />;
-};
-export const Outline5 = () => {
-  return <img src={outline1} alt='outlined donut' />;
-};
-export const Outline6 = () => {
-  return <img src={outline1} alt='outlined donut' />;
-};
+export const Outline1 = () => <img src={unstampedDonut} alt='outlined donut' />;
+export const Outline2 = () => <img src={unstampedDonut} alt='outlined donut' />;
+export const Outline3 = () => <img src={unstampedDonut} alt='outlined donut' />;
+export const Outline4 = () => <img src={unstampedDonut} alt='outlined donut' />;
+export const Outline5 = () => <img src={unstampedDonut} alt='outlined donut' />;
+export const Outline6 = () => <img src={unstampedDonut} alt='outlined donut' />;
 
 // color donut components
-export const Color1 = () => {
-  return <img src={color1} alt='color donut' />;
-};
-export const Color2 = () => {
-  return <img src={color2} alt='color donut' />;
-};
-export const Color3 = () => {
-  return <img src={color3} alt='color donut' />;
-};
-export const Color4 = () => {
-  return <img src={color4} alt='color donut' />;
-};
-export const Color5 = () => {
-  return <img src={color5} alt='color donut' />;
-};
-export const Color6 = () => {
-  return <img src={color6} alt='color donut' />;
-};
+export const Color1 = () => <img src={creamDonut} alt='color donut' />;
+export const Color2 = () => <img src={peachDonut} alt='color donut' />;
+export const Color3 = () => <img src={pinkDonut} alt='color donut' />;
+export const Color4 = () => <img src={purpleDonut} alt='color donut' />;
+export const Color5 = () => <img src={lightbrownDonut} alt='color donut' />;
+export const Color6 = () => <img src={darkbrownDonut} alt='color donut' />;
