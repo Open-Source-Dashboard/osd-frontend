@@ -26,57 +26,47 @@ const PeruseProjects = () => {
 
       {popularRepos.length > 0 ? (
         <div className="relative">
-
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-          {currentRepos.map((repo) => (
-
-  <li
-    key={repo.id}
-    className='card-content-li'
-  >
-    <div className="flex justify-center">
-    {repo.owner && repo.owner.avatar_url ? ( 
-      <img
-        src={repo.owner.avatar_url}
-        alt={repo.name}
-        className="w-20 h-20 rounded-lg "
-      />
-    ) : 
-    // Render a donut image if avatar_url not defined
-    (
-      <img
-        src={backupDonutImage} 
-        alt={repo.name}
-        className="w-20 h-20 rounded-lg"
-      />
-    )}
-    </div>
-
-    <h2>
-      <a
-        href={repo.html_url}
-        target="_blank"
-        rel="noreferrer"
-        className="text-sm font-bold text-blue-600"
-      >
-        {repo.name}
-      </a>
-    </h2>
-    <p className="text-sm text-gray-600">
-      ⭐ {repo.stargazers_count}
-    </p>
-    <p className="p-1 text-xs text-purple-600 mb3-2">{repo.description}</p>
-    <p className="text-xs text-gray-600">
-      Topics:{" "}
-      {repo.topics.map((topic, index) => (
-        <span key={topic}>
-          {topic}
-          {index !== repo.topics.length - 1 && ", "}
-        </span>
-      ))}
-    </p>
-  </li>
-))}
+            {currentRepos.map((repo) => (
+              <li key={repo.id} className='card-content-li'>
+                <div className="flex justify-center">
+                  {repo.owner && repo.owner.avatar_url ? ( 
+                    <img
+                      src={repo.owner.avatar_url}
+                      alt={repo.name}
+                      className="w-20 h-20 rounded-lg "
+                    />
+                  ) : (
+                    <img
+                      src={backupDonutImage} 
+                      alt={repo.name}
+                      className="w-20 h-20 rounded-lg"
+                    />
+                  )}
+                </div>
+                <h2>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-bold text-blue-600"
+                  >
+                    {repo.name}
+                  </a>
+                </h2>
+                <p className="text-sm text-gray-600">⭐ {repo.stargazers_count}</p>
+                <p className="p-1 text-xs text-purple-600 mb3-2">{repo.description}</p>
+                <p className="text-xs text-gray-600">
+                  Topics:{" "}
+                  {repo.topics.map((topic, index) => (
+                    <span key={topic}>
+                      {topic}
+                      {index !== repo.topics.length - 1 && ", "}
+                    </span>
+                  ))}
+                </p>
+              </li>
+            ))}
           </ul>
           <button
             onClick={handlePrevPage}
@@ -89,7 +79,6 @@ const PeruseProjects = () => {
             onClick={handleNextPage}
             className={`carousel-button absolute right-0 top-1/4`}
             disabled={indexOfLastRepo >= popularRepos.length}
-
           >
             Next
           </button>

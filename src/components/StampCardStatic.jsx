@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState, useEffect } from "react";
 
 const StampCard = () => {
-  const [userDonutsCount, setUserDonutsCount] = useState(1); // We give everyone a donut to start!
+  const [userDonutsCount, setUserDonutsCount] = useState(1); 
   const [userDonutBoxCount, setUserDonutBoxCount] = useState(0);
   const [stampedDonuts, setStampedDonuts] = useState([]);
   const [emptyDonuts, setEmptyDonuts] = useState([]);
@@ -15,11 +15,11 @@ const StampCard = () => {
   }, []);
 
   useEffect(() => {
-    randomizeStampedDonutsIcons(userDonutsCount); // TODO: Calculate the number of donuts to show
+    randomizeStampedDonutsIcons(userDonutsCount);
   }, [userDonutsCount]);
 
   useEffect(() => {
-    getUserDonutBoxCount(); // TODO: Calculate the number of donut boxes to show
+    getUserDonutBoxCount();
   }, [userDonutBoxCount]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const StampCard = () => {
   }, [stampedDonuts]);
 
   function getUserDonutsCount() {
-    return 4; // TODO: fetch user donuts count from API
+    return 20; 
   }
 
   function getUserDonutBoxCount() {
@@ -37,7 +37,7 @@ const StampCard = () => {
   function randomizeStampedDonutsIcons(numberOfStamps) {
     const stampsArray = new Array(numberOfStamps).fill("");
     stampsArray.forEach((_, index) => {
-      stampsArray[index] = Math.floor(Math.random() * 6) + 1; // Increase from 6 if add more donut designs
+      stampsArray[index] = Math.floor(Math.random() * 12) + 1;
     });
     setStampedDonuts(stampsArray);
   }
