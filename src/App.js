@@ -9,7 +9,6 @@ import StaticDashboard from "./views/StaticDashboard";
 import { useAuth } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
 import { UserProvider } from "./api_calls/UserContext";
-// import { useUser } from "./api_calls/UserContext";
 
 
 function App() {
