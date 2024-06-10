@@ -16,18 +16,18 @@ const Authentication = () => {
   }, [login, ghUserCode]); 
 
   useEffect(() => {
-    if (user.github_username) {
+    if (user && user.github_username) {
       navigate('/');
     }
   }, [user, navigate]);
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-    {Object.keys(user).length === 0 ? <p className="text-2xl">
-      Loading...
-      <img src={LoadingDonut} alt="Loading..." className='h-200 w-200'/>
-      </p> : <p>{JSON.stringify(user)}</p>}
-  </div>
+      <p className="text-2xl">
+        Loading...
+        <img src={LoadingDonut} alt="Loading..." className='h-200 w-200'/>
+      </p>
+    </div>
   );
 };
 
