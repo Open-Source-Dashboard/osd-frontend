@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
-const ghClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
 const osdAuthUrl = "";
 
 export const AuthContext = createContext();
@@ -26,18 +25,17 @@ export function AuthProvider({ children }) {
     localStorage.setItem("user_access_token", userAccessToken);
   };
 
+  
   function determineAuthUrl() {
     if (userState.user.github_username) {
-      // User is already authenticated via GitHub
+      // User is already authenticated via GitHub.
+      // A # doesn't navigate the user to a different URL. Use to trigger functions or trigger a change in the state of the application.
       return "#";
 
     } else if (localStorage.getItem("user_access_token")) {
-      // User has a valid access token stored locally
+      // User has a valid access token stored locally.
+      // A empty string typically means that no action should be taken. The user remains on the same page or navigates to the default route
       return "";
-
-    } else {
-        // User is not authenticated. Provide GitHub OAuth URL for login
-      return `https://github.com/login/oauth/authorize?client_id=${ghClientId}`;
     }
   }
 
