@@ -21,7 +21,7 @@ const PeruseProjects = () => {
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
   
   return (
-    <div className="h-full overflow-scroll shadow-gray-500/50 bg-violet-950">
+    <div className="h-full shadow-gray-500/50 bg-violet-950">
       <h2 className="mt-0 mb-2 text-xl font-bold">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (

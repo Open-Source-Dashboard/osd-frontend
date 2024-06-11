@@ -32,7 +32,7 @@ const Dashboard = () => {
       <div className="col-span-12 row-span-1 px-2 rounded-lg">
         <SubHeader />
       </div>
-      <div className="col-span-6 row-span-4 px-2 pt-0 mt-4 overflow-scroll rounded-lg bg-violet-950">
+      <div className="col-span-6 row-span-4 px-2 pt-0 mt-4 rounded-lg bg-violet-950">
         <LatestContributors />
       </div>
 

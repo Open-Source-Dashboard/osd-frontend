@@ -6,7 +6,7 @@ const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
 
   return (
-    <div className="h-full overflow-scroll">
+    <div className="h-full">
       <h2 className="mt-0 mb-2 text-xl font-bold text-left">
         Featured Opensource Project
       </h2>

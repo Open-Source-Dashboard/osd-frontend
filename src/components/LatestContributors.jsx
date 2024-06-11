@@ -5,7 +5,7 @@ const LatestContributors = () => {
   const { latestContributors } = useContext(RepoContext);
 
   return (
-    <div className="p-2 overflow-scroll">
+    <div className="p-2">
       <h2 className="font-bold text-md">Latest Opensource Project Contributors</h2>
       {latestContributors.length > 0 && (
         latestContributors.map((contributor, idx) => (
