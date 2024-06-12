@@ -61,3 +61,4 @@ See your name here when we merge your PR!
 
 Thank you!  <img src="src/assets/donut-icons/color/4.png" width="20" height="20" style="vertical-align: bottom;">
 - Caleb Hemphill
+- test commit logic
