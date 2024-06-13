@@ -32,7 +32,7 @@ const AboutUs = () => {
         <h1 className="mb-8 text-4xl font-bold">The Team</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
-            <div key={index} className="p-6 rounded-lg shadow-lg bg-violet-950">
+            <div key={index} className="p-6 rounded-lg shadow-lg bg-purple">
               <div className="bg-grey-100">
                 <div className="mb-4">
                   <img
@@ -53,16 +53,16 @@ const AboutUs = () => {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl text-teal-500"
+                    className="text-xl text-white"
                   >
                     LinkedIn
                   </a>
-                  <span className="text-2xl text-gray-500">|</span>
+                  <span className="text-xl text-white">_</span>
                   <a
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl text-teal-500"
+                    className="text-xl text-white"
                   >
                     GitHub
                   </a>
@@ -80,7 +80,7 @@ const AboutUs = () => {
             href="https://github.com/Open-Source-Dashboard/osd-frontend"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block p-4 text-yellow-500 "
+            className="inline-block p-4 text-pink "
           >
             <FaGithub className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
           </a>

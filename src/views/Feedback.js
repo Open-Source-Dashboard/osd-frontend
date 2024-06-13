@@ -65,7 +65,7 @@ const Feedback = () => {
                   id="name"
                   value={user.github_username}
                   readOnly
-                  className="w-full p-3 text-white rounded-lg shadow-lg bg-violet-950"
+                  className="w-full p-3 text-white rounded-lg shadow-lg bg-purple"
                   placeholder="Login to add your GitHub username here..."
                 />
               </div>
@@ -81,7 +81,7 @@ const Feedback = () => {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full p-3 text-white rounded-lg shadow-lg bg-violet-950"
+                  className="w-full p-3 text-white rounded-lg shadow-lg bg-purple"
                   placeholder="Your email..."
                 />
               </div>
@@ -95,7 +95,7 @@ const Feedback = () => {
                 <textarea
                   id="message"
                   rows="8"
-                  className="w-full p-3 text-white rounded-lg shadow-lg bg-violet-950"
+                  className="w-full p-3 text-white rounded-lg shadow-lg bg-purple"
                   placeholder="Your feedback..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -104,7 +104,7 @@ const Feedback = () => {
               </div>
               <button
                 type="submit"
-                className="w-1/3 p-3 text-xl text-white bg-teal-500 rounded-lg shadow-md hover:text-light-blue"
+                className="w-1/3 p-3 text-xl text-white rounded-lg shadow-md bg-blue hover:text-pink"
               >
                 Send Feedback
               </button>

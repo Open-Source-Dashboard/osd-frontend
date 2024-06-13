@@ -9,7 +9,7 @@ const LoginButton = () => {
   return (
     <a
       href={githubOAuthUrl}
-      className="flex items-center pt-2 pb-6 text-xl rounded-md font-small textbase hover:text-light-blue"
+      className="flex items-center pt-2 pb-6 text-xl rounded-md textbase hover:text-pink"
     >
       <span>Login</span>
       <FaGithub className="ml-2" />

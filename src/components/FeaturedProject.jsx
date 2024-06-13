@@ -10,7 +10,7 @@ const FeaturedProject = () => {
       <h2 className="mt-0 mb-2 text-xl font-bold text-left">
         Featured Opensource Project
       </h2>
-      <div className="card-content bg-orange-300">
+      <div className="bg-orange-300 card-content">
         {featuredRepo.length > 0 ? (
           featuredRepo.map((repo) => (
             <div
@@ -36,7 +36,7 @@ const FeaturedProject = () => {
               <p className="text-sm text-gray-600">
                 ⭐ {repo.stargazers_count}
               </p>
-              <p className="text-purple-500">{repo.description}</p>
+              <p className="text-blue">{repo.description}</p>
               <p>
                 Topics:{" "}
                 {repo.topics.map((topic, index) => (
