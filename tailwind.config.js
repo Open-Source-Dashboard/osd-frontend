@@ -11,9 +11,9 @@ module.exports = {
         sans: ['Roboto', 'sans-serif'], 
       },
       colors: {
-        'purple': '#872B97',
+        'purple': '#454545',
         'blue': '#3F3CBB',
-        'orange': '#ff7130',
+        'orange': '#5a5a5a',
         'pink': '#ff3c68',
         'md-pink': '#ffc4d1',
         'light-pink': '#ffebef',

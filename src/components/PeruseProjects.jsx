@@ -54,9 +54,9 @@ const PeruseProjects = () => {
                     {repo.name}
                   </a>
                 </h2>
-                <p className="text-sm text-gray-600">⭐ {repo.stargazers_count}</p>
-                <p className="p-1 text-xs text-purple-600 mb3-2">{repo.description}</p>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-white">⭐ {repo.stargazers_count}</p>
+                <p className="p-1 text-xs text-white mb3-2">{repo.description}</p>
+                <p className="text-xs text-light-pink">
                   Topics:{" "}
                   {repo.topics.map((topic, index) => (
                     <span key={topic}>
@@ -70,14 +70,14 @@ const PeruseProjects = () => {
           </ul>
           <button
             onClick={handlePrevPage}
-            className={`carousel-button absolute left-0 top-1/4`}
+            className={` text-xs absolute left-0 top-1/4 bg-blue p-1 m-2 transform -translate-y-1/2 rounded-md top-1/2;}`}
             disabled={currentPage === 0}
           >
             Prev
           </button>
           <button
             onClick={handleNextPage}
-            className={`carousel-button absolute right-0 top-1/4`}
+            className={` text-xs absolute right-0 top-1/4 bg-blue p-1 m-2 transform -translate-y-1/2 rounded-md top-1/2;}`}
             disabled={indexOfLastRepo >= popularRepos.length}
           >
             Next

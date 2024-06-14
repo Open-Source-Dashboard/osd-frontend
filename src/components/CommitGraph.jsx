@@ -5,10 +5,10 @@ const CommitGraph = () => {
   const { user } = useAuth();
   const githubUsername = user.github_username;
 
-  const graphImageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&bg_color=ff3c68&line=fff&point=3f3cbb&height=230&color=3f3cbb&title_color=fff`;
+  const graphImageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&bg_color=5a5a5a&line=ffc4d1&point=fff&height=230&color=ff3c68&title_color=fff`;
 
   return (
-    <div className="relative text-center">
+    <div className="relative h-full overflow-scroll text-center">
       <img
         src={graphImageUrl}
         alt="GitHub Commit Graph"
