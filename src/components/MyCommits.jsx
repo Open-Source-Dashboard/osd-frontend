@@ -8,8 +8,8 @@ const MyCommits = () => {
   const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
   const donutBoxes = Math.floor(totalCommits / 12);
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [loading] = useState(false);
+  const [error] = useState(null);
 
   return (
     <div className="mt-0 ">
