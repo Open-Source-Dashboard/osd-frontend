@@ -21,14 +21,14 @@ const PeruseProjects = () => {
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
   
   return (
-    <div className="h-full overflow-scroll shadow-gray-500/50 bg-purple">
+    <div className="h-full overflow-scroll shadow-gray-500/50 bg-gray">
       <h2 className="mt-0 mb-2 text-xl font-bold">Peruse Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
             {currentRepos.map((repo) => (
-              <li key={repo.id} className='p-2 rounded-lg shadow-md bg-orange'>
+              <li key={repo.id} className='p-2 rounded-lg shadow-md bg-gray-md'>
                 <div className="flex justify-center">
                   {repo.owner && repo.owner.avatar_url ? ( 
                     <img
@@ -55,7 +55,7 @@ const PeruseProjects = () => {
                   </a>
                 </h2>
                 <p className="text-sm text-white">⭐ {repo.stargazers_count}</p>
-                <p className="p-1 text-xs text-white mb3-2">{repo.description}</p>
+                <p className="py-2 text-xs text-white mb3-2">{repo.description}</p>
                 <p className="text-xs text-light-pink">
                   Topics:{" "}
                   {repo.topics.map((topic, index) => (

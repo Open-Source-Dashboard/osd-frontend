@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 import emailjs from "emailjs-com";
+import SubHeader from "../components/SubHeader";
 
 const Feedback = () => {
   const { user } = useAuth();
@@ -39,24 +40,24 @@ const Feedback = () => {
 
   return (
     <div className="min-h-screen p-8 bg-gradient-to-r from-primary to-secondary">
+      <SubHeader />
       <div className="container mx-auto text-center">
-        <h1 className="mb-8 text-4xl font-bold text-white">Give Feedback</h1>
+        <h1 className="mb-5 text-3xl font-bold text-pink">Give Feedback</h1>
         {feedbackSent ? (
-          <>
-            <p className="mb-8 text-2xl font-semibold text-orange-500">
-              Thanks for your message!
-            </p>
+          <div className="text-lg font-semibold text-pink">
+            <p className="mb-8">Thanks for your message!</p>
             <p>
-              Go back to <Link to="/">Donut Dashboard home</Link>
+              Go back to <Link to="/" className="text-white">Donut Dashboard home</Link>
             </p>
-          </>
+          </div>
         ) : (
-          <div className="w-2/3 mx-auto mb-10">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="w-2/3 p-2 mx-auto rounded-lg shadow-lg bg-gray">
+            <form onSubmit={handleSubmit} className="space-y-6 text-left">
               <div>
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-2xl font-semibold text-orange-500"
+                  className="block p-1 text-lg font-bold text-white"
+                  style={{ fontFamily: '"Baloo 2", cursive' }}
                 >
                   From
                 </label>
@@ -65,14 +66,15 @@ const Feedback = () => {
                   id="name"
                   value={user.github_username}
                   readOnly
-                  className="w-full p-3 text-white rounded-lg shadow-lg bg-purple"
+                  className="w-full p-3 text-white rounded-md bg-gray-md"
                   placeholder="Login to add your GitHub username here..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-2xl font-semibold text-orange-500"
+                  className="block p-1 text-lg font-bold text-white"
+                  style={{ fontFamily: '"Baloo 2", cursive' }}
                 >
                   Email (optional)
                 </label>
@@ -81,33 +83,36 @@ const Feedback = () => {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full p-3 text-white rounded-lg shadow-lg bg-purple"
+                  className="w-full p-3 text-white rounded-md bg-gray-md"
                   placeholder="Your email..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block mb-2 text-2xl font-semibold text-orange-500"
+                  className="block p-1 mb-0 text-lg font-bold text-white"
+                  style={{ fontFamily: '"Baloo 2", cursive' }}
                 >
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows="8"
-                  className="w-full p-3 text-white rounded-lg shadow-lg bg-purple"
+                  className="w-full p-3 text-white rounded-md bg-gray-md"
                   placeholder="Your feedback..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="w-1/3 p-3 text-xl text-white rounded-lg shadow-md bg-blue hover:text-pink"
-              >
-                Send Feedback
-              </button>
+              <div className="p-3 mt-0 rounded-md bg-gray-md">
+                <button
+                  type="submit"
+                  className="w-1/3 p-3 text-left text-white rounded-md shadow-md text-md bg-gray hover:text-pink"
+                >
+                  Send Feedback
+                </button>
+              </div>
             </form>
           </div>
         )}

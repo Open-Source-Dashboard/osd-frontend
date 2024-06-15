@@ -6,7 +6,7 @@ import purple1Donut from '../assets/donut-icons/color/donut-purple1.png';
 import purpleDonut from '../assets/donut-icons/color/donut-purple.png';
 import orangeDonut from '../assets/donut-icons/color/donut-orange.png';
 
-// greyed out donut components
+// grayed out donut components
 export const Outline1 = () => <img src={unstampedDonut} alt='outlined donut' />;
 export const Outline2 = () => <img src={unstampedDonut} alt='outlined donut' />;
 export const Outline3 = () => <img src={unstampedDonut} alt='outlined donut' />;

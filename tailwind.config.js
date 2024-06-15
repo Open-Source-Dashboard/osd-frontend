@@ -11,12 +11,14 @@ module.exports = {
         sans: ['Roboto', 'sans-serif'], 
       },
       colors: {
-        'purple': '#454545',
+        'gray': '#454545',
+        'gray-md': '#5a5a5a',
+        'gray-light': '#dadada',
+        'purple': '#872b97',
         'blue': '#3F3CBB',
-        'orange': '#5a5a5a',
         'pink': '#ff3c68',
-        'md-pink': '#ffc4d1',
-        'light-pink': '#ffebef',
+        'pink-md': '#ffc4d1',
+        'pink-light': '#ffebef',
       },
       backgroundImage: theme => ({
         'custom-gradient': 'linear-gradient(to right, #313131, #313131, #313131)',

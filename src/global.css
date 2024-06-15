@@ -15,7 +15,7 @@
     font-family: "Baloo 2", cursive;
   }
   h2 {
-    @apply mt-4 mb-4 text-xl font-bold text-white;
+    @apply my-4 text-xl font-bold text-white;
     font-family: "Baloo 2", cursive;
   }
   h3 {
@@ -23,7 +23,7 @@
     font-family: "Baloo 2", cursive;
   }
   a {
-    @apply p-2 text-white rounded-md hover:text-pink bg-purple;
+    @apply p-2 text-white rounded-md hover:text-pink bg-gray;
     transition: color 0.3s; 
   }
   button {
@@ -33,7 +33,7 @@
 
   input,
   textarea {
-    @apply text-xl text-white;
+    @apply text-lg text-white;
     &:focus {
       @apply ring-2 ring-blue;
     }

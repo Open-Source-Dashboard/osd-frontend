@@ -90,13 +90,13 @@ const StampCard = () => {
       <div className="flex items-center justify-center w-full">
         <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner" style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}>
           <div className="relative bg-white rounded-md">
-            <h2 className="mt-0 mb-0 text-2xl font-bold text-center text-pink">My Donuts</h2>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 rounded-b-md"></div>
+            <h2 className="p-2 mt-0 mb-0 text-2xl font-bold text-center text-pink">My Donuts</h2>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-light rounded-b-md"></div>
           </div>
 
           <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 place-items-center">
             {stampedDonuts.map((iconNumber, index) => (
-              <div key={index} className="flex items-center justify-center m-1 rounded-lg shadow-md shadow-lg bg-md-pink h-11 w-11 shadow-gray-500/50">
+              <div key={index} className="flex items-center justify-center m-1 rounded-lg shadow-md bg-md-pink h-11 w-11 shadow-gray-500/50">
                 <div className="flex items-center justify-center h-11 w-11">
                   <ColorDonutIcon number={iconNumber} />
                 </div>
@@ -110,10 +110,10 @@ const StampCard = () => {
           </div>
           
           <div className="relative mt-2 bg-white rounded-md">
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300 rounded-b-md"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-light rounded-b-md"></div>
           </div>
           <p className="pt-2 text-sm italic text-center text-blue">Earn a donut for every opensource commit.</p>
-          <p className="p-1 text-xs italic text-center text-orange-600">12 donuts equals a donut box!</p>
+          <p className="p-1 pb-0 text-xs italic text-center text-blue">12 donuts equals a donut box!</p>
         </div>
       </div>
     </div>

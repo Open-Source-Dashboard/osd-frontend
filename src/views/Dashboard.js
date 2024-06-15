@@ -30,9 +30,11 @@ const Dashboard = () => {
       }}
     >
       <div className="col-span-12 row-span-1 px-2 rounded-lg">
+        <div>
         <SubHeader />
+        </div>
       </div>
-      <div className="col-span-6 row-span-3 px-2 pt-0 mt-4 overflow-scroll rounded-lg bg-purple">
+      <div className="col-span-6 row-span-3 px-2 pt-0 mt-4 overflow-scroll rounded-lg bg-gray">
         <LatestContributors />
       </div>
 
@@ -40,7 +42,7 @@ const Dashboard = () => {
         <NavLeft />
       </div>
 
-      <div className="col-span-10 p-3 border-4 rounded-lg border-blue bg-purple row-span-7">
+      <div className="col-span-10 p-3 border-4 rounded-lg border-blue bg-gray row-span-7">
         <div className="grid h-full grid-cols-2 grid-rows-6 gap-2 ">
           <div className="col-span-1 row-span-4">
             <StampCard />
@@ -54,13 +56,13 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-6 row-span-5 p-2 rounded-lg bg-purple ">
+      <div className="col-span-6 row-span-5 p-2 rounded-lg bg-gray ">
         <FeaturedProject />
       </div>
-      <div className="col-span-7 row-span-6 p-2 overflow-hidden rounded-lg bg-purple">
+      <div className="col-span-7 row-span-6 p-2 overflow-hidden rounded-lg bg-gray">
         <MapOfUsers />
       </div>
-      <div className="col-span-11 row-span-6 p-2 rounded-lg bg-purple">
+      <div className="col-span-11 row-span-6 p-2 rounded-lg bg-gray">
         <PeruseProjects />
       </div>
     </div>
