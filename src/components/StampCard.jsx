@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect, useCallback } from "react";
 import { useAuth } from "../auth/AuthContext";
 
 const StampCard = () => {
@@ -8,6 +8,15 @@ const StampCard = () => {
   const [stampedDonuts, setStampedDonuts] = useState([]);
   const [emptyDonuts, setEmptyDonuts] = useState([]);
 
+  const getUserDonutsCount = useCallback(() => {
+    const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
+    return totalCommits % 12;
+  }, [user]);
+
+  const getUserDonutBoxCount = useCallback(() => {
+    return Math.floor(userDonutsCount / 12);
+  }, [userDonutsCount]);
+  
   useEffect(() => {
     setUserDonutsCount(getUserDonutsCount());
   }, []);
@@ -28,14 +37,6 @@ const StampCard = () => {
     randomizeEmptyDonutsIcons(12 - stampedDonuts.length);
   }, [stampedDonuts]);
 
-  function getUserDonutsCount() {
-    const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
-    return totalCommits % 12;
-  }
-
-  function getUserDonutBoxCount() {
-    return Math.floor(userDonutsCount / 12);
-  }
 
   function randomizeStampedDonutsIcons(numberOfStamps) {
     const stampsArray = new Array(numberOfStamps).fill("");
