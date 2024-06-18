@@ -23,7 +23,7 @@
     font-family: "Baloo 2", cursive;
   }
   a {
-    @apply p-2 text-white rounded-md hover:text-pink bg-gray;
+    @apply p-2 text-white rounded-md hover:text-pink bg-yellow;
     transition: color 0.3s; 
   }
   button {
@@ -65,4 +65,9 @@
 .carousel-slide p {
   @apply mt-4;
   @apply mb-4;
+}
+
+.slick-slide > div {
+  display: flex;
+  height: 100%;
 }

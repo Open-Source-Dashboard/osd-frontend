@@ -24,10 +24,10 @@ const sampleLocations = [
 
 const MapOfUsers = () => {
   return (
-    <div className="w-full h-full overflow-hidden rounded-lg">
-      <h2 className="mt-0 mb-2 text-xl font-bold">Where are you from?</h2>
-      <div className=" w-full h-[calc(100%-3rem)] rounded-lg overflow-hidden" >
-        <MapContainer center={[20, 0]} zoom={2} className="w-full h-full rounded-lg">
+    <div className="w-full h-full p-3 shadow-gray-500/50 bg-purple rounded-md">
+      <h2 className="mt-0 mb-2 text-xl font-bold text-center">Contributor Map</h2>
+      <div className="h-96 w-full rounded-lg overflow-hidden">
+        <MapContainer center={[20, 0]} zoom={4} className="h-full w-full rounded-lg">
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

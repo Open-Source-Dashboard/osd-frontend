@@ -30,9 +30,7 @@ const Dashboard = () => {
       }}
     >
       <div className="col-span-12 row-span-1 px-2 rounded-lg p-0 p-0">
-        {/* <div> */}
         <SubHeader />
-        {/* </div> */}
       </div>
       <div className="col-span-6 row-span-3 px-2 pt-0 rounded-lg">
         <LatestContributors />
