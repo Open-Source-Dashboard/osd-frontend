@@ -6,11 +6,11 @@ const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
 
   return (
-    <div className="h-full overflow-scroll">
-      <h2 className="mt-0 mb-2 text-xl font-bold text-left">
+    <>
+      <h2 className="mt-0 mb-0 rounded-t-md text-center text-md font-bold text-left bg-purple">
         Featured Opensource Project
       </h2>
-      <div className="rounded-md bg-gray-md">
+      <div className="bg-gray rounded-b-md">
         {featuredRepo.length > 0 ? (
           featuredRepo.map((repo) => (
             <div
@@ -52,7 +52,7 @@ const FeaturedProject = () => {
           <p>Loading...</p>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

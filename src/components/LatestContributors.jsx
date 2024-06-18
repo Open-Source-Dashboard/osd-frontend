@@ -5,19 +5,25 @@ const LatestContributors = () => {
   const { latestContributors } = useContext(RepoContext);
 
   return (
-    <div className="p-2 pt-0 mt-0 overflow-scroll text-white">
-      <h2 className="font-bold text-md">Latest Opensource Project Contributors</h2>
-      {latestContributors.length > 0 && (
+    <div className="text-white">
+      <h2 className="font-bold text-md text-center bg-purple rounded-t-md mt-0 mb-0">
+        Latest Opensource Project Contributors
+      </h2>
+      {latestContributors.length > 0 &&
         latestContributors.map((contributor, idx) => (
-          <div key={`contributor-${idx}`}>
+          <div
+            key={`contributor-${idx}`}
+            className={`bg-gray ${
+              idx === latestContributors.length - 1 ? "rounded-b-lg" : ""
+            }`}
+          >
             {contributor.author && contributor.repo_name && (
-              <p className="p-1 m-2 text-sm text-white border border-white rounded-md">
+              <p className="p-2 text-sm text-white bg-gray">
                 {`🎉 ${contributor.author} just contributed to ${contributor.repo_name}`}
               </p>
             )}
           </div>
-        ))
-      )}
+        ))}
     </div>
   );
 };

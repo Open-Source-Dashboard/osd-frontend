@@ -25,7 +25,7 @@ const sampleLocations = [
 const MapOfUsers = () => {
   return (
     <div className="w-full h-full overflow-hidden rounded-lg">
-      <h2 className="mt-0 mb-2 text-xl font-bold">Donut Dashboard Users</h2>
+      <h2 className="mt-0 mb-2 text-xl font-bold">Where are you from?</h2>
       <div className=" w-full h-[calc(100%-3rem)] rounded-lg overflow-hidden" >
         <MapContainer center={[20, 0]} zoom={2} className="w-full h-full rounded-lg">
           <TileLayer
