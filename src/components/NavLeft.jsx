@@ -8,14 +8,14 @@ const NavLeft = () => {
   const githubUsername = user.github_username || "";
 
   return (
-    <div className="flex flex-col p-3 text-sm rounded-lg justify-left">
+    <div className="flex flex-col text-sm rounded-lg justify-left">
 
       {isAuthenticated ? (
         <button
           className="text-base rounded-md"
           onClick={() => {
             localStorage.removeItem('github_token'); 
-            window.location.reload(); // Reload to update UI
+            window.location.reload();
           }}
         >
           Logout
@@ -28,6 +28,7 @@ const NavLeft = () => {
           href={`https://github.com/${githubUsername}#js-contribution-activity`}
           target="_blank"
           rel="noopener noreferrer"
+          className="bg-blue-light"
         >
           My Github Profile
         </a>
@@ -35,14 +36,14 @@ const NavLeft = () => {
           href="https://github.com/orgs/Open-Source-Dashboard/repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center rounded-md"
+          className="flex items-center rounded-md bg-blue-light"
         >
           <span>Donut Dashboard Repo</span>
         </a>
-        <Link to="/about-us">
+        <Link to="/about-us" className="bg-blue-light">
           The Team
         </Link>
-        <Link to="/feedback">
+        <Link to="/feedback" className="bg-blue-light">
           Give Feedback
         </Link>
       </div>
