@@ -88,10 +88,10 @@ const StampCard = () => {
   return (
     <div className="h-auto p-0 bg-transparent border-none row-1-card no-shadow">
       <div className="flex items-center justify-center w-full">
-        {/* <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner" style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}> */}
-        <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner bg-cream">
+        <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner" style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}>
+        {/* <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner bg-cream"> */}
 
-            <h2 className="p-2 mt-0 mb-0 text-2xl font-bold text-center text-purple-dark">My Donuts</h2>
+            <h2 className="p-2 mt-0 mb-0 text-2xl font-bold text-center text-purple-dark">Hi {user.github_username}</h2>
 
           <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 place-items-center">
             {stampedDonuts.map((iconNumber, index) => (

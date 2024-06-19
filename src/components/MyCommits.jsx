@@ -28,7 +28,7 @@ const MyCommits = () => {
           {loading && <p>Loading contributions...</p>}
           {error && <p>{error}</p>}
           <p className="px-1 text-xs text-center text-gray">
-            Since joining on {formattedDate}
+            Since {formattedDate}
           </p>
         </div>
 

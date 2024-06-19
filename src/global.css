@@ -4,36 +4,36 @@
 
 @layer base {
   body {
-    @apply text-white bg-custom-gradient;
+    @apply text-cream bg-custom-gradient;
   }
   h1 {
-    @apply mt-4 text-xl font-bold text-white;
+    @apply mt-4 text-xl font-bold text-cream;
     font-family: "Baloo 2", cursive;
   }
   .sub-header {
-    @apply mt-5 text-sm text-white;
+    @apply mt-5 text-sm text-cream;
     font-family: "Baloo 2", cursive;
   }
   h2 {
-    @apply my-4 text-xl font-bold text-white;
+    @apply my-4 text-xl font-bold text-cream;
     font-family: "Baloo 2", cursive;
   }
   h3 {
-    @apply p-1 text-sm font-bold text-white;
+    @apply p-1 text-sm font-bold text-cream;
     font-family: "Baloo 2", cursive;
   }
   a {
-    @apply p-2 text-white rounded-md hover:text-pink bg-gray;
+    @apply p-2 text-cream rounded-md hover:text-pink bg-gray;
     transition: color 0.3s; 
   }
   button {
-    @apply text-white;
+    @apply text-cream;
     transition: background-color 0.3s;
   }
 
   input,
   textarea {
-    @apply text-lg text-white;
+    @apply text-lg text-cream;
     &:focus {
       @apply ring-2 ring-blue;
     }

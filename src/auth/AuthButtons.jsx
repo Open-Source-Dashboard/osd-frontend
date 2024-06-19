@@ -11,9 +11,9 @@ const AuthButtons = () => {
     <>
       {user.github_username ? (
         <div className="items-start mb-6 rounded-md justify-left textbase">
-          <div className="flex items-center justify-center text-white font-bold h-full w-full rounded-md mb-2 p-2">
+          {/* <div className="flex items-center justify-center text-white font-bold h-full w-full rounded-md mb-2 p-2">
             <span className="text-md">Hi {githubUsername}</span>
-          </div>
+          </div> */}
           <LogoutButton />
         </div>
       ) : (
