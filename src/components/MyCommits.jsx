@@ -7,9 +7,17 @@ const MyCommits = () => {
   const { user } = useAuth();
   const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
   const donutBoxes = Math.floor(totalCommits / 12);
-
+  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  
+  const dateJoined = user.user_model_data['date_joined'] 
+  const date = new Date(dateJoined);
+
+  const month = date.toLocaleString('default', { month: 'long' });
+  const year = date.getFullYear();
+  const formattedDate = `${month} ${year}`;
+
 
   return (
     <div className="mt-0 ">
@@ -20,7 +28,7 @@ const MyCommits = () => {
           {loading && <p>Loading contributions...</p>}
           {error && <p>{error}</p>}
           <p className="px-1 text-xs text-center text-gray">
-            Since joining on _____
+            Since joining on {formattedDate}
           </p>
         </div>
 
