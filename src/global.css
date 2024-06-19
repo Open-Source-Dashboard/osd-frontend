@@ -11,11 +11,11 @@
     font-family: "Baloo 2", cursive;
   }
   .sub-header {
-    @apply mt-6 text-sm text-white;
+    @apply mt-5 text-sm text-white;
     font-family: "Baloo 2", cursive;
   }
   h2 {
-    @apply mt-4 mb-4 text-xl font-bold text-white;
+    @apply my-4 text-xl font-bold text-white;
     font-family: "Baloo 2", cursive;
   }
   h3 {
@@ -23,7 +23,7 @@
     font-family: "Baloo 2", cursive;
   }
   a {
-    @apply text-white hover:text-light-blue;
+    @apply p-2 text-white rounded-md hover:text-pink bg-gray;
     transition: color 0.3s; 
   }
   button {
@@ -33,33 +33,14 @@
 
   input,
   textarea {
-    @apply text-xl text-white;
+    @apply text-lg text-white;
     &:focus {
-      @apply ring-2 ring-purple-500;
+      @apply ring-2 ring-blue;
     }
   }
 
   .no-shadow.flex-grow {
     box-shadow: none !important;
-  }
-
-  .row-1-card {
-    @apply p-6 rounded-lg shadow-md bg-violet-950 shadow-gray-500/50;
-  }
-  .row-2-card {
-    @apply w-2/3 p-6 mx-auto rounded-lg shadow-md bg-violet-950 shadow-gray-500/50;
-  }
-  .row-3-card {
-    @apply p-6 rounded-lg shadow-md bg-violet-950 shadow-gray-500/50;
-  }
-  .card-content {
-    @apply rounded-lg;
-  }
-  .card-content-li {
-    @apply p-2 text-purple-500 bg-gray-100 rounded-lg shadow-md;
-  }
-  .carousel-button {
-    @apply absolute p-1 m-2 transform -translate-y-1/2 rounded-full bg-violet-800 top-1/2;
   }
 }
 
@@ -74,11 +55,11 @@
 }
 
 .carousel-slide h1 {
-  @apply text-2xl font-bold text-purple-900;
+  @apply text-2xl font-bold text-purple;
 }
 
 .carousel-slide h3 {
-  @apply text-xl text-purple-900;
+  @apply text-xl text-purple;
 }
 
 .carousel-slide p {

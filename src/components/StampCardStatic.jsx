@@ -84,7 +84,7 @@ const StampCard = () => {
   };
   
   return (
-    <div className="flex-grow w-3/4 h-auto p-0 bg-transparent border-none row-1-card no-shadow">
+    <div className="flex-grow w-3/4 h-auto p-0 bg-transparent border-none no-shadow">
       <div className="flex items-center justify-center w-full ">
         <div
           className="relative w-5/6 p-3 bg-center bg-cover rounded-md shadow-inner"

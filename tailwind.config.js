@@ -11,14 +11,17 @@ module.exports = {
         sans: ['Roboto', 'sans-serif'], 
       },
       colors: {
-        'dark-purple': '#3f3cbb',
-        'deep-blue': '#252d47',
-        'vibrant-orange': '#ff9f00',
-        'light-blue': '#08d9ff',
+        'gray': '#454545',
+        'gray-md': '#5a5a5a',
+        'gray-light': '#dadada',
+        'purple': '#872b97',
+        'blue': '#3F3CBB',
+        'pink': '#ff3c68',
+        'pink-md': '#ffc4d1',
+        'pink-light': '#ffebef',
       },
       backgroundImage: theme => ({
-        // 'custom-gradient': 'linear-gradient(to right, #4F2F8E, #02c1cb, #4F2F8E)',
-        'custom-gradient': 'linear-gradient(to right, #4F2F8E, #4F2F8E, #4F2F8E)',
+        'custom-gradient': 'linear-gradient(to right, #313131, #313131, #313131)',
       }),
       boxShadow: {
         'custom-light': '0 2px 5px rgba(255, 255, 255, 0.15)',

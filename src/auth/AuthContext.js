@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import axios from "axios";
 
 const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
   };
 
   
-  function determineAuthUrl() {
+  const determineAuthUrl = useCallback(() => {
     if (userState.user.github_username) {
       // User is already authenticated via GitHub.
       // A # doesn't navigate the user to a different URL. Use to trigger functions or trigger a change in the state of the application.
@@ -37,7 +37,11 @@ export function AuthProvider({ children }) {
       // A empty string typically means that no action should be taken. The user remains on the same page or navigates to the default route
       return "";
     }
-  }
+  }, [userState.user.github_username]);
+
+  useEffect(() => {
+    determineAuthUrl();
+  }, [determineAuthUrl]);
 
   async function login(ghUserCode, osdUserToken) {
     try {

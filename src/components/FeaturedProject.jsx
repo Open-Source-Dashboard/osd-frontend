@@ -10,7 +10,7 @@ const FeaturedProject = () => {
       <h2 className="mt-0 mb-2 text-xl font-bold text-left">
         Featured Opensource Project
       </h2>
-      <div className="card-content bg-orange-300">
+      <div className="rounded-md bg-gray-md">
         {featuredRepo.length > 0 ? (
           featuredRepo.map((repo) => (
             <div
@@ -21,22 +21,22 @@ const FeaturedProject = () => {
                 <img
                   src={repo.owner.avatar_url}
                   alt={repo.name}
-                  className="w-20 h-20 rounded-lg"
+                  className="w-20 h-20 m-2 rounded-lg"
                 />
               ) : (
                 <img
                   src={backupDonutImage}
                   alt={repo.name}
-                  className="w-40 h-40 rounded-lg"
+                  className="w-40 h-40 m-2 rounded-lg"
                 />
               )}
               <h1>
                 <a href={repo.html_url}>{repo.name}</a>
               </h1>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-white">
                 ⭐ {repo.stargazers_count}
               </p>
-              <p className="text-purple-500">{repo.description}</p>
+              <p className="text-white">{repo.description}</p>
               <p>
                 Topics:{" "}
                 {repo.topics.map((topic, index) => (

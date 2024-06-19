@@ -25,17 +25,20 @@ const sampleLocations = [
 const MapOfUsers = () => {
   return (
     <div className="w-full h-full overflow-hidden rounded-lg">
-      <MapContainer center={[20, 0]} zoom={2} className="w-full h-full">
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
-        {sampleLocations.map((location, index) => (
-          <Marker key={index} position={[location.lat, location.lng]}>
-            <Popup>{location.name}</Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+      <h2 className="mt-0 mb-2 text-xl font-bold">Donut Dashboard Users</h2>
+      <div className=" w-full h-[calc(100%-3rem)] rounded-lg overflow-hidden" >
+        <MapContainer center={[20, 0]} zoom={2} className="w-full h-full rounded-lg">
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          {sampleLocations.map((location, index) => (
+            <Marker key={index} position={[location.lat, location.lng]}>
+              <Popup>{location.name}</Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </div>
   );
 };

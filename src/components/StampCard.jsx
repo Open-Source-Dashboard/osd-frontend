@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect, useCallback } from "react";
 import { useAuth } from "../auth/AuthContext";
 
 const StampCard = () => {
@@ -8,6 +8,15 @@ const StampCard = () => {
   const [stampedDonuts, setStampedDonuts] = useState([]);
   const [emptyDonuts, setEmptyDonuts] = useState([]);
 
+  const getUserDonutsCount = useCallback(() => {
+    const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
+    return totalCommits % 12;
+  }, [user]);
+
+  const getUserDonutBoxCount = useCallback(() => {
+    return Math.floor(userDonutsCount / 12);
+  }, [userDonutsCount]);
+  
   useEffect(() => {
     setUserDonutsCount(getUserDonutsCount());
   }, []);
@@ -28,14 +37,6 @@ const StampCard = () => {
     randomizeEmptyDonutsIcons(12 - stampedDonuts.length);
   }, [stampedDonuts]);
 
-  function getUserDonutsCount() {
-    const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
-    return totalCommits % 12;
-  }
-
-  function getUserDonutBoxCount() {
-    return Math.floor(userDonutsCount / 12);
-  }
 
   function randomizeStampedDonutsIcons(numberOfStamps) {
     const stampsArray = new Array(numberOfStamps).fill("");
@@ -89,31 +90,31 @@ const StampCard = () => {
     <div className="h-auto p-0 bg-transparent border-none row-1-card no-shadow">
       <div className="flex items-center justify-center w-full">
         <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner" style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}>
-          <div className="relative bg-white border-none rounded-md">
-            <h2 className="mt-0 mb-0 text-xl font-bold text-center text-gray-800">My Donuts</h2>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 rounded-b-md"></div>
+          <div className="relative bg-white rounded-md">
+            <h2 className="p-2 mt-0 mb-0 text-2xl font-bold text-center text-pink">My Donuts</h2>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-light rounded-b-md"></div>
           </div>
 
           <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 place-items-center">
             {stampedDonuts.map((iconNumber, index) => (
-              <div key={index} className="flex items-center justify-center m-1 bg-teal-200 rounded-lg shadow-md shadow-lg h-11 w-11 shadow-gray-500/50">
+              <div key={index} className="flex items-center justify-center m-1 rounded-lg shadow-md bg-md-pink h-11 w-11 shadow-gray-500/50">
                 <div className="flex items-center justify-center h-11 w-11">
                   <ColorDonutIcon number={iconNumber} />
                 </div>
               </div>
             ))}
             {emptyDonuts.map((iconNumber, index) => (
-              <div key={index} className="flex items-center justify-center bg-teal-100 rounded-lg shadow-md h-11 w-11">
+              <div key={index} className="flex items-center justify-center rounded-lg shadow-md bg-light-pink h-11 w-11">
                 <OutlineDonutIcon number={iconNumber} />
               </div>
             ))}
           </div>
           
-          <div className="relative mt-2 bg-white border-none rounded-md">
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300 rounded-b-md"></div>
+          <div className="relative mt-2 bg-white rounded-md">
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-light rounded-b-md"></div>
           </div>
-          <p className="pt-2 text-sm italic text-center text-gray-700">Earn a donut for every opensource commit.</p>
-          <p className="p-1 text-xs italic text-center text-orange-600">12 donuts equals a donut box!</p>
+          <p className="pt-2 text-sm italic text-center text-blue">Earn a donut for every opensource commit.</p>
+          <p className="p-1 pb-0 text-xs italic text-center text-blue">12 donuts equals a donut box!</p>
         </div>
       </div>
     </div>

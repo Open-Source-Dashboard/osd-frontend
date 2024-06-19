@@ -10,9 +10,9 @@ const AuthButtons = () => {
   return (
     <>
       {user.github_username ? (
-        <div className='items-start mb-6 rounded-md justify-left font-small textbase'>
+        <div className='items-start mb-6 rounded-md justify-left textbase'>
           <div className='flex items-center'>
-            <span>Hi {githubUsername}</span>
+            <span className="text-md">Hi {githubUsername}</span>
           </div>
           <LogoutButton />
         </div>

@@ -23,7 +23,7 @@ const NavLeft = () => {
       ) : (
         <AuthButtons />
       )}
-      <div className="flex flex-col space-y-10 text-sm justify-left">
+      <div className="flex flex-col space-y-2 text-sm rounded-md justify-left">
         <a
           href={`https://github.com/${githubUsername}#js-contribution-activity`}
           target="_blank"
@@ -35,7 +35,7 @@ const NavLeft = () => {
           href="https://github.com/orgs/Open-Source-Dashboard/repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center border-gray-300 rounded-md"
+          className="flex items-center rounded-md"
         >
           <span>Donut Dashboard Repo</span>
         </a>

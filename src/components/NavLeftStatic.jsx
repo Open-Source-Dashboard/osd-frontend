@@ -17,7 +17,7 @@ const NavLeft = () => {
           href="https://github.com/orgs/Open-Source-Dashboard/repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center border-gray-300 rounded-md"
+          className="flex items-center rounded-md"
         >
           Donut Dashboard Repo
         </a>
