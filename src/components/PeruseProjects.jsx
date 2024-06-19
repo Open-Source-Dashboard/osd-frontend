@@ -29,14 +29,14 @@ const PeruseProjects = () => {
   };
 
   return (
-    <div className="p-1 mt-8 border border-gray-md rounded-md">
-      <h2 className="mt-0 mb-2 p-1 text-xl font-bold text-center bg-purple rounded-t-md">Peruse Projects</h2>
+    <div className="p-1 mt-8 rounded-md bg-purple">
+      <h2 className="mt-0 mb-2 p-1 text-xl font-bold rounded-t-md">Peruse Projects</h2>
       
       {popularRepos.length > 0 ? (
         <Slider {...settings}>
           {popularRepos.map((repo) => (
             <div key={repo.id} className="px-3 h-full">
-              <div className="border border-white rounded-md bg-gray-md p-4 h-96 max-w-xs mx-auto">
+              <div className="rounded-md bg-gray-md p-4 max-w-xs mx-auto">
                 <div className="flex justify-center mb-4">
                   <img
                     src={repo.owner && repo.owner.avatar_url ? repo.owner.avatar_url : backupDonutImage}
@@ -56,7 +56,7 @@ const PeruseProjects = () => {
                 </h2>
                 <p className="text-sm text-white text-center m-2 p-2">⭐ {repo.stargazers_count}</p>
                 <p className="text-xs text-white mb-2 text-center">{repo.description}</p>
-                <p className="text-xs text-light-pink text-center">
+                <p className="text-xs text-light-orange text-center">
                   Topics:{" "}
                   {repo.topics.map((topic, index) => (
                     <span key={topic}>

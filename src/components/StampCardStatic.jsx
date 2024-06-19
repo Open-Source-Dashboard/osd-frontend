@@ -124,7 +124,7 @@ const StampCard = () => {
           <p className="pt-2 italic text-center text-gray-700 text-s">
             Earn a donut for every opensource commit.
           </p>
-          <p className="p-1 text-xs italic text-center text-orange-600">
+          <p className="p-1 text-xs italic text-center text-yellow-600">
             12 donuts equals a donut box!
           </p>
         </div>

@@ -42,9 +42,9 @@ const Feedback = () => {
     <div className="min-h-screen p-8 bg-gradient-to-r from-primary to-secondary">
       <SubHeader />
       <div className="container mx-auto text-center">
-        <h1 className="mb-5 text-3xl font-bold text-pink">Give Feedback</h1>
+        <h1 className="mb-5 text-3xl font-bold text-orange">Give Feedback</h1>
         {feedbackSent ? (
-          <div className="text-lg font-semibold text-pink">
+          <div className="text-lg font-semibold text-orange">
             <p className="mb-8">Thanks for your message!</p>
             <p>
               Go back to <Link to="/" className="text-white">Donut Dashboard home</Link>
@@ -108,7 +108,7 @@ const Feedback = () => {
               <div className="p-3 mt-0 rounded-md bg-gray-md">
                 <button
                   type="submit"
-                  className="w-1/3 p-3 text-left text-white rounded-md shadow-md text-md bg-gray hover:text-pink"
+                  className="w-1/3 p-3 text-left text-white rounded-md shadow-md text-md bg-gray hover:text-orange"
                 >
                   Send Feedback
                 </button>

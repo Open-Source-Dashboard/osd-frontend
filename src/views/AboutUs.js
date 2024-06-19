@@ -35,7 +35,7 @@ const AboutUs = () => {
         <div className="mb-5">
           <SubHeader />
         </div>
-        <h1 className="mb-5 text-3xl font-bold text-pink">The Team</h1>
+        <h1 className="mb-5 text-3xl font-bold text-orange">The Team</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
             <div key={index} className="p-2 rounded-lg shadow-lg bg-gray">
@@ -83,7 +83,7 @@ const AboutUs = () => {
             href="https://github.com/Open-Source-Dashboard/osd-frontend"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block p-4 text-pink"
+            className="inline-block p-4 text-orange"
           >
             <FaGithub className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
           </a>

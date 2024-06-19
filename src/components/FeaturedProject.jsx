@@ -6,14 +6,14 @@ const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
 
   return (
-    <div className="mt-4 border border-gray-md rounded-md">
-      <h2 className="mt-0 mb-0 rounded-t-md text-center text-md font-bold text-left bg-purple">
+    <div className="mt-4 rounded-md bg-purple">
+      <h2 className="mt-0 mb-0 pl-2 rounded-t-md text-md font-bold text-left">
         Featured Opensource Project
       </h2>
-      <div className="bg-gray rounded-b-md">
+      <div className="">
         {featuredRepo.length > 0 ? (
           featuredRepo.map((repo) => (
-            <div key={repo.id} className="flex flex-col bg-gray rounded-md">
+            <div key={repo.id} className="flex flex-col">
               <div className="flex items-center text-xs ml-2 mt-1">
                 {repo.owner && repo.owner.avatar_url ? (
                   <img
