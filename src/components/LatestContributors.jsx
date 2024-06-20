@@ -6,9 +6,9 @@ const LatestContributors = () => {
 
   return (
     <div className="p-2 pt-0 mt-0 overflow-scroll text-white">
-      <h2 className="font-bold text-md">Latest Opensource Project Contributors</h2>
+      <h2 className="font-bold text-lg">Latest Opensource Contributors</h2>
       {latestContributors.length > 0 && (
-        latestContributors.map((contributor, idx) => (
+        latestContributors.slice(0,5).map((contributor, idx) => (
           <div key={`contributor-${idx}`}>
             {contributor.author && contributor.repo_name && (
               <p className="p-1 m-2 text-sm text-white border border-white rounded-md">

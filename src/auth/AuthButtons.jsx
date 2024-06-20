@@ -5,14 +5,13 @@ import LogoutButton from './LogoutButton';
 
 const AuthButtons = () => {
   const { user } = useAuth();
-  const githubUsername = user.github_username || "User!";
 
   return (
     <>
       {user.github_username ? (
-        <div className='items-start mb-6 rounded-md justify-left textbase'>
+        <div className='items-start mb-2 rounded-md justify-left textbase'>
           <div className='flex items-center'>
-            <span className="text-md">Hi {githubUsername}</span>
+            {/* <span className="text-md">Hi {githubUsername}</span> */}
           </div>
           <LogoutButton />
         </div>

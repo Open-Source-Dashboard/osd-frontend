@@ -14,11 +14,16 @@ module.exports = {
         'gray': '#454545',
         'gray-md': '#5a5a5a',
         'gray-light': '#dadada',
+        'green': '#6CA13D',
         'purple': '#872b97',
+        'purple-light': '#913f99',
+        'purple-gray': '#443454',
         'blue': '#3F3CBB',
-        'pink': '#ff3c68',
+        'pink': '#ff4f77',
         'pink-md': '#ffc4d1',
         'pink-light': '#ffebef',
+        'orange':'#F58025',
+        'orange-light':'#fde3cf'
       },
       backgroundImage: theme => ({
         'custom-gradient': 'linear-gradient(to right, #313131, #313131, #313131)',
