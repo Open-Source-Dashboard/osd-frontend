@@ -4,68 +4,31 @@ import { useAuth } from "../auth/AuthContext";
 const StampCard = () => {
   const { user } = useAuth();
   const github_username = user.github_username ? 
-  user.github_username.charAt(0).toUpperCase() + user.github_username.slice(1) 
-  : "My Donuts";
+    user.github_username.charAt(0).toUpperCase() + user.github_username.slice(1) 
+    : "My Donuts";
   const date_joined = user.user_model_data['date_joined'] || "";
   const joinedDate = date_joined;
   const formattedDate = new Date(joinedDate).toLocaleString('en-US', {
     month: 'short',
     year: 'numeric'
   });
-  
-  console.log(`Joined ${formattedDate}`);
-  
 
-
-  const [userDonutsCount, setUserDonutsCount] = useState(1);
-  const [userDonutBoxCount, setUserDonutBoxCount] = useState(0);
   const [stampedDonuts, setStampedDonuts] = useState([]);
   const [emptyDonuts, setEmptyDonuts] = useState([]);
 
   const getUserDonutsCount = useCallback(() => {
     const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
-    return totalCommits % 11;
+    return Math.min(12, totalCommits); // Ensure maximum of 12 donuts
   }, [user]);
 
-  const getUserDonutBoxCount = useCallback(() => {
-    return Math.floor(userDonutsCount / 11);
-  }, [userDonutsCount]);
-
   useEffect(() => {
-    setUserDonutsCount(getUserDonutsCount());
-  }, []);
+    const totalDonuts = getUserDonutsCount();
+    const stampedDonutsArray = new Array(totalDonuts).fill("").map(() => Math.floor(Math.random() * 6) + 1);
+    setStampedDonuts(stampedDonutsArray);
 
-  useEffect(() => {
-    setUserDonutBoxCount(getUserDonutBoxCount());
-  }, []);
-
-  useEffect(() => {
-    randomizeStampedDonutsIcons(userDonutsCount);
-  }, [userDonutsCount]);
-
-  useEffect(() => {
-    getUserDonutBoxCount();
-  }, [userDonutBoxCount]);
-
-  useEffect(() => {
-    randomizeEmptyDonutsIcons(11 - stampedDonuts.length);
-  }, [stampedDonuts]);
-
-  function randomizeStampedDonutsIcons(numberOfStamps) {
-    const stampsArray = new Array(numberOfStamps).fill("");
-    stampsArray.forEach((_, index) => {
-      stampsArray[index] = Math.floor(Math.random() * 6) + 1;
-    });
-    setStampedDonuts(stampsArray);
-  }
-
-  function randomizeEmptyDonutsIcons(numberOfEmptyDonuts) {
-    const emptyDonutsArray = new Array(numberOfEmptyDonuts).fill("");
-    emptyDonutsArray.forEach((_, index) => {
-      emptyDonutsArray[index] = Math.floor(Math.random() * 6) + 1;
-    });
+    const emptyDonutsArray = new Array(12 - totalDonuts).fill("").map(() => Math.floor(Math.random() * 6) + 1);
     setEmptyDonuts(emptyDonutsArray);
-  }
+  }, [getUserDonutsCount]);
 
   const OutlineDonutIcon = ({ number }) => {
     const componentName = `Outline${number}`;
@@ -110,10 +73,10 @@ const StampCard = () => {
         >
           <div className="relative bg-white rounded-md">
             <div className="flex flex-row justify-between">
-            <h2 className="p-1 m-0 text-xl font-bold text-left ml-2 text-pink">
-              {github_username}'s Donuts
-            </h2>
-            <p className="text-gray text-sm p-1 mt-1">Joined {formattedDate} </p>
+              <h2 className="p-1 m-0 text-xl font-bold text-left ml-2 text-pink">
+                {github_username}'s Donuts
+              </h2>
+              <p className="text-gray text-sm p-1 mt-1">Joined {formattedDate}</p>
             </div>
             <div className="absolute bottom-0 left-0 w-full border-orange-light border-t-2 border-dotted"></div>
           </div>
@@ -140,10 +103,10 @@ const StampCard = () => {
           </div>
 
           <div className="relative mt-2 bg-white rounded-md">
-          <div className="absolute bottom-0 left-0 w-full ml-2 mr-2 border-orange-light border-t-2 border-dotted"></div>
+            <div className="absolute bottom-0 left-0 w-full ml-2 mr-2 border-orange-light border-t-2 border-dotted"></div>
           </div>
           <p className="p-2 text-sm italic text-center text-gray">
-            Earn a donut for every opensource commit.
+            Earn a donut for every open-source commit.
           </p>
         </div>
       </div>
