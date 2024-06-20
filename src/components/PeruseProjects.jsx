@@ -30,23 +30,24 @@ const PeruseProjects = () => {
             {currentRepos.map((repo) => (
               <li key={repo.id} className="p-2 rounded-lg shadow-md bg-gray-md">
                 <div className="flex justify-center">
-                  {repo.owner && repo.owner.avatar_url ? (
-                    <img
-                      src={repo.owner.avatar_url}
-                      alt={repo.name}
-                      className="w-16 h-16 rounded-lg "
-                    />
-                  ) : (
-                    <img
-                      src={backupDonutImage}
-                      alt={repo.name}
-                      className="w-16 h-16 rounded-lg"
-                    />
-                  )}
+                <a href={repo.html_url} className="bg-gray-md m-0 p-0" target="_blank" rel="noopener noreferrer">
+                    {repo.owner && repo.owner.avatar_url ? (
+                      <img
+                        src={repo.owner.avatar_url}
+                        alt={repo.name}
+                        className="w-16 h-16 rounded-lg "
+                      />
+                    ) : (
+                      <img
+                        src={backupDonutImage}
+                        alt={repo.name}
+                        className="w-16 h-16 rounded-lg"
+                      />
+                    )}
+                  </a>
                 </div>
 
                 <div className="flex flex-row justify-center items-center mt-2">
-                
                   <h2 className="mr-2">
                     <a
                       href={repo.html_url}

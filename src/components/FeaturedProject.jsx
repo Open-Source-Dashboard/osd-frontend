@@ -18,7 +18,7 @@ const FeaturedProject = () => {
               className="flex flex-col items-center text-xs text-center"
             >
               <div className="flex flex-row items-center justify-center">
-              <a href={repo.html_url} className="bg-gray-md m-0 p-0">
+              <a href={repo.html_url} className="bg-gray-md m-0 p-0" target="_blank" rel="noopener noreferrer">
 
               {repo.owner && repo.owner.avatar_url ? (
                 <img

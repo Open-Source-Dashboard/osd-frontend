@@ -7,17 +7,18 @@ const MyCommits = () => {
   const { user } = useAuth();
   const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
   const donutBoxes = Math.floor(totalCommits / 12);
+  const boxOrBoxes = donutBoxes === 1 ? "box" : "boxes"; // Determine singular or plural
 
   const [loading] = useState(false);
   const [error] = useState(null);
 
   return (
-    <div className="mt-0 ">
+    <div className="mt-0">
       <div className="flex items-stretch justify-around mt-0 mb-0 rounded-lg">
         <div className="flex flex-col items-center justify-between w-48 rounded-lg border border-gray-light ml-1 mr-1">
           <div className="flex flex-col items-center justify-between h-full">
             <h3 className="mt-2 mb-0 text-md font-bold text-center text-white">
-              {donutBoxes} Donut Boxes
+              {donutBoxes} Donut {boxOrBoxes}
             </h3>
             <img
               src={donutBoxFull}
