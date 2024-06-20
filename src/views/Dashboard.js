@@ -51,7 +51,7 @@ const Dashboard = () => {
             <MyCommits />
           </div>
 
-          <div className="col-span-2 row-span-2">
+          <div className="col-span-2 row-span-7">
             <CommitGraph />
           </div>
         </div>
