@@ -3,6 +3,20 @@ import { useAuth } from "../auth/AuthContext";
 
 const StampCard = () => {
   const { user } = useAuth();
+  const github_username = user.github_username ? 
+  user.github_username.charAt(0).toUpperCase() + user.github_username.slice(1) 
+  : "My Donuts";
+  const date_joined = user.user_model_data['date_joined'] || "";
+  const joinedDate = date_joined;
+  const formattedDate = new Date(joinedDate).toLocaleString('en-US', {
+    month: 'short',
+    year: 'numeric'
+  });
+  
+  console.log(`Joined ${formattedDate}`);
+  
+
+
   const [userDonutsCount, setUserDonutsCount] = useState(1);
   const [userDonutBoxCount, setUserDonutBoxCount] = useState(0);
   const [stampedDonuts, setStampedDonuts] = useState([]);
@@ -10,13 +24,13 @@ const StampCard = () => {
 
   const getUserDonutsCount = useCallback(() => {
     const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
-    return totalCommits % 12;
+    return totalCommits % 11;
   }, [user]);
 
   const getUserDonutBoxCount = useCallback(() => {
-    return Math.floor(userDonutsCount / 12);
+    return Math.floor(userDonutsCount / 11);
   }, [userDonutsCount]);
-  
+
   useEffect(() => {
     setUserDonutsCount(getUserDonutsCount());
   }, []);
@@ -34,9 +48,8 @@ const StampCard = () => {
   }, [userDonutBoxCount]);
 
   useEffect(() => {
-    randomizeEmptyDonutsIcons(12 - stampedDonuts.length);
+    randomizeEmptyDonutsIcons(11 - stampedDonuts.length);
   }, [stampedDonuts]);
-
 
   function randomizeStampedDonutsIcons(numberOfStamps) {
     const stampsArray = new Array(numberOfStamps).fill("");
@@ -69,7 +82,7 @@ const StampCard = () => {
       </div>
     );
   };
-  
+
   const ColorDonutIcon = ({ number }) => {
     const componentName = `Color${number}`;
     const Component = lazy(() =>
@@ -85,36 +98,53 @@ const StampCard = () => {
       </div>
     );
   };
-  
+
   return (
     <div className="h-auto p-0 bg-transparent border-none row-1-card no-shadow">
       <div className="flex items-center justify-center w-full">
-        <div className="relative w-full p-3 bg-center bg-cover rounded-md shadow-inner" style={{ backgroundImage: `url(/sprinkles-colorful-background.jpeg)` }}>
+        <div
+          className="relative w-full p-1 bg-center bg-cover rounded-md shadow-inner"
+          style={{
+            backgroundImage: `url(/sprinkles-colorful-background.jpeg)`,
+          }}
+        >
           <div className="relative bg-white rounded-md">
-            <h2 className="p-2 mt-0 mb-0 text-2xl font-bold text-center text-pink">My Donuts</h2>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-light rounded-b-md"></div>
+            <div className="flex flex-row justify-between">
+            <h2 className="p-1 m-0 text-xl font-bold text-left ml-2 text-pink">
+              {github_username}'s Donuts
+            </h2>
+            <p className="text-gray text-sm p-1 mt-1">Joined {formattedDate} </p>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full border-orange-light border-t-2 border-dotted"></div>
           </div>
 
-          <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 place-items-center">
+          <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 ml-2 mr-2 place-items-center">
             {stampedDonuts.map((iconNumber, index) => (
-              <div key={index} className="flex items-center justify-center m-1 rounded-lg shadow-md bg-md-pink h-11 w-11 shadow-gray-500/50">
+              <div
+                key={index}
+                className="flex items-center justify-center m-1 rounded-lg shadow-md bg-md-pink h-11 w-11 shadow-gray-500/50"
+              >
                 <div className="flex items-center justify-center h-11 w-11">
                   <ColorDonutIcon number={iconNumber} />
                 </div>
               </div>
             ))}
             {emptyDonuts.map((iconNumber, index) => (
-              <div key={index} className="flex items-center justify-center rounded-lg shadow-md bg-light-pink h-11 w-11">
+              <div
+                key={index}
+                className="flex items-center justify-center rounded-lg shadow-md shadow-gray-500/50 h-11 w-11"
+              >
                 <OutlineDonutIcon number={iconNumber} />
               </div>
             ))}
           </div>
-          
+
           <div className="relative mt-2 bg-white rounded-md">
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-light rounded-b-md"></div>
+          <div className="absolute bottom-0 left-0 w-full ml-2 mr-2 border-orange-light border-t-2 border-dotted"></div>
           </div>
-          <p className="pt-2 text-sm italic text-center text-blue">Earn a donut for every opensource commit.</p>
-          <p className="p-1 pb-0 text-xs italic text-center text-blue">12 donuts equals a donut box!</p>
+          <p className="p-2 text-sm italic text-center text-gray">
+            Earn a donut for every opensource commit.
+          </p>
         </div>
       </div>
     </div>

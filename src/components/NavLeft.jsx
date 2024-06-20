@@ -8,7 +8,7 @@ const NavLeft = () => {
   const githubUsername = user.github_username || "";
 
   return (
-    <div className="flex flex-col p-3 text-sm rounded-lg justify-left">
+    <div className="flex flex-col pt-3 pb-3 ml-0 mr-0 text-sm rounded-lg justify-left">
 
       {isAuthenticated ? (
         <button
@@ -28,6 +28,7 @@ const NavLeft = () => {
           href={`https://github.com/${githubUsername}#js-contribution-activity`}
           target="_blank"
           rel="noopener noreferrer"
+          className='bg-gray-md'
         >
           My Github Profile
         </a>
@@ -35,14 +36,14 @@ const NavLeft = () => {
           href="https://github.com/orgs/Open-Source-Dashboard/repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center rounded-md"
+          className="flex items-center rounded-md bg-gray-md"
         >
           <span>Donut Dashboard Repo</span>
         </a>
-        <Link to="/about-us">
+        <Link to="/about-us" className='bg-gray-md'>
           The Team
         </Link>
-        <Link to="/feedback">
+        <Link to="/feedback" className='bg-gray-md'>
           Give Feedback
         </Link>
       </div>
