@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     determineAuthUrl();
-  }, []);
+  }, );
 
   const saveTokenToLocalStorage = (userAccessToken) => {
     localStorage.setItem("user_access_token", userAccessToken);

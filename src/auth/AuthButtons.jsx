@@ -5,7 +5,6 @@ import LogoutButton from './LogoutButton';
 
 const AuthButtons = () => {
   const { user } = useAuth();
-  const githubUsername = user.github_username || "User!";
 
   return (
     <>

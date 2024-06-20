@@ -1,8 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import SubHeader from "../components/SubHeader";
-import NavLeft from "../components/NavLeft";
 
 const teamMembers = [
   {
