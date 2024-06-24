@@ -72,6 +72,7 @@ export function AuthProvider({ children }) {
   async function ghLogin(ghUserCode) {
     try {
       const response = await axios.get(`${ghAuthUrl}?code=${ghUserCode}`);
+      console.log('{ghAuthUrl}?code={ghUserCode}:', `${ghAuthUrl}?code=${ghUserCode}`)
       console.log("User data with updated opensource_commits_count", response);
 
       return response;

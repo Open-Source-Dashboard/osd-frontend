@@ -4,6 +4,8 @@ import { useAuth } from "../auth/AuthContext";
 import LoadingDonut from "../assets/loading-donut.gif";
 
 const Authentication = () => {
+  console.log('in authentication file')
+
   const { login, user } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
