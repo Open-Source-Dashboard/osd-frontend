@@ -1,7 +1,8 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useEffect, useContext, useCallback } from "react";
 import axios from "axios";
 
 export const UserContext = createContext();
+export const UserDispatchContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [userData, setUser] = useState({});
@@ -49,11 +50,25 @@ export const UserProvider = ({ children }) => {
     }
   }, [API_SERVER_URL, tokenChecked]);
 
+  const dispatch = useCallback((action) => {
+    switch (action.type) {
+      case 'SET_USER':
+        setUser(action.payload);
+        break;
+      // Add more cases as needed
+      default:
+        throw new Error(`Unhandled action type: ${action.type}`);
+    }
+  }, []);
+
   return (
     <UserContext.Provider value={userData}>
-      {children}
+      <UserDispatchContext.Provider value={dispatch}>
+        {children}
+      </UserDispatchContext.Provider>
     </UserContext.Provider>
   );
 };
 
 export const useUser = () => useContext(UserContext);
+export const useUserDispatch = () => useContext(UserDispatchContext);
