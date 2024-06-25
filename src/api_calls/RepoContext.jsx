@@ -12,8 +12,10 @@ export const RepoProvider = ({ children }) => {
 
   useEffect(() => {
     const getRepoData = async () => {
+      const response = await axios.get(`${API_SERVER_URL}/repos`);
+      console.log("url", `${API_SERVER_URL}/repos`);
       try {
-        const response = await axios.get(`${API_SERVER_URL}/repos`);
+        // const response = await axios.get(`${API_SERVER_URL}/repos`);
         const {
           featured_repo_result,
           latest_contributors_result,
