@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useAuth } from "./auth/AuthContext";
+import { useAuth, AuthProvider } from "./auth/AuthContext";
 import { RepoProvider } from "./api_calls/RepoContext";
 import { UserProvider, useUserDispatch } from "./api_calls/UserContext"; // Assuming useUserDispatch is provided by UserContext
 import AboutUs from "./views/AboutUs";
@@ -43,22 +43,24 @@ function App() {
 
   return (
     <Router>
-      <UserProvider>
-        <RepoProvider>
-          <div>
-            <Routes>
-              <Route
-                path="/"
-                element={user && user.github_username ? <Dashboard /> : <StaticDashboard />}
-              />
-              <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/authentication" element={<Authentication handleGitHubAuth={handleGitHubAuth} />} />
-              <Route path="/feedback" element={<Feedback />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-          </div>
-        </RepoProvider>
-      </UserProvider>
+      <AuthProvider>
+        <UserProvider>
+          <RepoProvider>
+            <div> 
+              <Routes>
+                <Route
+                  path="/"
+                  element={user && user.github_username ? <Dashboard /> : <StaticDashboard />}
+                  />
+                <Route path="/about-us" element={<AboutUs />} />
+                <Route path="/authentication" element={<Authentication handleGitHubAuth={handleGitHubAuth} />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Routes>
+            </div>
+          </RepoProvider>
+        </UserProvider>
+      </AuthProvider>
     </Router>
   );
 }

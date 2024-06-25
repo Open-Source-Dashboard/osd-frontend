@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import axios from "axios";
+import netlifyIdentity from 'netlify-identity-widget'
 
 const ghAuthUrl = process.env.REACT_APP_AUTH_API_URL;
 const osdAuthUrl = "";
@@ -15,11 +16,13 @@ export function AuthProvider({ children }) {
     user: {},
     login,
     isLoading: false,
+    authReady: false
   });
 
   useEffect(() => {
-    determineAuthUrl();
-  }, );
+    // determineAuthUrl();
+    netlifyIdentity.init()
+  }, []);
 
   const saveTokenToLocalStorage = (userAccessToken) => {
     localStorage.setItem("user_access_token", userAccessToken);

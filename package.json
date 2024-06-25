@@ -13,6 +13,7 @@
     "lighthouse": "^12.0.0",
     "moment": "^2.30.1",
     "netlify-auth-providers": "^1.0.0-alpha5",
+    "netlify-identity-widget": "^1.9.2",
     "puppeteer": "^22.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
