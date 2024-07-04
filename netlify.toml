@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/repos/*"
+  to = "http://localhost:8000/repos/:splat"
+  status = 200
+  force = true
