@@ -7,7 +7,7 @@ const MyCommits = () => {
   const { user } = useAuth();
   const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
   const donutBoxes = Math.floor(totalCommits / 12);
-  const boxOrBoxes = donutBoxes === 1 ? "box" : "boxes"; // Determine singular or plural
+  const boxOrBoxes = donutBoxes === 1 ? "box" : "boxes";
 
   const [loading] = useState(false);
   const [error] = useState(null);

@@ -1,38 +1,61 @@
 import React, { useState } from "react";
+import { useAuth } from "../auth/AuthContext";
 import octocatHoldingDonut from "../assets/octocat-holding-donut.png";
 import donutBoxFull from "../assets/dozen-donuts-box.png";
 
-const MyCommitsStatic = () => {
-  const totalCommits = 20 || 1;
+const MyCommits = () => {
+  const totalCommits = 34;
   const donutBoxes = Math.floor(totalCommits / 12);
+  const boxOrBoxes = donutBoxes === 1 ? "Box" : "Boxes"; 
 
-  const currentDate = new Date();
-  const currentMonth = currentDate.toLocaleString("default", { month: "short" });
-  const currentYear = currentDate.getFullYear();
+  const [loading] = useState(false);
+  const [error] = useState(null);
 
   return (
-    <div className="mt-0 card-content">
-      <div className="flex items-center justify-between p-2 mt-0">
-        <div className="w-48 pb-2 mt-0 mr-2 bg-white rounded-lg h-54">
-          <h3 className="mb-0 text-lg font-bold text-center text-gray-800">Opensource Commits</h3>
-          <img src={octocatHoldingDonut} alt="Octocat holding donut" className="w-20 h-20 mx-auto mt-1" />
-          <p className="m-1 text-2xl font-bold text-center text-gray-800">{totalCommits}</p>
-          <p className="px-1 text-xs text-center text-gray-800">
-            Since joining on {currentMonth} {currentYear}
-          </p>
+    <div className="mt-0">
+      <div className="flex items-stretch justify-around mt-0 mb-0 rounded-lg">
+        <div className="flex flex-col items-center justify-between w-48 rounded-lg border border-gray-light ml-1 mr-3">
+          <div className="flex flex-col items-center justify-between h-full">
+            <h3 className="mt-1 mb-0 text-md font-bold text-center text-white">
+              Donut {boxOrBoxes}
+            </h3>
+            <div className="flex justify-center items-center w-full">
+              <p className="text-6xl px-2">{donutBoxes}</p>
+              <img
+                src={donutBoxFull}
+                alt="Donut box full"
+                className="w-20 h-20 mx-2 mt-2"
+              />
+            </div>
+            <p className="px-2 mt-1 mb-2 text-xs text-center text-white">
+              Earn 12 donuts to add a donut box
+            </p>
+          </div>
         </div>
+        <div className="flex flex-col items-center justify-between w-48 rounded-lg border border-gray-light ml-1 mr-1">
+          <div className="flex flex-col items-center justify-around h-full">
+            <h3 className="mb-0 text-md font-bold text-center text-white">
+              Opensource Commits
+            </h3>
+            <div className="flex justify-center items-center w-full">
+              <p className="text-6xl px-1">{totalCommits}</p>
+              <img
+                src={octocatHoldingDonut}
+                alt="Octocat holding donut"
+                className="w-20 h-20 mx-0 mt-2"
+              />
+            </div>
 
-        <div className="w-48 bg-white rounded-lg h-54">
-          <h3 className="mt-2 mb-0 text-lg font-bold text-center text-gray-800">Donut Boxes</h3>
-          <img src={donutBoxFull} alt="Donut box full" className="w-20 h-20 mx-auto mt-2" />
-          <p className="px-1 m-1 text-2xl font-bold text-center text-gray-800">{donutBoxes}</p>
-          <p className="px-2 mt-1 mb-2 text-xs text-center text-gray-800">
-            Earn 12 donuts to add a donut box.
-          </p>
+            <p className="text-xs">Since joining DD</p>
+            <div className="flex items-start justify-center w-full">
+              {loading && <p>Loading contributions...</p>}
+              {error && <p>{error}</p>}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default MyCommitsStatic;
+export default MyCommits;

@@ -12,7 +12,7 @@ export const RepoProvider = ({ children }) => {
 
   useEffect(() => {
     const getRepoData = async () => {
-      try {
+      // try {
         const response = await axios.get(`${API_SERVER_URL}/repos`);
         const {
           featured_repo_result,
@@ -20,12 +20,14 @@ export const RepoProvider = ({ children }) => {
           popular_repos_result,
         } = response.data;
 
+        console.log("/repos response: ", response.data)
+
         setFeaturedRepo(featured_repo_result);
         setLatestContributors(latest_contributors_result);
         setPopularRepos(popular_repos_result);
-      } catch (error) {
-        console.error("Error getting repo data:", error);
-      }
+      // } catch (error) {
+      //   console.error("Error getting repo data:", error);
+      // }
     };
 
     getRepoData();

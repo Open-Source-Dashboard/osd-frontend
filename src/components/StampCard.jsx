@@ -18,7 +18,7 @@ const StampCard = () => {
 
   const getUserDonutsCount = useCallback(() => {
     const totalCommits = user?.user_model_data?.opensource_commit_count || 0;
-    return Math.min(12, totalCommits); // Ensure maximum of 12 donuts
+    return Math.min(12, totalCommits);
   }, [user]);
 
   useEffect(() => {
