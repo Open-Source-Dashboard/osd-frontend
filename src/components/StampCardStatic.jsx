@@ -1,5 +1,4 @@
 import { lazy, Suspense, useState, useEffect, useCallback } from "react";
-import { useAuth } from "../auth/AuthContext";
 
 const StampCardStatic = () => {
   const github_username = "My Donuts";

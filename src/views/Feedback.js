@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 import emailjs from "emailjs-com";
-import SubHeader from "../components/SubHeader";
+import Header from "../components/Header";
 
 const Feedback = () => {
   const { user } = useAuth();
@@ -40,7 +40,7 @@ const Feedback = () => {
 
   return (
     <div className="min-h-screen p-8 bg-gradient-to-r from-primary to-secondary">
-      <SubHeader />
+      <Header />
       <div className="container mx-auto text-center">
         <h1 className="mb-5 text-3xl font-bold text-pink">Give Feedback</h1>
         {feedbackSent ? (
