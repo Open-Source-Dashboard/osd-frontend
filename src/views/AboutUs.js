@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import SubHeader from "../components/SubHeader";
+import Header from "../components/Header";
 
 const teamMembers = [
   {
@@ -31,7 +31,7 @@ const AboutUs = () => {
     <div className="min-h-screen p-8 bg-gradient-to-r from-primary to-secondary">
       <div className="container mx-auto text-center">
         <div className="mb-5">
-          <SubHeader />
+          <Header />
         </div>
         <h1 className="mb-5 text-3xl font-bold text-pink">The Team</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

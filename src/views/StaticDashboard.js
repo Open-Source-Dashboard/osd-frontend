@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import SubHeader from "../components/SubHeader";
+import Header from "../components/Header";
 import FeaturedProject from "../components/FeaturedProject";
 import NavLeft from "../components/NavLeft";
 import StampCardStatic from "../components/StampCardStatic";
@@ -21,7 +20,7 @@ const StaticDashboard = () => {
     >
       <div className="col-span-12 row-span-1 px-2 rounded-lg">
         <div>
-          <SubHeader />
+          <Header />
         </div>
       </div>
       <div className="col-span-6 row-span-3 px-1 pt-0 mt-4 overflow-scroll rounded-lg bg-gray">
