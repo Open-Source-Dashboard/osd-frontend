@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-const CommitGraph = () => {
-  const staticGithubUsername = 'tammytdo';
+const CommitGraphStatic = () => {
+  const githubUsername = 'tammytdo';
 
-  const staticGraphImageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${staticGithubUsername}&theme=dracula&line=FFD700&point=ffc4d1&height=280`;
+  const graphImageUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&bg_color=dadada&line=ff4f77&point=fff&height=200&color=3F3CBB&custom_title=my%20contributions`;
 
   return (
-    <div className="text-center">
-      <img 
-        src={staticGraphImageUrl} 
-        alt="GitHub Commit Graph" 
-        className="h-auto max-w-full rounded-sm" 
+    <div className="relative h-full overflow-scroll text-center">
+      <img
+        src={graphImageUrl}
+        alt="GitHub Commit Graph"
+        className="h-auto max-w-full rounded-lg"
       />
     </div>
   );
 };
 
-export default CommitGraph;
+export default CommitGraphStatic;
