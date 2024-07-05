@@ -72,7 +72,7 @@ export function AuthProvider({ children }) {
   async function ghLogin(ghUserCode) {
     console.log('url: ', `${ghAuthUrl}?code=${ghUserCode}`)
     try {
-      const response = await axios.get(`${ghAuthUrl}?code=${ghUserCode}`);
+      const response = await axios.get(`https://osd-backend-one.vercel.app/accounts/github/callback?code=${ghUserCode}`);
       console.log('ghUserCode', ghUserCode)
       console.log("User data with updated opensource_commits_count", response);
 
