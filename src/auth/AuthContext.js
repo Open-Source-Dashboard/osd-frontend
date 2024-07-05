@@ -70,6 +70,7 @@ export function AuthProvider({ children }) {
   }
 
   async function ghLogin(ghUserCode) {
+    console.log('url: ', `${ghAuthUrl}?code=${ghUserCode}`)
     try {
       const response = await axios.get(`${ghAuthUrl}?code=${ghUserCode}`);
       console.log('ghUserCode', ghUserCode)

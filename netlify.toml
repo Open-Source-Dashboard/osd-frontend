@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/repos/*"
-  to = "http://localhost:8000/repos/:splat"
+  to = "https://osd-backend-one.vercel.app/repos/:splat"
   status = 200
   force = true
