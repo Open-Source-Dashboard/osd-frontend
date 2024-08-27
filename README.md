@@ -26,7 +26,7 @@ This frontend is built with React, styled with Tailwind CSS, and designed to int
 - April 12 - May 18, 2024: Project planning and initial build.
 - May 20 - 24, 2024: Styling, logic finishing touches, features glow up, deployment.
 - May 27 - June 7, 2024: A/B testing on UI/UX.
-- June - August, 2024: Bug fixes and UI/UX tweaks.
+- June - August, 2024: Bug fixes and UI/UX tweaks, testing, and final touches.
 
 
 ## Acknowledgments 
