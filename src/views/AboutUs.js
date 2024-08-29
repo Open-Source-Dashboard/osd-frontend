@@ -78,7 +78,7 @@ const AboutUs = () => {
             Visit our GitHub repository to learn more and contribute!
           </p>
           <a
-            href="https://github.com/Open-Source-Dashboard/osd-frontend"
+            href="https://github.com/orgs/Open-Source-Dashboard/repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block p-4 text-pink"
