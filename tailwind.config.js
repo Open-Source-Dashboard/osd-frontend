@@ -40,15 +40,12 @@ module.exports = {
       },
 
       screens: {
-        xsss: "0px", //0 to 160px
-        xss: "160px", //160 to 320
-        xs: "320px", //320 to 640
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "smm": "200px",
-        'height_login': { 'raw': '(max-height: 260px)' },
+        'xs': '480px',    // Extra small devices (portrait phones)
+        'sm': '640px',    // Small devices (landscape phones)
+        'md': '768px',    // Medium devices (tablets)
+        'lg': '1024px',   // Large devices (desktops)
+        'xl': '1280px',   // Extra large devices (large desktops)
+        '2xl': '1536px'   // Extra extra large devices (larger desktops)
       },
     },
   },
