@@ -4,11 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
   ],
-  darkMode: 'class', 
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'], 
+        sans: ['Roboto', 'sans-serif'],
       },
       colors: {
         'gray': '#454545',
@@ -22,8 +22,8 @@ module.exports = {
         'pink': '#ff4f77',
         'pink-md': '#ffc4d1',
         'pink-light': '#ffebef',
-        'orange':'#F58025',
-        'orange-light':'#fde3cf'
+        'orange': '#F58025',
+        'orange-light': '#fde3cf'
       },
       backgroundImage: theme => ({
         'custom-gradient': 'linear-gradient(to right, #313131, #313131, #313131)',
@@ -37,6 +37,18 @@ module.exports = {
       },
       gridTemplateColumns: {
         'layout': 'repeat(6, 1fr)',
+      },
+
+      screens: {
+        xsss: "0px", //0 to 160px
+        xss: "160px", //160 to 320
+        xs: "320px", //320 to 640
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "smm": "200px",
+        'height_login': { 'raw': '(max-height: 260px)' },
       },
     },
   },

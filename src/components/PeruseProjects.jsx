@@ -22,7 +22,7 @@ const PeruseProjects = () => {
 
   return (
     <div className="h-full overflow-scroll shadow-gray-500/50 bg-gray">
-      <h2 className="mt-0 mb-2 text-lg font-bold">Peruse Projects</h2>
+      <h2 className="mt-0 mb-2 text-lg font-bold">Peruse Opensource Projects</h2>
 
       {popularRepos.length > 0 ? (
         <div className="relative">
@@ -30,7 +30,7 @@ const PeruseProjects = () => {
             {currentRepos.map((repo) => (
               <li key={repo.id} className="p-2 rounded-lg shadow-md bg-gray-md">
                 <div className="flex justify-center">
-                <a href={repo.html_url} className="bg-gray-md m-0 p-0" target="_blank" rel="noopener noreferrer">
+                <a href={repo.html_url} className="p-0 m-0 bg-gray-md" target="_blank" rel="noopener noreferrer">
                     {repo.owner && repo.owner.avatar_url ? (
                       <img
                         src={repo.owner.avatar_url}
@@ -47,7 +47,7 @@ const PeruseProjects = () => {
                   </a>
                 </div>
 
-                <div className="flex flex-row justify-center items-center mt-2">
+                <div className="flex flex-row items-center justify-center mt-2">
                   <h2 className="mr-2">
                     <a
                       href={repo.html_url}
@@ -70,7 +70,7 @@ const PeruseProjects = () => {
                   {repo.topics.map((topic, index) => (
                     <span
                       key={topic}
-                      className="bg-purple rounded-md text-white mr-1 pl-1 pr-1"
+                      className="pl-1 pr-1 mr-1 text-white rounded-md bg-purple"
                     >
                       {topic}
                       {index !== repo.topics.length - 1 && " "}
