@@ -33,19 +33,14 @@ module.exports = {
         'custom-dark': '5px 5px 15px rgba(0, 0, 0, 0.3)',
       },
       gridTemplateRows: {
-        'layout': 'repeat(6, minmax(100px, 1fr))',
+        'layout-12': 'repeat(12, minmax(10px, 1fr))',
       },
       gridTemplateColumns: {
-        'layout': 'repeat(6, 1fr)',
+        'layout-18': 'repeat(18, 1fr)',
       },
 
       screens: {
-        'xs': '480px',    // Extra small devices (portrait phones)
-        'sm': '640px',    // Small devices (landscape phones)
-        'md': '768px',    // Medium devices (tablets)
-        'lg': '1024px',   // Large devices (desktops)
-        'xl': '1280px',   // Extra large devices (large desktops)
-        '2xl': '1536px'   // Extra extra large devices (larger desktops)
+        'xs': '480px',    // Extra small devices, phones
       },
     },
   },
