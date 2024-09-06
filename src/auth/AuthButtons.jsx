@@ -16,7 +16,9 @@ const AuthButtons = () => {
           <LogoutButton />
         </div>
       ) : (
+        <div>
         <LoginButton />
+        </div>
       )}
     </>
   );

@@ -8,54 +8,33 @@ import MyCommitsStatic from "../components/MyCommitsStatic";
 import LatestContributors from "../components/LatestContributors";
 import MapOfUsers from "./MapOfUsers";
 import "leaflet/dist/leaflet.css";
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import Footer from "../components/Footer";
+import AuthButtons from "../auth/AuthButtons";
 
 
 const DashboardStatic = () => {
   return (
     <div
-      className="grid h-screen gap-4 pt-3 m-3 grid-cols-layout-18 grid-rows-layout-12">
-      <div className="col-span-12 row-span-2 px-2 rounded-lg">
-        <div>
-          <Header />
+      className="flex-col m-3 space-y-5 md:h-screen md:gap-4 md:grid md:grid-cols-18 md:grid-rows-12">
+        <div className="flex items-center md:grid md:row-start-1 md:row-span-2 md:col-span-12">
+        <Header />
+        <div className="pl-3 md:hidden"> 
+          <AuthButtons />
         </div>
-      </div>
-      <div className="col-span-6 row-span-4 px-1 pt-0 mt-4 overflow-scroll rounded-lg bg-gray">
-        <LatestContributors />
-      </div>
-      <div className="col-span-2 row-span-6 p-2 mb-5">
+        </div>
+        <div className="hidden md:grid md:col-span-4 md:row-start-1 md:row-span-5 min-w-60">
+          <LatestContributors/>
+        </div>
         <NavLeftStatic />
-      </div>
-
-      <div className="col-span-10 p-3 rounded-lg bg-purple row-span-7">
-        <div className="grid h-full grid-cols-2 grid-rows-6 gap-2">
-          <div className="col-span-1 row-span-4">
-            <StampCardStatic />
-          </div>
-        <div className="col-span-1 row-span-4 ml-2 rounded-lg">
+        <div className="flex items-center justify-center md:grid md:col-start-2 md:col-span-6 min-w-60">
+          <StampCardStatic />
+        </div>
         <MyCommitsStatic />
-      </div>
+        <div className="md:hidden">
+          <LatestContributors/>
+        </div>
 
-      <div className="col-span-2 row-span-7">
-          <CommitGraphStatic />
       </div>
-    </div>
-    </div>
-      <div className="col-span-6 row-span-5 p-2 rounded-lg bg-gray ">
-        <FeaturedProject />
-      </div>
-      <div className="col-span-7 p-2 overflow-hidden rounded-lg row-span-8 bg-gray">
-        <MapOfUsers />
-      </div>
-      <div className="col-span-11 p-2 rounded-lg row-span-8 bg-gray">
-        <PeruseProjects />
-      </div>
-      <div className="col-span-12 row-span-1 px-2 rounded-lg md:hidden">
-      <Footer />
-      </div>
-    </div>
   );
 };
 

@@ -32,12 +32,6 @@ module.exports = {
         'custom-light': '0 2px 5px rgba(255, 255, 255, 0.15)',
         'custom-dark': '5px 5px 15px rgba(0, 0, 0, 0.3)',
       },
-      gridTemplateRows: {
-        'layout-12': 'repeat(12, minmax(10px, 1fr))',
-      },
-      gridTemplateColumns: {
-        'layout-18': 'repeat(18, 1fr)',
-      },
 
       screens: {
         'xs': '480px',    // Extra small devices, phones

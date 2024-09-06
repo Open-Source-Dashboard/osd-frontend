@@ -5,8 +5,8 @@ const LatestContributors = () => {
   const { latestContributors } = useContext(RepoContext);
 
   return (
-    <div className="p-2 pt-0 mt-0 overflow-scroll text-white">
-      <h2 className="font-bold text-lg">Latest Opensource Contributors</h2>
+    <div className="p-2 pt-0 overflow-scroll rounded-lg bg-gray">
+      <h2 className="text-lg font-bold">Latest Opensource Contributors</h2>
       {latestContributors.length > 0 ? (
         latestContributors.slice(0,5).map((contributor, idx) => (
           <div key={`contributor-${idx}`}>
