@@ -30,6 +30,8 @@ const DashboardStatic = () => {
           <StampCardStatic />
         </div>
         <MyCommitsStatic />
+        <CommitGraphStatic />
+        
         <div className="md:hidden">
           <LatestContributors/>
         </div>
