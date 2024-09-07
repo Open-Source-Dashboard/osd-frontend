@@ -22,7 +22,7 @@ const DashboardStatic = () => {
           <AuthButtons />
         </div>
         </div>
-        <div className="hidden md:grid md:col-span-6 md:row-start-1 md:row-span-5 min-w-50">
+        <div className="hidden md:grid md:col-span-7 md:row-start-1 md:row-span-5 min-w-50">
           <LatestContributors/>
         </div>
         <NavLeftStatic />
@@ -31,13 +31,24 @@ const DashboardStatic = () => {
         </div>
         <MyCommitsStatic />
         <CommitGraphStatic />
-        <div className="flex p-2 rounded-lg md:row-span-5 md:col-span-6 bg-gray md:col-start-10">
+        <div className="flex p-2 rounded-lg md:row-span-5 md:col-span-7 bg-gray md:col-start-10">
           <FeaturedProject />
         </div>
-
+        <div className="flex hidden p-2 md:grid min-h-60 md:col-span-5 bg-gray">
+          <MapOfUsers />
+        </div>
+        <div className="flex p-2 rounded-lg md:col-span-11 md:row-span-10 bg-gray md:col-start-6 md:row-start-11">
+          <PeruseProjects />
+        </div>
         
         <div className="md:hidden">
           <LatestContributors/>
+        </div>
+        <div className="flex p-2 md:hidden min-h-60 bg-gray" >
+          <MapOfUsers />
+        </div>
+        <div className="md:hidden">
+          <Footer />
         </div>
 
       </div>
