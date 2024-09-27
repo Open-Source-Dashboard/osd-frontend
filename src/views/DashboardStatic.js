@@ -22,16 +22,18 @@ const DashboardStatic = () => {
           <AuthButtons />
         </div>
         </div>
-        <div className="hidden md:grid md:col-span-7 md:row-start-1 md:row-span-5">
+        <div className="hidden md:grid lg:col-span-7 lg:row-start-1 lg:row-span-5">
           <LatestContributors/>
         </div>
         <NavLeftStatic />
-        <div className="flex items-center justify-center sm:grid md:col-start-2 sm:col-span-4 ">
+        <div className="flex items-center justify-center lg:pl-10 md:grid md:col-start-2 lg:col-span-5 md:col-span-5 ">
           <StampCardStatic />
         </div>
-        <MyCommitsStatic />
+        <div className="flex items-center justify-center md:grid lg:col-start-7 lg:col-span-3 ">
+          <MyCommitsStatic />
+        </div>
         <CommitGraphStatic />
-        <div className="flex p-2 rounded-lg bg-blue md:row-span-5 md:col-span-7 md:col-start-10">
+        <div className="flex p-2 rounded-lg bg-blue lg:row-span-5 lg:col-span-7 lg:col-start-10">
           <FeaturedProject />
         </div>
         <div className="flex hidden p-2 rounded-lg md:grid min-h-60 md:col-span-5 bg-gray">

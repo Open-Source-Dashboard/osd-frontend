@@ -61,7 +61,7 @@ const StampCardStatic = () => {
   };
 
   return (
-    <div className="max-w-xs bg-transparent border-none">
+    <div className="max-w-xs"> 
       <div className="flex items-center justify-center w-full">
         <div
           className="relative w-full p-1 bg-center bg-cover rounded-md shadow-inner"
