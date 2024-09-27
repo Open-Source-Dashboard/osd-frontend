@@ -16,9 +16,9 @@ const DashboardStatic = () => {
   return (
     <div
       className="flex-col m-3 space-y-5 md:h-screen md:gap-4 md:grid md:grid-cols-18 md:grid-rows-12">
-        <div className="flex items-center md:grid md:row-start-1 md:row-span-2 md:col-span-9">
+        <div className="flex-col items-center md:grid md:row-start-1 md:row-span-2 md:col-span-9">
         <Header />
-        <div className="pl-3 sm:hidden"> 
+        <div className="p-4 md:hidden"> 
           <AuthButtons />
         </div>
         </div>
@@ -31,7 +31,7 @@ const DashboardStatic = () => {
         </div>
         <MyCommitsStatic />
         <CommitGraphStatic />
-        <div className="flex p-2 rounded-lg md:row-span-5 md:col-span-7 bg-gray md:col-start-10">
+        <div className="flex p-2 rounded-lg bg-blue md:row-span-5 md:col-span-7 md:col-start-10">
           <FeaturedProject />
         </div>
         <div className="flex hidden p-2 rounded-lg md:grid min-h-60 md:col-span-5 bg-gray">

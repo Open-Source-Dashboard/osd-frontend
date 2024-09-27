@@ -11,7 +11,7 @@
     font-family: "Baloo 2", cursive;
   }
   .sub-header {
-    @apply mt-5 text-sm text-white sm:text-base;
+    @apply text-white ;
     font-family: "Baloo 2", cursive;
   }
   h2 {
