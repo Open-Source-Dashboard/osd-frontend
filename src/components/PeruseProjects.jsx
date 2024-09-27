@@ -1,10 +1,31 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { RepoContext } from "../api_calls/RepoContext";
 import backupDonutImage from "../assets/donut-icons/color/donut-purple.png";
 
 const PeruseProjects = () => {
   const { popularRepos } = useContext(RepoContext);
-  const reposPerPage = 3;
+
+  // Change repos per page based on screen size
+  const [reposPerPage, setReposPerPage] = useState();
+
+  useEffect(() => {
+    const updateReposPerPage = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1024) {
+        setReposPerPage(3); // lg
+      } else if (screenWidth >= 640) {
+        setReposPerPage(2); // md 
+      } else {
+        setReposPerPage(1); // sm
+      }
+    };
+
+    window.addEventListener('resize', updateReposPerPage);
+
+    updateReposPerPage();
+
+    return () => window.removeEventListener('resize', updateReposPerPage);
+  }, []);
 
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -26,7 +47,7 @@ const PeruseProjects = () => {
 
       {popularRepos.length > 0 ? (
         <div className="relative">
-          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {currentRepos.map((repo) => (
               <li key={repo.id} className="p-2 rounded-lg shadow-md bg-gray-md">
                 <div className="flex justify-center">
@@ -58,14 +79,10 @@ const PeruseProjects = () => {
                       {repo.name}
                     </a>
                   </h2>
-                  <p className="text-sm text-white">
-                    ⭐ {repo.stargazers_count}
-                  </p>
+                  <p className="text-sm text-white">⭐ {repo.stargazers_count}</p>
                 </div>
 
-                <p className="py-2 text-xs text-white mb3-2">
-                  {repo.description}
-                </p>
+                <p className="py-2 text-xs text-white mb3-2">{repo.description}</p>
                 <p className="text-xs text-light-pink">
                   {repo.topics.map((topic, index) => (
                     <span
@@ -80,21 +97,21 @@ const PeruseProjects = () => {
               </li>
             ))}
           </ul>
-          <button
-            onClick={handlePrevPage}
-            className={` text-xs absolute left-0 top-1/4 bg-green p-1 m-2 transform -translate-y-1/2 rounded-md top-1/2;}`}
-            disabled={currentPage === 0}
-          >
-            Prev
-          </button>
-          <button
-            onClick={handleNextPage}
-            className={` text-xs absolute right-0 top-1/4 bg-green p-1 m-2 transform -translate-y-1/2 rounded-md top-1/2;}`}
-            disabled={indexOfLastRepo >= popularRepos.length}
-          >
-            Next
-          </button>
-        </div>
+            <button
+              onClick={handlePrevPage}
+              className={` text-xs absolute left-0 top-1/4 bg-green p-1 m-2 transform -translate-y-1/2 rounded-md top-1/2;}`}
+              disabled={currentPage === 0}
+            >
+              Prev
+            </button>
+            <button
+              onClick={handleNextPage}
+              className={` text-xs absolute right-0 top-1/4 bg-green p-1 m-2 transform -translate-y-1/2 rounded-md top-1/2;}`}
+              disabled={indexOfLastRepo >= popularRepos.length}
+            >
+              Next
+            </button>
+          </div> 
       ) : (
         <p>Loading...</p>
       )}
