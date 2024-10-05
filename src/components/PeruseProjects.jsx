@@ -50,8 +50,9 @@ const PeruseProjects = () => {
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {currentRepos.map((repo) => (
               <li key={repo.id} className="p-2 rounded-lg shadow-md bg-gray-md">
+                <div className="flex flex-row justify-center">
                 <div className="flex justify-center">
-                <a href={repo.html_url} className="p-0 m-0 bg-gray-md" target="_blank" rel="noopener noreferrer">
+                <a href={repo.html_url} className="p-0 bg-gray-md" target="_blank" rel="noopener noreferrer">
                     {repo.owner && repo.owner.avatar_url ? (
                       <img
                         src={repo.owner.avatar_url}
@@ -68,8 +69,8 @@ const PeruseProjects = () => {
                   </a>
                 </div>
 
-                <div className="flex flex-row items-center justify-center mt-2">
-                  <h2 className="mr-2">
+                <div className="flex flex-col items-center justify-center">
+                  <h2 className="mx-4 mt-2 mb-2">
                     <a
                       href={repo.html_url}
                       target="_blank"
@@ -80,6 +81,7 @@ const PeruseProjects = () => {
                     </a>
                   </h2>
                   <p className="text-sm text-white">⭐ {repo.stargazers_count}</p>
+                </div>
                 </div>
 
                 <p className="py-2 text-xs text-white mb3-2">{repo.description}</p>
