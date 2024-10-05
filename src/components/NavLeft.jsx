@@ -8,7 +8,7 @@ const NavLeft = () => {
   const githubUsername = user.github_username || "";
 
   return (
-    <div className="flex flex-col pt-3 pb-3 ml-0 mr-0 text-sm rounded-lg justify-left">
+    <div className="flex flex-col pt-3 pb-3 text-sm rounded-lg justify-left">
 
       {isAuthenticated ? (
         <button

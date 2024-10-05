@@ -8,11 +8,11 @@ import Authentication from "./views/Authentication";
 import Dashboard from "./views/Dashboard";
 import Feedback from "./views/Feedback";
 import PageNotFound from "./views/PageNotFound";
-import StaticDashboard from "./views/StaticDashboard";
+import DashboardStatic from "./views/DashboardStatic";
 
 function App() {
   const { user } = useAuth();
-  
+
   return (
     <Router>
       <UserProvider>
@@ -21,7 +21,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={user.github_username ? <Dashboard /> : <StaticDashboard />}
+                element={user.github_username ? <Dashboard /> : <DashboardStatic />}
               />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/authentication" element={<Authentication />} />

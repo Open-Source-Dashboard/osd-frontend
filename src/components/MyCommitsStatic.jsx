@@ -11,15 +11,15 @@ const MyCommits = () => {
   const [error] = useState(null);
 
   return (
-    <div className="mt-0">
+    <div className="col-span-4 row-span-4">
       <div className="flex items-stretch justify-around mt-0 mb-0 rounded-lg">
-        <div className="flex flex-col items-center justify-between w-48 rounded-lg border border-gray-light ml-1 mr-3">
+        <div className="flex flex-col items-center justify-between w-48 ml-1 mr-3 border rounded-lg border-gray-light">
           <div className="flex flex-col items-center justify-between h-full">
-            <h3 className="mt-1 mb-0 text-md font-bold text-center text-white">
+            <h3 className="mt-1 mb-0 font-bold text-center text-white text-md">
               Donut {boxOrBoxes}
             </h3>
-            <div className="flex justify-center items-center w-full">
-              <p className="text-6xl px-2">{donutBoxes}</p>
+            <div className="flex items-center justify-center w-full">
+              <p className="px-2 text-6xl">{donutBoxes}</p>
               <img
                 src={donutBoxFull}
                 alt="Donut box full"
@@ -31,13 +31,13 @@ const MyCommits = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-between w-48 rounded-lg border border-gray-light ml-1 mr-1">
+        <div className="flex flex-col items-center justify-between w-48 ml-1 mr-1 border rounded-lg border-gray-light">
           <div className="flex flex-col items-center justify-around h-full">
-            <h3 className="mb-0 text-md font-bold text-center text-white">
+            <h3 className="mb-0 font-bold text-center text-white text-md">
               Opensource Commits
             </h3>
-            <div className="flex justify-center items-center w-full">
-              <p className="text-6xl px-1">{totalCommits}</p>
+            <div className="flex items-center justify-center w-full">
+              <p className="px-1 text-6xl">{totalCommits}</p>
               <img
                 src={octocatHoldingDonut}
                 alt="Octocat holding donut"

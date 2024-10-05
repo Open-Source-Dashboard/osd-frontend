@@ -1,29 +1,18 @@
-import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import FeaturedProject from "../components/FeaturedProject";
-import NavLeft from "../components/NavLeft";
-import StampCard from "../components/StampCard";
-import CommitGraph from "../components/CommitGraph";
+import NavLeftStatic from "../components/NavLeftStatic";
+import StampCardStatic from "../components/StampCardStatic";
+import CommitGraphStatic from "../components/CommitGraphStatic";
 import PeruseProjects from "../components/PeruseProjects";
-import MyCommits from "../components/MyCommits";
+import MyCommitsStatic from "../components/MyCommitsStatic";
 import LatestContributors from "../components/LatestContributors";
 import MapOfUsers from "./MapOfUsers";
 import "leaflet/dist/leaflet.css";
-import AuthButtons from "../auth/AuthButtons";
 import Footer from "../components/Footer";
+import AuthButtons from "../auth/AuthButtons";
 
 
-const Dashboard = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
+const DashboardStatic = () => {
   return (
     <div
       className="flex-col m-3 space-y-5 lg:h-screen lg:gap-4 lg:grid lg:grid-cols-18 lg:grid-rows-12">
@@ -36,14 +25,14 @@ const Dashboard = () => {
       <div className="hidden lg:grid lg:col-span-7 lg:row-start-1 lg:row-span-5">
         <LatestContributors />
       </div>
-      <NavLeft />
+      <NavLeftStatic />
       <div className="flex items-center justify-center lg:pl-10 lg:grid lg:col-start-2 lg:col-span-5 ">
-        <StampCard />
+        <StampCardStatic />
       </div>
       <div className="flex items-center justify-center lg:grid lg:col-start-7 lg:col-span-3 ">
-        <MyCommits />
+        <MyCommitsStatic />
       </div>
-      <CommitGraph />
+      <CommitGraphStatic />
       <div className="flex p-2 rounded-lg bg-blue lg:row-span-5 lg:col-span-7 lg:col-start-10">
         <FeaturedProject />
       </div>
@@ -68,4 +57,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardStatic;
