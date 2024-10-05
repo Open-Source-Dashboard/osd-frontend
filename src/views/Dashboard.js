@@ -9,6 +9,9 @@ import MyCommits from "../components/MyCommits";
 import LatestContributors from "../components/LatestContributors";
 import MapOfUsers from "./MapOfUsers";
 import "leaflet/dist/leaflet.css";
+import AuthButtons from "../auth/AuthButtons";
+import Footer from "../components/Footer";
+
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -23,48 +26,44 @@ const Dashboard = () => {
 
   return (
     <div
-      className="grid h-screen gap-4 pt-3 m-3"
-      style={{
-        gridTemplateRows: "repeat(12, 1fr)",
-        gridTemplateColumns: "repeat(18, 1fr)",
-      }}
-    >
-      <div className="col-span-12 row-span-1 px-2 rounded-lg">
-        <div>
+      className="flex-col m-3 space-y-5 lg:h-screen lg:gap-4 lg:grid lg:grid-cols-18 lg:grid-rows-12">
+      <div className="flex-col items-center lg:grid lg:row-start-1 lg:row-span-2 lg:col-span-9">
         <Header />
-        </div>
       </div>
-      <div className="col-span-6 row-span-3 px-1 pt-0 mt-4 overflow-scroll rounded-lg bg-gray">
+      <div className="p-0 px-4 lg:pb-4 lg:hidden">
+        <AuthButtons />
+      </div>
+      <div className="hidden lg:grid lg:col-span-7 lg:row-start-1 lg:row-span-5">
         <LatestContributors />
       </div>
-
-      <div className="col-span-2 p-2 mb-5 row-span-6 ">
-        <NavLeft />
+      <NavLeft />
+      <div className="flex items-center justify-center lg:pl-10 lg:grid lg:col-start-2 lg:col-span-5 ">
+        <StampCard />
       </div>
-
-      <div className="col-span-10 p-3 rounded-lg bg-purple row-span-7">
-        <div className="grid h-full grid-cols-2 grid-rows-6 gap-2">
-          <div className="col-span-1 row-span-4">
-            <StampCard />
-          </div>
-          <div className="col-span-1 row-span-4 ml-2 rounded-lg">
-            <MyCommits />
-          </div>
-
-          <div className="col-span-2 row-span-7">
-            <CommitGraph />
-          </div>
-        </div>
+      <div className="flex items-center justify-center lg:grid lg:col-start-7 lg:col-span-3 ">
+        <MyCommits />
       </div>
-      <div className="col-span-6 row-span-5 p-2 rounded-lg bg-gray ">
+      <CommitGraph />
+      <div className="flex p-2 rounded-lg bg-blue lg:row-span-5 lg:col-span-7 lg:col-start-10">
         <FeaturedProject />
       </div>
-      <div className="col-span-7 row-span-8 p-2 overflow-hidden rounded-lg bg-gray">
+      <div className="flex hidden p-2 rounded-lg lg:grid min-h-60 lg:col-span-5 bg-gray">
         <MapOfUsers />
       </div>
-      <div className="col-span-11 row-span-8 p-2 rounded-lg bg-gray">
+      <div className="flex p-2 rounded-lg md:col-span-11 md:row-span-10 bg-gray md:col-start-6 md:row-start-11">
         <PeruseProjects />
       </div>
+
+      <div className="lg:hidden">
+        <LatestContributors />
+      </div>
+      <div className="hidden p-2 rounded-lg md:grid min-h-60 lg:hidden bg-gray" >
+        <MapOfUsers />
+      </div>
+      <div className="md:hidden">
+        <Footer />
+      </div>
+
     </div>
   );
 };
