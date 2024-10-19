@@ -4,7 +4,7 @@ import AuthButtons from "../auth/AuthButtons";
 const NavLeft = () => {
 
   return (
-    <div className="flex-col hidden p-3 text-sm rounded-lg justify-left lg:flex md:max-w-xs md:row-start-3">
+    <div>
       <div className="flex-col space-y-2 bg-gray-800 -full ">
         <AuthButtons />
       </div>

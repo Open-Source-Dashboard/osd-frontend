@@ -7,7 +7,7 @@ const Footer = () => {
   const githubUsername = user?.githubUsername;
   
   return (
-    <footer className="w-full p-4 text-white bg-gray-800 md:hidden">
+    <footer className="w-full p-4 text-white bg-gray-800">
       <div className="flex flex-col space-y-2">
         <Link to="/about-us" className='bg-gray-md'>The Team</Link>
         <Link to="/feedback" className='bg-gray-md'>Give Feedback</Link>

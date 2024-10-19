@@ -10,7 +10,7 @@ const FeaturedProject = () => {
       <h2 className="mt-0 mb-2 text-lg font-bold text-left">
         Featured Opensource Project
       </h2>
-      <div className="h-full rounded-md bg-gray-md">
+      <div className="h-full w-full rounded-md bg-gray-md">
         {featuredRepo.length > 0 ? (
           featuredRepo.map((repo) => (
             <div
@@ -44,7 +44,7 @@ const FeaturedProject = () => {
               </div>
 
               <p className="mt-2 text-white">{repo.description}</p>
-              <p className="mt-2 text-purple">
+              <p className="mt-2 p-1 text-purple">
                 {repo.topics.map((topic, index) => (
                   <span key={topic} className="pl-1 pr-1 mr-1 text-white rounded-md bg-purple">
                     {topic}
@@ -55,7 +55,8 @@ const FeaturedProject = () => {
             </div>
           ))
         ) : (
-          <p>Loading...</p>
+          <p className="w-full h-full rounded-lg bg-blue">
+            Loading...</p>
         )}
       </div>
     </div>

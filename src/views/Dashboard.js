@@ -26,44 +26,51 @@ const Dashboard = () => {
 
   return (
     <div
-      className="flex-col m-3 space-y-5 lg:h-screen lg:gap-4 lg:grid lg:grid-cols-18 lg:grid-rows-12">
-      <div className="flex-col items-center lg:grid lg:row-start-1 lg:row-span-2 lg:col-span-9">
+      className="flex-col m-4 space-y-5 lg:m-3 lg:space-y-0 lg:h-screen lg:gap-4 lg:grid lg:grid-cols-[repeat(18,1fr)] lg:grid-rows-[repeat(12,1fr)]">
+      <div className="flex-col items-center lg:row-span-1 lg:col-span-12">
         <Header />
       </div>
-      <div className="p-0 px-4 lg:pb-4 lg:hidden">
+      <div className="p-0 px-4 lg:hidden">
         <AuthButtons />
       </div>
-      <div className="hidden lg:grid lg:col-span-7 lg:row-start-1 lg:row-span-5">
+      <div className="hidden lg:grid lg:col-span-6 lg:pt-4 lg:overflow-scroll lg:row-span-3">
         <LatestContributors />
       </div>
-      <NavLeft />
-      <div className="flex items-center justify-center lg:pl-10 lg:grid lg:col-start-2 lg:col-span-5 ">
-        <StampCard />
-      </div>
-      <div className="flex items-center justify-center lg:grid lg:col-start-7 lg:col-span-3 ">
-        <MyCommits />
-      </div>
-      <CommitGraph />
-      <div className="flex p-2 rounded-lg bg-blue lg:row-span-5 lg:col-span-7 lg:col-start-10">
-        <FeaturedProject />
-      </div>
-      <div className="flex hidden p-2 rounded-lg lg:grid min-h-60 lg:col-span-5 bg-gray">
-        <MapOfUsers />
-      </div>
-      <div className="flex p-2 rounded-lg md:col-span-11 md:row-span-10 bg-gray md:col-start-6 md:row-start-11">
-        <PeruseProjects />
+      <div className="flex-col hidden text-sm rounded-lg justify-left lg:grid lg:p-2 lg:row-span-6 lg:col-span-2">
+        <NavLeft />
       </div>
 
+      <div className="lg:col-span-10 lg:rounded-lg lg:row-span-7">
+        <div className="space-y-5 lg:space-y-0 lg:h-full lg:gap-2 lg:grid-rows-6 lg:grid-cols-2 lg:grid">
+          <div className="flex items-center justify-center lg:row-span-4 lg:grid lg:col-span-1">
+            <StampCard />
+          </div>
+          <div className="flex items-center justify-center lg:col-span-1 lg:row-span-4">
+            <MyCommits />
+          </div>
+          <div className="h-full lg:col-span-2 lg:row-span-7">
+            <CommitGraph />
+          </div>
+        </div>
+      </div>
+      <div className="flex p-2 w-full rounded-lg bg-blue lg:row-span-5">
+        <FeaturedProject />
+      </div>
+      <div className="hidden p-2 rounded-lg lg:grid min-h-60 lg:col-span-7 lg:row-span-8 bg-gray">
+        <MapOfUsers />
+      </div>
+      <div className="flex p-2 rounded-lg bg-gray lg:row-span-8 lg:col-span-11">
+        <PeruseProjects />
+      </div>
       <div className="lg:hidden">
         <LatestContributors />
       </div>
-      <div className="hidden p-2 rounded-lg md:grid min-h-60 lg:hidden bg-gray" >
+      <div className="p-2 rounded-lg  xs:grid min-h-60 lg:hidden bg-gray" >
         <MapOfUsers />
       </div>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <Footer />
       </div>
-
     </div>
   );
 };
