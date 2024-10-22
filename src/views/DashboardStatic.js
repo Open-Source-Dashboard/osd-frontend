@@ -23,7 +23,7 @@ const DashboardStatic = () => {
       <div className="p-0 px-4 lg:hidden">
         <AuthButtons />
       </div>
-      <div className="hidden lg:grid lg:col-span-6 lg:pt-4 lg:overflow-scroll lg:row-span-3">
+      <div className="hidden lg:grid lg:col-span-6 lg:pt-4 lg:overflow-auto lg:row-span-3">
         <LatestContributors />
       </div>
       <div className="flex-col hidden text-sm rounded-lg justify-left lg:grid lg:p-2 lg:row-span-6 lg:col-span-2">
@@ -43,7 +43,7 @@ const DashboardStatic = () => {
           </div>
         </div>
       </div>
-      <div className="flex p-2 w-full rounded-lg bg-blue lg:row-span-5 lg:col-span-6">
+      <div className="flex w-full p-2 rounded-lg bg-blue lg:row-span-5 lg:col-span-6">
         <FeaturedProject />
       </div>
       <div className="hidden p-2 rounded-lg lg:grid lg:col-span-7 lg:row-span-8 bg-gray">

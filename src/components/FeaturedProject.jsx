@@ -6,11 +6,11 @@ const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
 
   return (
-    <div className="h-full overflow-scroll">
+    <div className="h-full overflow-auto">
       <h2 className="mt-0 mb-2 text-lg font-bold text-left">
         Featured Opensource Project
       </h2>
-      <div className="h-full w-full rounded-md bg-gray-md">
+      <div className="w-full h-full rounded-md bg-gray-md">
         {featuredRepo.length > 0 ? (
           featuredRepo.map((repo) => (
             <div
@@ -36,7 +36,7 @@ const FeaturedProject = () => {
               </a>
 
               <div className="flex flex-col">
-                <h1 className="text-m">
+                <h1 className="mt-3 text-m">
                   <a href={repo.html_url} className="text-sm bg-gray">{repo.name}</a>
                 </h1>
                 <p className="pt-2 m-2 text-sm text-left text-white">⭐ {repo.stargazers_count}</p>
@@ -44,7 +44,7 @@ const FeaturedProject = () => {
               </div>
 
               <p className="mt-2 text-white">{repo.description}</p>
-              <p className="mt-2 p-1 text-purple">
+              <p className="p-1 mt-2 text-purple">
                 {repo.topics.map((topic, index) => (
                   <span key={topic} className="pl-1 pr-1 mr-1 text-white rounded-md bg-purple">
                     {topic}

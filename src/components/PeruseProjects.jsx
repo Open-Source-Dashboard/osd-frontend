@@ -42,7 +42,7 @@ const PeruseProjects = () => {
   const currentRepos = popularRepos.slice(indexOfFirstRepo, indexOfLastRepo);
 
   return (
-    <div className="h-full overflow-scroll shadow-gray-500/50 bg-gray">
+    <div className="h-full overflow-auto shadow-gray-500/50 bg-gray">
       <h2 className="mt-0 mb-2 text-lg font-bold">Peruse Opensource Projects</h2>
       
       {popularRepos.length > 0 ? (
@@ -80,7 +80,7 @@ const PeruseProjects = () => {
                       {repo.name}
                     </a>
                   </h2>
-                  <p className="text-sm pt-1 text-white">⭐ {repo.stargazers_count}</p>
+                  <p className="pt-1 text-sm text-white">⭐ {repo.stargazers_count}</p>
                 </div>
                 </div>
 
