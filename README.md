@@ -26,7 +26,9 @@ This frontend is built with React, styled with Tailwind CSS, and designed to int
 - April 12 - May 18, 2024: Project planning and initial build.
 - May 20 - 24, 2024: Styling, logic finishing touches, features glow up, deployment.
 - May 27 - June 7, 2024: A/B testing on UI/UX.
-- June - August, 2024: Bug fixes and UI/UX tweaks.
+- June - August, 2024: Bug fixes.
+- August - September, 2024: Implement responsiveness, mobile view, UI/UX tweaks.
+- October - December, 2024: Code review, user feedback, features, documentation, database.
 
 
 ## Acknowledgments 
@@ -38,6 +40,7 @@ This frontend is built with React, styled with Tailwind CSS, and designed to int
 - Canva for creation of donut assets. <img src="src/assets/dozen-donuts-box.png" width="60" height="60" style="vertical-align: bottom;" /> 
 - [EmailJS](https://www.emailjs.com/) for handling feedback submissions.
 - Allison Do, Nicole Do for UI ideation and feedback.
+- Andy Ernst for code review. 
 - All of the amazing devs contributing to Opensource projects!
 
 

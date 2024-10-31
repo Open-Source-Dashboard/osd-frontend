@@ -7,11 +7,11 @@
     @apply text-white bg-custom-gradient;
   }
   h1 {
-    @apply mt-4 text-xl font-bold text-white;
+    @apply text-xl font-bold text-white;
     font-family: "Baloo 2", cursive;
   }
   .sub-header {
-    @apply mt-5 text-sm text-white;
+    @apply text-white text-center;
     font-family: "Baloo 2", cursive;
   }
   h2 {
@@ -39,6 +39,13 @@
     }
   }
 
+  .mobile-menu {
+    @apply hidden sm:block;
+  }
+  .auth-button {
+    @apply flex items-center justify-center;
+  }
+  
   .no-shadow.flex-grow {
     box-shadow: none !important;
   }

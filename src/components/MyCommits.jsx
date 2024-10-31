@@ -15,7 +15,7 @@ const MyCommits = () => {
   return (
     <div className="mt-0">
       <div className="flex items-stretch justify-around mt-0 mb-0 rounded-lg">
-        <div className="flex flex-col items-center justify-between w-48 rounded-lg border border-gray-light ml-1 mr-3">
+        <div className="flex flex-col items-center justify-between rounded-lg border border-gray-light ml-1 mr-3">
           <div className="flex flex-col items-center justify-between h-full">
             <h3 className="mt-1 mb-0 text-md font-bold text-center text-white">
               Donut {boxOrBoxes}

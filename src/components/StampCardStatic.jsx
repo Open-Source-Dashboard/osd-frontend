@@ -61,7 +61,7 @@ const StampCardStatic = () => {
   };
 
   return (
-    <div className="h-auto p-0 bg-transparent border-none row-1-card no-shadow">
+    <div className="max-w-xs"> 
       <div className="flex items-center justify-center w-full">
         <div
           className="relative w-full p-1 bg-center bg-cover rounded-md shadow-inner"
@@ -71,12 +71,12 @@ const StampCardStatic = () => {
         >
           <div className="relative bg-white rounded-md">
             <div className="flex flex-row justify-between">
-              <h2 className="p-1 m-0 text-xl font-bold text-left ml-2 text-pink">
+              <h2 className="p-1 m-0 ml-2 text-xl font-bold text-left text-pink">
                 {github_username}
               </h2>
-              <p className="text-gray text-sm p-1 mt-1">Joined {formattedDate}</p>
+              <p className="p-1 mt-1 text-xs italic text-gray">Joined {formattedDate}</p>
             </div>
-            <div className="absolute bottom-0 left-0 w-full border-orange-light border-t-2 border-dotted"></div>
+            <div className="absolute bottom-0 left-0 w-full border-t-2 border-dotted border-orange-light"></div>
           </div>
 
           <div className="grid grid-cols-6 grid-rows-2 gap-1 mx-auto mb-2 ml-2 mr-2 place-items-center">
@@ -101,7 +101,7 @@ const StampCardStatic = () => {
           </div>
 
           <div className="relative mt-2 bg-white rounded-md">
-            <div className="absolute bottom-0 left-0 w-full ml-2 mr-2 border-orange-light border-t-2 border-dotted"></div>
+            <div className="absolute bottom-0 left-0 w-full ml-2 mr-2 border-t-2 border-dotted border-orange-light"></div>
           </div>
           <p className="p-2 text-sm italic text-center text-gray">
             Earn a donut for every open-source commit.
