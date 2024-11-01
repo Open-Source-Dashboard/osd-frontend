@@ -10,7 +10,6 @@ import MapOfUsers from "./MapOfUsers";
 import "leaflet/dist/leaflet.css";
 import Footer from "../components/Footer";
 import AuthButtons from "../auth/AuthButtons";
-import TestBlock from "../components/TestBlock";
 
 
 const DashboardStatic = () => {
