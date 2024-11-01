@@ -46,10 +46,10 @@ const PeruseProjects = () => {
       <h2 className="mt-0 mb-2 text-lg font-bold">Peruse Opensource Projects</h2>
       
       {popularRepos.length > 0 ? (
-        <div className="relative">
-          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="relative h-full rounded-lg">
+          <ul className="grid h-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {currentRepos.map((repo) => (
-              <li key={repo.id} className="p-2 rounded-lg shadow-md bg-gray-md">
+              <li key={repo.id} className="h-full p-2 rounded-lg shadow-md bg-gray-md">
                 <div className="flex flex-row justify-center">
                 <div className="flex justify-center">
                 <a href={repo.html_url} className="p-0 bg-gray-md" target="_blank" rel="noopener noreferrer">
