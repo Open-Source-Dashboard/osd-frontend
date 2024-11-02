@@ -69,7 +69,7 @@ const Dashboard = () => {
         <MapOfUsers />
       </div>
       <div className="lg:hidden">
-        <Footer />
+        <Footer isAuthenticated={true} />
       </div>
     </div>
   );

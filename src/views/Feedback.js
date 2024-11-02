@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 import emailjs from "emailjs-com";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Feedback = () => {
   const { user } = useAuth();
@@ -45,6 +46,7 @@ const Feedback = () => {
         <h1 className="mb-5 text-3xl font-bold text-pink">Give Feedback</h1>
         {feedbackSent ? (
           <div className="text-lg font-semibold text-pink">
+            <br/>
             <p className="mb-8">Thanks for your message!</p>
             <p>
               Go back to <Link to="/" className="text-white">Donut Dashboard home</Link>
@@ -117,6 +119,7 @@ const Feedback = () => {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 };

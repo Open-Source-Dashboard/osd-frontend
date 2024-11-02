@@ -58,7 +58,7 @@ const DashboardStatic = () => {
         <MapOfUsers />
       </div>
       <div className="lg:hidden">
-        <Footer />
+        <Footer  isAuthenticated={false} />
       </div>
     </div>
   );
