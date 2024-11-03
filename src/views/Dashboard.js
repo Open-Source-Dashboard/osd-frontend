@@ -53,7 +53,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full p-2 rounded-lg bg-blue lg:row-span-5">
+      <div className="flex w-full p-2 rounded-lg bg-blue lg:row-span-5 lg:col-span-6">
         <FeaturedProject />
       </div>
       <div className="hidden p-2 rounded-lg lg:grid min-h-60 lg:col-span-7 lg:row-span-8 bg-gray">
