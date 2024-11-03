@@ -6,7 +6,7 @@ const FeaturedProject = () => {
   const { featuredRepo } = useContext(RepoContext);
 
   return (
-    <div className="w-full h-full overflow-auto">
+    <div className="flex flex-col w-full h-full overflow-auto">
       <h2 className="mt-0 mb-2 text-lg font-bold text-left">
         Featured Opensource Project
       </h2>
@@ -15,7 +15,7 @@ const FeaturedProject = () => {
           featuredRepo.map((repo) => (
             <div
               key={repo.id}
-              className="flex flex-col items-center text-xs text-center"
+              className="flex flex-col w-full text-xs text-center place-items-centercenter"
             >
               <div className="flex flex-row items-center justify-center">
               <a href={repo.html_url} className="p-0 m-0 bg-gray-md" target="_blank" rel="noopener noreferrer">
